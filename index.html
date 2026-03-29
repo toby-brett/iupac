@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nomenclature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #f5f2ed;
+    --surface:  #ffffff;
+    --border:   #e0dbd3;
+    --text:     #1a1916;
+    --muted:    #8a8580;
+    --accent:   #2d5a3d;
+    --accent-l: #e8f0eb;
+    --danger:   #8b3a2f;
+    --danger-l: #f5e8e6;
+    --warn:     #7a5c1e;
+    --warn-l:   #faf6ec;
+    --easy:     #2d5a3d;
+    --medium:   #7a5c1e;
+    --hard:     #6b2d2d;
+    --radius:   10px;
+    --mono:     'DM Mono', monospace;
+    --sans:     'DM Sans', sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .screen {
+    display: none;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeUp .35s ease both;
+  }
+  .screen.active { display: flex; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem 3rem;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+  }
+
+  .label {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+
+  p.sub {
+    color: var(--muted);
+    font-size: .9rem;
+    margin-bottom: 2rem;
+  }
+
+  /* home */
+  .home-header { margin-bottom: 2.5rem; }
+  .home-header .eyebrow {
+    font-family: var(--mono);
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .6rem;
+  }
+
+  .difficulty-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .diff-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 1.2rem .75rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: transparent;
+    cursor: pointer;
+    transition: all .18s ease;
+    text-align: center;
+  }
+  .diff-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+  .diff-btn .icon { font-size: 1.4rem; }
+  .diff-btn .name {
+    font-family: var(--mono);
+    font-size: .75rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .diff-btn .desc { font-size: .75rem; color: var(--muted); }
+
+  .diff-btn[data-d="easy"]            { border-color: #b5d4be; }
+  .diff-btn[data-d="easy"]:hover      { background: #f0f8f2; border-color: var(--easy); }
+  .diff-btn[data-d="easy"] .name      { color: var(--easy); }
+  .diff-btn[data-d="medium"]          { border-color: #ddd0a8; }
+  .diff-btn[data-d="medium"]:hover    { background: #faf6ec; border-color: var(--medium); }
+  .diff-btn[data-d="medium"] .name    { color: var(--medium); }
+  .diff-btn[data-d="hard"]            { border-color: #d4a8a8; }
+  .diff-btn[data-d="hard"]:hover      { background: #fdf0ee; border-color: var(--hard); }
+  .diff-btn[data-d="hard"] .name      { color: var(--hard); }
+
+  .hint-text {
+    font-size: .78rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    text-align: center;
+    margin-top: .5rem;
+  }
+
+  /* quiz */
+  #screen-quiz .card { max-width: 580px; }
+
+  .quiz-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  .quiz-top-left { display: flex; align-items: center; gap: .75rem; }
+
+  .badge {
+    font-family: var(--mono);
+    font-size: .65rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .25rem .65rem;
+    border-radius: 999px;
+    border: 1px solid;
+  }
+  .badge-easy   { color: var(--easy);   border-color: #b5d4be; background: #f0f8f2; }
+  .badge-medium { color: var(--medium); border-color: #ddd0a8; background: #faf6ec; }
+  .badge-hard   { color: var(--hard);   border-color: #d4a8a8; background: #fdf0ee; }
+
+  /* attempt pips */
+  .attempt-pips { display: flex; gap: 5px; align-items: center; }
+  .pip {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    transition: all .2s;
+  }
+  .pip.used-wrong { background: var(--danger); border-color: var(--danger); }
+  .pip.used-right { background: var(--accent); border-color: var(--accent); }
+  .pip.active     { border-color: var(--text); }
+
+  .score-display {
+    font-family: var(--mono);
+    font-size: .78rem;
+    color: var(--muted);
+  }
+  .score-display span { color: var(--text); font-weight: 500; }
+
+  /* molecule image */
+  .mol-wrap {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .mol-wrap img { max-height: 200px; max-width: 100%; object-fit: contain; }
+
+  .skeleton {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--bg) 25%, var(--border) 50%, var(--bg) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: var(--radius);
+  }
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* input */
+  .input-row {
+    display: flex;
+    gap: .6rem;
+    margin-bottom: .75rem;
+  }
+  .mol-input {
+    flex: 1;
+    padding: .7rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--mono);
+    font-size: .88rem;
+    background: var(--surface);
+    color: var(--text);
+    transition: border-color .15s;
+    outline: none;
+  }
+  .mol-input:focus   { border-color: var(--accent); }
+  .mol-input.correct { border-color: var(--accent); background: var(--accent-l); }
+  .mol-input.wrong   { border-color: var(--danger); background: var(--danger-l); }
+
+  /* buttons */
+  .btn {
+    padding: .7rem 1.3rem;
+    border-radius: var(--radius);
+    font-family: var(--sans);
+    font-size: .88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+    border: 1.5px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .btn-primary:hover:not(:disabled) { opacity: .85; }
+  .btn-primary:disabled { opacity: .4; cursor: default; }
+  .btn-ghost   { background: transparent; color: var(--muted); border-color: var(--border); }
+  .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
+  .btn-danger  { background: transparent; color: var(--danger); border-color: #d4a8a8; }
+  .btn-danger:hover { background: var(--danger-l); }
+
+  /* feedback */
+  .feedback-area { margin-bottom: .75rem; min-height: 3rem; }
+  .feedback {
+    font-size: .83rem;
+    font-family: var(--mono);
+    padding: .6rem .85rem;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    opacity: 0;
+    transition: opacity .2s;
+    line-height: 1.5;
+  }
+  .feedback.visible { opacity: 1; }
+  .feedback.correct { color: var(--accent); background: var(--accent-l); border-color: #b5d4be; }
+  .feedback.wrong   { color: var(--danger); background: var(--danger-l); border-color: #d4a8a8; }
+  .feedback.hint    { color: var(--warn);   background: var(--warn-l);   border-color: #ddd0a8; }
+
+  .quiz-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  /* results */
+  .result-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .8rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .result-stat:last-of-type { border-bottom: none; }
+  .stat-label { font-size: .85rem; color: var(--muted); }
+  .stat-value { font-family: var(--mono); font-size: 1.3rem; font-weight: 500; }
+  .stat-value.good { color: var(--accent); }
+  .stat-value.ok   { color: var(--medium); }
+  .stat-value.poor { color: var(--danger); }
+
+  .results-header { margin-bottom: 1.8rem; }
+  .results-footer { margin-top: 2rem; display: flex; gap: .75rem; }
+
+  .history { margin-top: 1.5rem; }
+  .history-title {
+    font-family: var(--mono);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--muted);
+    margin-bottom: .75rem;
+  }
+  .history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: .8rem;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .h-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: .45rem; flex-shrink: 0; }
+  .h-dot.c  { background: var(--accent); }
+  .h-dot.w  { background: var(--danger); }
+  .h-dot.w2 { background: var(--warn); }
+  .h-answer { font-family: var(--mono); color: var(--text); }
+  .h-sub    { color: var(--muted); font-size: .75rem; margin-top: .1rem; }
+
+  /* toast */
+  .toast {
+    position: fixed;
+    bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--danger);
+    color: #fff;
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-family: var(--mono);
+    opacity: 0;
+    transition: all .25s ease;
+    pointer-events: none;
+    z-index: 99;
+    white-space: nowrap;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div id="screen-home" class="screen active">
+  <div class="card">
+    <div class="home-header">
+      <div class="eyebrow">Organic Chemistry</div>
+      <h1>Nomenclature<br>Practice</h1>
+      <p class="sub" style="margin-top:.5rem">Name randomly generated molecules using IUPAC conventions. You get 2 attempts per molecule.</p>
+    </div>
+    <div class="label">Choose difficulty</div>
+    <div class="difficulty-grid">
+      <button class="diff-btn" data-d="easy" onclick="startSession('easy')">
+        <span class="icon">⬡</span>
+        <span class="name">Easy</span>
+        <span class="desc">Simple chains &amp; one group</span>
+      </button>
+      <button class="diff-btn" data-d="medium" onclick="startSession('medium')">
+        <span class="icon">⬡⬡</span>
+        <span class="name">Medium</span>
+        <span class="desc">Esters, amides &amp; 2 groups</span>
+      </button>
+      <button class="diff-btn" data-d="hard" onclick="startSession('hard')">
+        <span class="icon">⬡⬡⬡</span>
+        <span class="name">Hard</span>
+        <span class="desc">Anhydrides &amp; 3+ groups</span>
+      </button>
+    </div>
+    <p class="hint-text">Molecules are fetched live — requires an internet connection.</p>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="screen-quiz" class="screen">
+  <div class="card">
+    <div class="quiz-top">
+      <div class="quiz-top-left">
+        <span id="diff-badge" class="badge"></span>
+        <div class="attempt-pips" id="attempt-pips">
+          <div class="pip" id="pip-1"></div>
+          <div class="pip" id="pip-2"></div>
+        </div>
+      </div>
+      <span class="score-display">
+        <span id="score-correct">0</span> / <span id="score-total">0</span> correct
+      </span>
+    </div>
+
+    <div class="mol-wrap">
+      <div class="skeleton" id="skeleton"></div>
+      <img id="mol-img" src="" alt="molecule" style="display:none" />
+    </div>
+
+    <div class="input-row">
+      <input
+        id="answer-input"
+        class="mol-input"
+        type="text"
+        placeholder="e.g. propan-1-ol"
+        autocomplete="off"
+        spellcheck="false"
+        disabled
+      />
+      <button id="submit-btn" class="btn btn-primary" onclick="submitAnswer()" disabled>
+        Submit
+      </button>
+    </div>
+
+    <div class="feedback-area">
+      <div id="feedback" class="feedback"></div>
+    </div>
+
+    <div class="quiz-actions">
+      <button id="next-btn" class="btn btn-ghost" onclick="loadNext()" style="display:none">
+        Next →
+      </button>
+      <div></div>
+      <button class="btn btn-danger" onclick="endSession()">End session</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="screen-results" class="screen">
+  <div class="card">
+    <div class="results-header">
+      <div class="label">Session complete</div>
+      <h1>Results</h1>
+    </div>
+    <div id="result-stats">
+      <div class="result-stat">
+        <span class="stat-label">Questions answered</span>
+        <span class="stat-value" id="res-total">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Correct (first attempt)</span>
+        <span class="stat-value" id="res-first">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Correct (second attempt)</span>
+        <span class="stat-value" id="res-second">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Score</span>
+        <span class="stat-value" id="res-pct">—</span>
+      </div>
+    </div>
+    <div class="history" id="history-wrap" style="display:none">
+      <div class="history-title">Answer history</div>
+      <div id="history-list"></div>
+    </div>
+    <div class="results-footer">
+      <button class="btn btn-primary" onclick="playAgain()">Play again</button>
+      <button class="btn btn-ghost" onclick="showHome()">Home</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+const API_BASE = "http://127.0.0.1:5000";
+const MAX_ATTEMPTS = 2;
+
+let state = {
+  difficulty:    "medium",
+  correct:       0,
+  total:         0,
+  currentName:   null,
+  attempt:       0,
+  questionDone:  false,
+  loading:       false,
+  history:       [],
+};
+
+function show(id) {
+  document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+  const el = document.getElementById(id);
+  el.classList.add("active");
+  el.style.animation = "none"; el.offsetHeight; el.style.animation = "";
+}
+
+function startSession(difficulty) {
+  state = { difficulty, correct: 0, total: 0, currentName: null,
+            attempt: 0, questionDone: false, loading: false, history: [] };
+  const badge = document.getElementById("diff-badge");
+  badge.textContent = difficulty;
+  badge.className = "badge badge-" + difficulty;
+  updateScore();
+  show("screen-quiz");
+  loadNext();
+}
+
+function endSession() {
+  if (state.total === 0) { showHome(); return; }
+  showResults();
+}
+function playAgain() { startSession(state.difficulty); }
+function showHome()  { show("screen-home"); }
+
+// ── pips ──────────────────────────────────────────────────────────────────────
+function resetPips() {
+  for (let i = 1; i <= MAX_ATTEMPTS; i++) {
+    const pip = document.getElementById(`pip-${i}`);
+    pip.className = "pip" + (i === 1 ? " active" : "");
+  }
+}
+function markPip(attemptIndex, correct) {
+  const pip = document.getElementById(`pip-${attemptIndex + 1}`);
+  pip.className = "pip " + (correct ? "used-right" : "used-wrong");
+  const next = document.getElementById(`pip-${attemptIndex + 2}`);
+  if (next) next.className = "pip active";
+}
+
+// ── load molecule ─────────────────────────────────────────────────────────────
+async function loadNext() {
+  if (state.loading) return;
+  state.loading      = true;
+  state.questionDone = false;
+  state.attempt      = 0;
+  state.currentName  = null;
+
+  const input   = document.getElementById("answer-input");
+  const submitB = document.getElementById("submit-btn");
+  const nextB   = document.getElementById("next-btn");
+  const fb      = document.getElementById("feedback");
+  const img     = document.getElementById("mol-img");
+  const skel    = document.getElementById("skeleton");
+
+  input.value = "";
+  input.className = "mol-input";
+  input.disabled  = true;
+  submitB.disabled = true;
+  nextB.style.display = "none";
+  fb.className = "feedback";
+  fb.textContent = "";
+  img.style.display = "none";
+  skel.style.display = "block";
+  resetPips();
+
+  try {
+    const res  = await fetch(`${API_BASE}/molecule?difficulty=${state.difficulty}`);
+    if (!res.ok) throw new Error("Server error " + res.status);
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+
+    state.currentName = data.name;
+    img.src = "data:image/png;base64," + data.image;
+    img.onload = () => {
+      skel.style.display = "none";
+      img.style.display  = "block";
+    };
+    input.disabled   = false;
+    submitB.disabled = false;
+    input.focus();
+  } catch (err) {
+    skel.style.display = "none";
+    showToast("⚠ " + (err.message || "Network error"));
+  } finally {
+    state.loading = false;
+  }
+}
+
+// ── submit ────────────────────────────────────────────────────────────────────
+async function submitAnswer() {
+  if (state.questionDone || state.loading || !state.currentName) return;
+
+  const input  = document.getElementById("answer-input");
+  const answer = input.value.trim();
+  if (!answer) { input.focus(); return; }
+
+  const submitB = document.getElementById("submit-btn");
+  const nextB   = document.getElementById("next-btn");
+  const fb      = document.getElementById("feedback");
+
+  submitB.disabled = true;
+  input.disabled   = true;
+
+  try {
+    const res = await fetch(`${API_BASE}/try1`, {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ answer, correct: state.currentName }),
+    });
+    const data = await res.json();
+
+    const isCorrect     = data.correct;
+    const currentAttempt = state.attempt;
+
+    markPip(currentAttempt, isCorrect);
+
+    if (isCorrect) {
+      // correct!
+      state.correct++;
+      state.total++;
+      state.questionDone = true;
+      input.classList.add("correct");
+      fb.textContent = "✓ Correct!";
+      fb.className   = "feedback correct visible";
+
+      state.history.push({
+        answer:      data.normalized_answer,
+        correctName: data.normalized_correct,
+        result:      "correct",
+        attempt:     currentAttempt + 1,
+      });
+
+      updateScore();
+      nextB.style.display = "inline-flex";
+      nextB.focus();
+
+    } else if (currentAttempt < MAX_ATTEMPTS - 1) {
+      // wrong, but can try again
+      state.attempt++;
+      input.classList.add("wrong");
+
+      const hint = data.message && data.message !== "null"
+        ? `✗ Not quite. ${data.message}`
+        : "✗ Not quite — try again.";
+      fb.textContent = hint;
+      fb.className   = "feedback hint visible";
+
+      setTimeout(() => {
+        input.className = "mol-input";
+        input.disabled  = false;
+        submitB.disabled = false;
+        input.focus();
+      }, 700);
+
+    } else {
+      // out of attempts
+      state.total++;
+      state.questionDone = true;
+      input.classList.add("wrong");
+      fb.textContent = `✗ ${data.normalized_correct}`;
+      fb.className   = "feedback wrong visible";
+
+      state.history.push({
+        answer:      data.normalized_answer,
+        correctName: data.normalized_correct,
+        result:      "wrong",
+        attempt:     currentAttempt + 1,
+      });
+
+      updateScore();
+      nextB.style.display = "inline-flex";
+      nextB.focus();
+    }
+
+  } catch (err) {
+    input.disabled   = false;
+    submitB.disabled = false;
+    showToast("⚠ Could not check answer");
+  }
+}
+
+document.getElementById("answer-input").addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    if (!state.questionDone) submitAnswer();
+    else loadNext();
+  }
+});
+
+function updateScore() {
+  document.getElementById("score-correct").textContent = state.correct;
+  document.getElementById("score-total").textContent   = state.total;
+}
+
+function showResults() {
+  const firstAttempt  = state.history.filter(h => h.result === "correct" && h.attempt === 1).length;
+  const secondAttempt = state.history.filter(h => h.result === "correct" && h.attempt === 2).length;
+  const pct = state.total > 0 ? Math.round(state.correct / state.total * 100) : 0;
+
+  document.getElementById("res-total").textContent  = state.total;
+  document.getElementById("res-first").textContent  = firstAttempt;
+  document.getElementById("res-second").textContent = secondAttempt;
+
+  const pctEl = document.getElementById("res-pct");
+  pctEl.textContent = pct + "%";
+  pctEl.className   = "stat-value " + (pct >= 70 ? "good" : pct >= 40 ? "ok" : "poor");
+
+  const list = document.getElementById("history-list");
+  list.innerHTML = "";
+  const wrap = document.getElementById("history-wrap");
+
+  if (state.history.length > 0) {
+    wrap.style.display = "block";
+    state.history.forEach(h => {
+      const dotClass = h.result === "correct" ? (h.attempt === 1 ? "c" : "w2") : "w";
+      const item = document.createElement("div");
+      item.className = "history-item";
+      item.innerHTML = `
+        <div class="h-dot ${dotClass}"></div>
+        <div>
+          <div class="h-answer">${escHtml(h.answer || "(blank)")}</div>
+          <div class="h-sub">${
+            h.result === "correct"
+              ? `Correct on attempt ${h.attempt}`
+              : `✗ → ${escHtml(h.correctName)}`
+          }</div>
+        </div>`;
+      list.appendChild(item);
+    });
+  } else {
+    wrap.style.display = "none";
+  }
+
+  show("screen-results");
+}
+
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 3500);
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+</script>
+</body>
+</html>
