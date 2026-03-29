@@ -643,7 +643,7 @@
 <script>
 const API_BASE = "/api";
 const MAX_ATTEMPTS = 2;
-const POOL_SIZE = 10;
+const POOL_SIZE = 5;
 
 // ── chemistry facts ────────────────────────────────────────────────────────────
 const FACTS = [
@@ -700,13 +700,13 @@ function nextFact() {
     factIndex = (factIndex + 1) % factShuffled.length;
     el.textContent = factShuffled[factIndex];
     el.classList.remove("fade");
-  }, 800);
+  }, 400);
 }
 
 function startFactCycle() {
   const el = document.getElementById("fact-text");
   el.textContent = factShuffled[factIndex];
-  factTimer = setInterval(nextFact, 6000);
+  factTimer = setInterval(nextFact, 12000);
 }
 
 function stopFactCycle() {
