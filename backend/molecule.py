@@ -228,7 +228,7 @@ def add_benzene(mol: Chem.RWMol):
 
     mol.AddBond(c_idx, atoms[0], Chem.BondType.SINGLE)
 
-    return mols
+    return mol
 
 def add_amine(mol: Chem.RWMol):
     carbon_indices = get_available_carbons(mol, 1)
@@ -322,11 +322,11 @@ def hard():
     rand = random.random()
     if rand < 0.2:
         base = generate_benzene()
-    elif rand < 0.3:
-        base = generate_ester(max(3, length))
     elif rand < 0.4:
+        base = generate_ester(max(3, length))
+    elif rand < 0.6:
         base = generate_amide(max(3, length))
-    elif rand < 0.5:
+    elif rand < 0.8:
         base = generate_acid_anhydride(max(3, length))
     else:
         base = generate_alkyl(length)
@@ -347,7 +347,7 @@ def hard():
     ]
 
     mol = base
-    groups = random.randint(1, 3)
+    groups = random.randint(3, 3)
     for _ in range(groups):
         fn = random.choice(group_fns)
         mol = fn(mol)
@@ -365,10 +365,12 @@ def medium():
     rand = random.random()
     if rand < 0.2:
         base = generate_benzene()
-    elif rand < 0.3:
-        base = generate_ester(max(3, length))
     elif rand < 0.4:
+        base = generate_ester(max(3, length))
+    elif rand < 0.6:
         base = generate_amide(max(3, length))
+    elif rand < 0.8:
+        base = generate_acid_anhydride(max(3, length))
     else:
         base = generate_alkyl(length)
 
@@ -386,7 +388,7 @@ def medium():
     ]
 
     mol = base
-    groups = random.randint(1, 2)
+    groups = random.randint(2, 2)
     for _ in range(groups):
         fn = random.choice(group_fns)
         mol = fn(mol)
@@ -402,7 +404,7 @@ def easy():
     length = random.choice(lengths)
 
     rand = random.random()
-    if rand < 0.2:
+    if rand < 0.5:
         base = generate_benzene()
     else:
         base = generate_alkyl(length)
@@ -421,7 +423,7 @@ def easy():
     ]
 
     mol = base
-    groups = random.randint(0, 1)
+    groups = random.randint(1, 1)
     for _ in range(groups):
         fn = random.choice(group_fns)
         mol = fn(mol)
@@ -430,3 +432,8 @@ def easy():
     Chem.SanitizeMol(mol)
 
     return mol
+
+
+if __name__ == "__main__":
+    molecule = medium()
+    print(smiles_to_name(Chem.MolToSmiles(molecule)))
