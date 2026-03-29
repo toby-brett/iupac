@@ -470,8 +470,38 @@
 <div id="toast" class="toast"></div>
 
 <script>
-const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "/api";
 const MAX_ATTEMPTS = 2;
+const POOL_SIZE = 10;
+
+// pool[difficulty] = array of prefetched molecule data
+const pool = { easy: [], medium: [], hard: [] };
+const fetching = { easy: 0, medium: 0, hard: 0 };
+
+function topUpPool(difficulty) {
+  const needed = POOL_SIZE - pool[difficulty].length - fetching[difficulty];
+  for (let i = 0; i < needed; i++) {
+    fetching[difficulty]++;
+    fetch(`${API_BASE}/molecule?difficulty=${difficulty}`)
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        if (!data.error) pool[difficulty].push(data);
+      })
+      .catch(() => {})
+      .finally(() => {
+        fetching[difficulty]--;
+        // keep topping up if still low
+        if (pool[difficulty].length + fetching[difficulty] < POOL_SIZE) {
+          topUpPool(difficulty);
+        }
+      });
+  }
+}
+
+// start prefetching all difficulties immediately on page load
+topUpPool("easy");
+topUpPool("medium");
+topUpPool("hard");
 
 let state = {
   difficulty:    "medium",
@@ -509,7 +539,6 @@ function endSession() {
 function playAgain() { startSession(state.difficulty); }
 function showHome()  { show("screen-home"); }
 
-// ── pips ──────────────────────────────────────────────────────────────────────
 function resetPips() {
   for (let i = 1; i <= MAX_ATTEMPTS; i++) {
     const pip = document.getElementById(`pip-${i}`);
@@ -523,7 +552,6 @@ function markPip(attemptIndex, correct) {
   if (next) next.className = "pip active";
 }
 
-// ── load molecule ─────────────────────────────────────────────────────────────
 async function loadNext() {
   if (state.loading) return;
   state.loading      = true;
@@ -550,10 +578,22 @@ async function loadNext() {
   resetPips();
 
   try {
-    const res  = await fetch(`${API_BASE}/molecule?difficulty=${state.difficulty}`);
-    if (!res.ok) throw new Error("Server error " + res.status);
-    const data = await res.json();
-    if (data.error) throw new Error(data.error);
+    let data;
+
+    if (pool[state.difficulty].length > 0) {
+      // instant — grab from pool
+      data = pool[state.difficulty].shift();
+      // refill what we just consumed
+      topUpPool(state.difficulty);
+    } else {
+      // pool empty — fetch live and show a waiting message
+      showToast("⏳ Fetching molecule…");
+      const res = await fetch(`${API_BASE}/molecule?difficulty=${state.difficulty}`);
+      if (!res.ok) throw new Error("Server error " + res.status);
+      data = await res.json();
+      if (data.error) throw new Error(data.error);
+      topUpPool(state.difficulty);
+    }
 
     state.currentName = data.name;
     img.src = "data:image/png;base64," + data.image;
@@ -572,7 +612,6 @@ async function loadNext() {
   }
 }
 
-// ── submit ────────────────────────────────────────────────────────────────────
 async function submitAnswer() {
   if (state.questionDone || state.loading || !state.currentName) return;
 
@@ -595,64 +634,55 @@ async function submitAnswer() {
     });
     const data = await res.json();
 
-    const isCorrect     = data.correct;
+    const isCorrect      = data.correct;
     const currentAttempt = state.attempt;
 
     markPip(currentAttempt, isCorrect);
 
     if (isCorrect) {
-      // correct!
       state.correct++;
       state.total++;
       state.questionDone = true;
       input.classList.add("correct");
       fb.textContent = "✓ Correct!";
       fb.className   = "feedback correct visible";
-
       state.history.push({
         answer:      data.normalized_answer,
         correctName: data.normalized_correct,
         result:      "correct",
         attempt:     currentAttempt + 1,
       });
-
       updateScore();
       nextB.style.display = "inline-flex";
       nextB.focus();
 
     } else if (currentAttempt < MAX_ATTEMPTS - 1) {
-      // wrong, but can try again
       state.attempt++;
       input.classList.add("wrong");
-
       const hint = data.message && data.message !== "null"
         ? `✗ Not quite. ${data.message}`
         : "✗ Not quite — try again.";
       fb.textContent = hint;
       fb.className   = "feedback hint visible";
-
       setTimeout(() => {
-        input.className = "mol-input";
-        input.disabled  = false;
+        input.className  = "mol-input";
+        input.disabled   = false;
         submitB.disabled = false;
         input.focus();
       }, 700);
 
     } else {
-      // out of attempts
       state.total++;
       state.questionDone = true;
       input.classList.add("wrong");
       fb.textContent = `✗ ${data.normalized_correct}`;
       fb.className   = "feedback wrong visible";
-
       state.history.push({
         answer:      data.normalized_answer,
         correctName: data.normalized_correct,
         result:      "wrong",
         attempt:     currentAttempt + 1,
       });
-
       updateScore();
       nextB.style.display = "inline-flex";
       nextB.focus();

@@ -228,7 +228,7 @@ def add_benzene(mol: Chem.RWMol):
 
     mol.AddBond(c_idx, atoms[0], Chem.BondType.SINGLE)
 
-    return mol
+    return mols
 
 def add_amine(mol: Chem.RWMol):
     carbon_indices = get_available_carbons(mol, 1)
