@@ -404,8 +404,14 @@ def easy():
     length = random.choice(lengths)
 
     rand = random.random()
-    if rand < 0.5:
+    if rand < 0.2:
         base = generate_benzene()
+    elif rand < 0.4:
+        base = generate_ester(max(3, length))
+    elif rand < 0.6:
+        base = generate_amide(max(3, length))
+    elif rand < 0.8:
+        base = generate_acid_anhydride(max(3, length))
     else:
         base = generate_alkyl(length)
 
