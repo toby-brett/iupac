@@ -64,6 +64,8 @@
     max-width: 520px;
     width: 100%;
     box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    position: relative;
+    overflow: hidden;
   }
 
   .label {
@@ -120,6 +122,7 @@
     text-align: center;
   }
   .diff-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+  .diff-btn:disabled { opacity: .4; cursor: default; transform: none; box-shadow: none; }
   .diff-btn .icon { font-size: 1.4rem; }
   .diff-btn .name {
     font-family: var(--mono);
@@ -131,13 +134,13 @@
   .diff-btn .desc { font-size: .75rem; color: var(--muted); }
 
   .diff-btn[data-d="easy"]            { border-color: #b5d4be; }
-  .diff-btn[data-d="easy"]:hover      { background: #f0f8f2; border-color: var(--easy); }
+  .diff-btn[data-d="easy"]:not(:disabled):hover      { background: #f0f8f2; border-color: var(--easy); }
   .diff-btn[data-d="easy"] .name      { color: var(--easy); }
   .diff-btn[data-d="medium"]          { border-color: #ddd0a8; }
-  .diff-btn[data-d="medium"]:hover    { background: #faf6ec; border-color: var(--medium); }
+  .diff-btn[data-d="medium"]:not(:disabled):hover    { background: #faf6ec; border-color: var(--medium); }
   .diff-btn[data-d="medium"] .name    { color: var(--medium); }
   .diff-btn[data-d="hard"]            { border-color: #d4a8a8; }
-  .diff-btn[data-d="hard"]:hover      { background: #fdf0ee; border-color: var(--hard); }
+  .diff-btn[data-d="hard"]:not(:disabled):hover      { background: #fdf0ee; border-color: var(--hard); }
   .diff-btn[data-d="hard"] .name      { color: var(--hard); }
 
   .hint-text {
@@ -147,6 +150,139 @@
     text-align: center;
     margin-top: .5rem;
   }
+
+  /* ── loading overlay ───────────────────────────────────────────────────── */
+  .loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(245, 242, 237, 0.97);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2.5rem;
+    gap: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 10;
+  }
+  .loading-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .loading-status {
+    text-align: center;
+  }
+  .loading-label {
+    font-family: var(--mono);
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .4rem;
+  }
+  .loading-count {
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* progress bar */
+  .progress-track {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 999px;
+    transition: width .4s ease;
+    width: 0%;
+  }
+
+  /* difficulty mini-bars */
+  .diff-progress {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    width: 100%;
+  }
+  .diff-row {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: var(--mono);
+    font-size: .7rem;
+  }
+  .diff-row-label {
+    width: 3.5rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .diff-row-track {
+    flex: 1;
+    height: 3px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .diff-row-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width .4s ease;
+    width: 0%;
+  }
+  .diff-row-fill.easy   { background: var(--easy); }
+  .diff-row-fill.medium { background: var(--medium); }
+  .diff-row-fill.hard   { background: var(--hard); }
+  .diff-row-count {
+    width: 2rem;
+    text-align: right;
+    color: var(--muted);
+  }
+
+  /* fact box */
+  .fact-box {
+    background: var(--accent-l);
+    border: 1px solid #b5d4be;
+    border-radius: 8px;
+    padding: .9rem 1.1rem;
+    width: 100%;
+  }
+  .fact-eyebrow {
+    font-family: var(--mono);
+    font-size: .6rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .3rem;
+  }
+  .fact-text {
+    font-size: .82rem;
+    color: var(--text);
+    line-height: 1.55;
+    min-height: 2.8rem;
+    transition: opacity .4s ease;
+  }
+  .fact-text.fade { opacity: 0; }
+
+  .loading-ready-hint {
+    font-family: var(--mono);
+    font-size: .7rem;
+    color: var(--accent);
+    text-align: center;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+  .loading-ready-hint.visible { opacity: 1; }
 
   /* quiz */
   #screen-quiz .card { max-width: 580px; }
@@ -173,7 +309,6 @@
   .badge-medium { color: var(--medium); border-color: #ddd0a8; background: #faf6ec; }
   .badge-hard   { color: var(--hard);   border-color: #d4a8a8; background: #fdf0ee; }
 
-  /* attempt pips */
   .attempt-pips { display: flex; gap: 5px; align-items: center; }
   .pip {
     width: 8px; height: 8px;
@@ -193,7 +328,6 @@
   }
   .score-display span { color: var(--text); font-weight: 500; }
 
-  /* molecule image */
   .mol-wrap {
     background: white;
     border: 1px solid var(--border);
@@ -220,7 +354,6 @@
     100% { background-position: -200% 0; }
   }
 
-  /* input */
   .input-row {
     display: flex;
     gap: .6rem;
@@ -242,7 +375,6 @@
   .mol-input.correct { border-color: var(--accent); background: var(--accent-l); }
   .mol-input.wrong   { border-color: var(--danger); background: var(--danger-l); }
 
-  /* buttons */
   .btn {
     padding: .7rem 1.3rem;
     border-radius: var(--radius);
@@ -262,7 +394,6 @@
   .btn-danger  { background: transparent; color: var(--danger); border-color: #d4a8a8; }
   .btn-danger:hover { background: var(--danger-l); }
 
-  /* feedback */
   .feedback-area { margin-bottom: .75rem; min-height: 3rem; }
   .feedback {
     font-size: .83rem;
@@ -286,7 +417,6 @@
     margin-top: 1rem;
   }
 
-  /* results */
   .result-stat {
     display: flex;
     justify-content: space-between;
@@ -329,7 +459,6 @@
   .h-answer { font-family: var(--mono); color: var(--text); }
   .h-sub    { color: var(--muted); font-size: .75rem; margin-top: .1rem; }
 
-  /* toast */
   .toast {
     position: fixed;
     bottom: 1.5rem; left: 50%;
@@ -354,30 +483,72 @@
 <!-- HOME -->
 <div id="screen-home" class="screen active">
   <div class="card">
-    <div class="home-header">
-      <div class="eyebrow">Organic Chemistry</div>
-      <h1>Nomenclature<br>Practice</h1>
-      <p class="sub" style="margin-top:.5rem">Name randomly generated molecules using IUPAC conventions. You get 2 attempts per molecule.</p>
+    <!-- normal home content -->
+    <div id="home-content">
+      <div class="home-header">
+        <div class="eyebrow">Organic Chemistry</div>
+        <h1>Nomenclature<br>Practice</h1>
+        <p class="sub" style="margin-top:.5rem">Name randomly generated molecules using IUPAC conventions. You get 2 attempts per molecule.</p>
+      </div>
+      <div class="label">Choose difficulty</div>
+      <div class="difficulty-grid">
+        <button class="diff-btn" data-d="easy" id="btn-easy" onclick="startSession('easy')">
+          <span class="icon">⬡</span>
+          <span class="name">Easy</span>
+          <span class="desc">Simple chains &amp; one group</span>
+        </button>
+        <button class="diff-btn" data-d="medium" id="btn-medium" onclick="startSession('medium')">
+          <span class="icon">⬡⬡</span>
+          <span class="name">Medium</span>
+          <span class="desc">Esters, amides &amp; 2 groups</span>
+        </button>
+        <button class="diff-btn" data-d="hard" id="btn-hard" onclick="startSession('hard')">
+          <span class="icon">⬡⬡⬡</span>
+          <span class="name">Hard</span>
+          <span class="desc">Anhydrides &amp; 3+ groups</span>
+        </button>
+      </div>
+      <p class="hint-text" id="hint-text">Molecules are fetched live — requires an internet connection.</p>
     </div>
-    <div class="label">Choose difficulty</div>
-    <div class="difficulty-grid">
-      <button class="diff-btn" data-d="easy" onclick="startSession('easy')">
-        <span class="icon">⬡</span>
-        <span class="name">Easy</span>
-        <span class="desc">Simple chains &amp; one group</span>
-      </button>
-      <button class="diff-btn" data-d="medium" onclick="startSession('medium')">
-        <span class="icon">⬡⬡</span>
-        <span class="name">Medium</span>
-        <span class="desc">Esters, amides &amp; 2 groups</span>
-      </button>
-      <button class="diff-btn" data-d="hard" onclick="startSession('hard')">
-        <span class="icon">⬡⬡⬡</span>
-        <span class="name">Hard</span>
-        <span class="desc">Anhydrides &amp; 3+ groups</span>
-      </button>
+
+    <!-- loading overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="loading-status">
+        <div class="loading-label">Building &amp; naming molecules</div>
+        <div class="loading-count" id="loading-count">0 / 30 ready</div>
+      </div>
+
+      <div class="progress-track" style="width:100%">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="diff-progress">
+        <div class="diff-row">
+          <span class="diff-row-label">Easy</span>
+          <div class="diff-row-track"><div class="diff-row-fill easy" id="bar-easy"></div></div>
+          <span class="diff-row-count" id="count-easy">0/10</span>
+        </div>
+        <div class="diff-row">
+          <span class="diff-row-label">Medium</span>
+          <div class="diff-row-track"><div class="diff-row-fill medium" id="bar-medium"></div></div>
+          <span class="diff-row-count" id="count-medium">0/10</span>
+        </div>
+        <div class="diff-row">
+          <span class="diff-row-label">Hard</span>
+          <div class="diff-row-track"><div class="diff-row-fill hard" id="bar-hard"></div></div>
+          <span class="diff-row-count" id="count-hard">0/10</span>
+        </div>
+      </div>
+
+      <div class="fact-box">
+        <div class="fact-eyebrow">💡 Did you know?</div>
+        <div class="fact-text" id="fact-text"></div>
+      </div>
+
+      <div class="loading-ready-hint" id="ready-hint">
+        ✓ Ready — select a difficulty above to begin
+      </div>
     </div>
-    <p class="hint-text">Molecules are fetched live — requires an internet connection.</p>
   </div>
 </div>
 
@@ -474,9 +645,130 @@ const API_BASE = "/api";
 const MAX_ATTEMPTS = 2;
 const POOL_SIZE = 10;
 
-// pool[difficulty] = array of prefetched molecule data
+// ── chemistry facts ────────────────────────────────────────────────────────────
+const FACTS = [
+  "Carbon is the only element that can bond to itself indefinitely, forming chains millions of atoms long.",
+  "Benzene's ring structure was famously proposed by August Kekulé after he dreamed of a snake eating its own tail.",
+  "The smell of freshly cut grass is caused by a class of compounds called green leaf volatiles — mainly hexanal and hex-2-enal.",
+  "Capsaicin, the molecule that makes chillies hot, is an amide — it binds to pain receptors but causes no actual tissue damage.",
+  "Diamond and graphite are both pure carbon, but their different bonding arrangements make one the hardest natural material and the other one of the softest.",
+  "Ethanol is produced by yeast as a toxic waste product — they're essentially poisoning their own environment.",
+  "The first synthetic dye, mauveine, was accidentally discovered in 1856 by 18-year-old William Perkin while trying to synthesise quinine.",
+  "Aspirin (acetylsalicylic acid) was first synthesised in 1897, but willow bark — which contains the related salicin — was used as a painkiller by ancient Egyptians.",
+  "Menthol tricks cold receptors in the skin without actually lowering temperature — it's a purely chemical illusion of coolness.",
+  "The 'new car smell' is a mixture of volatile organic compounds off-gassing from plastics, adhesives, and fabrics — not a single molecule.",
+  "Nitroglycerin is both a powerful explosive and a heart medication. The dosage difference is about a millionfold.",
+  "Kevlar, one of the strongest synthetic fibres, is a polyamide — essentially a very long, very organised nylon.",
+  "Carbon monoxide is toxic because it binds to haemoglobin about 200× more strongly than oxygen does.",
+  "Chlorophyll and haemoglobin have almost identical ring structures — the key difference is magnesium in chlorophyll versus iron in haemoglobin.",
+  "The Maillard reaction — responsible for the browning of bread and meat — involves hundreds of distinct chemical reactions happening simultaneously.",
+  "Ozone (O₃) and oxygen (O₂) are both made of only oxygen atoms, but ozone is a toxic irritant at ground level and a UV shield in the stratosphere.",
+  "Soap works because each molecule has a water-loving head and a fat-loving tail — it physically bridges water and grease.",
+  "Nylon was the first synthetic polymer fibre and was originally marketed as a substitute for silk in stockings.",
+  "The smell of petrichor — rain on dry earth — comes largely from geosmin, a compound produced by soil bacteria.",
+  "Caffeine is an alkaloid that works by blocking adenosine receptors in the brain, preventing the sensation of tiredness.",
+  "The strongest known acid, fluoroantimonic acid, is about 10²⁰ times stronger than pure sulphuric acid.",
+  "Teflon (PTFE) was discovered accidentally in 1938 when a chemist found a gas cylinder had polymerised overnight.",
+  "DNA is held together by hydrogen bonds — individually weak, but collectively so numerous that the double helix is remarkably stable.",
+  "Cholesterol is essential for life — it's a structural component of every cell membrane in the human body.",
+  "The explosive TNT is 2,4,6-trinitrotoluene: a benzene ring with a methyl group and three nitro groups attached.",
+  "Alcohols, ethers, aldehydes, ketones, and esters can all be derived from simple hydrocarbons by substituting or adding functional groups.",
+  "IUPAC nomenclature was designed so that any compound's name unambiguously describes its structure — and vice versa.",
+  "Penicillin works by inhibiting an enzyme that bacteria use to build their cell walls, causing them to burst.",
+  "Optical isomers (enantiomers) can smell completely different: one form of carvone smells of spearmint, the other of caraway seeds.",
+  "Rubber is a polymer of isoprene. Vulcanisation — adding sulphur — cross-links the chains and makes it much more durable.",
+  "The 'lead' in a pencil is actually graphite mixed with clay — it contains no lead whatsoever.",
+  "Dry ice is solid CO₂. It sublimates directly from solid to gas at −78.5 °C, which is why it produces that eerie fog.",
+  "Glucose and fructose have the same molecular formula (C₆H₁₂O₆) but different structures — they're structural isomers.",
+  "The first element to be isolated by electrolysis was potassium, separated from molten potash by Humphry Davy in 1807.",
+  "Acetic acid at 100% concentration is called glacial acetic acid — it freezes at 16.7 °C, just below room temperature.",
+  "Adrenaline (epinephrine) is a catecholamine — it contains both an amine group and a catechol (two adjacent hydroxyl groups on a benzene ring).",
+  "The blue colour of copper sulphate crystals comes from water molecules coordinated around the copper ion, not the sulphate.",
+  "Vanillin — the main flavour compound in vanilla — is an aldehyde. Synthetic vanillin is chemically identical to the natural version.",
+  "Lithium, sodium, and potassium all react vigorously with water — but the reaction gets more violent as you go down the group.",
+  "The greenhouse effect works because CO₂ and water vapour absorb infrared radiation at specific wavelengths that N₂ and O₂ do not.",
+];
+
+let factIndex = 0;
+let factShuffled = [...FACTS].sort(() => Math.random() - 0.5);
+let factTimer = null;
+
+function nextFact() {
+  const el = document.getElementById("fact-text");
+  el.classList.add("fade");
+  setTimeout(() => {
+    factIndex = (factIndex + 1) % factShuffled.length;
+    el.textContent = factShuffled[factIndex];
+    el.classList.remove("fade");
+  }, 400);
+}
+
+function startFactCycle() {
+  const el = document.getElementById("fact-text");
+  el.textContent = factShuffled[factIndex];
+  factTimer = setInterval(nextFact, 6000);
+}
+
+function stopFactCycle() {
+  clearInterval(factTimer);
+  factTimer = null;
+}
+
+// ── pool ───────────────────────────────────────────────────────────────────────
 const pool = { easy: [], medium: [], hard: [] };
 const fetching = { easy: 0, medium: 0, hard: 0 };
+let poolReady = false;
+
+function totalReady() {
+  return pool.easy.length + pool.medium.length + pool.hard.length;
+}
+
+function updateLoadingUI() {
+  const total = totalReady();
+  const pct = Math.round(total / (POOL_SIZE * 3) * 100);
+
+  document.getElementById("loading-count").textContent = `${total} / ${POOL_SIZE * 3} ready`;
+  document.getElementById("progress-fill").style.width = pct + "%";
+
+  ["easy", "medium", "hard"].forEach(d => {
+    const n = pool[d].length;
+    document.getElementById(`bar-${d}`).style.width = (n / POOL_SIZE * 100) + "%";
+    document.getElementById(`count-${d}`).textContent = `${n}/${POOL_SIZE}`;
+  });
+
+  // once each difficulty has at least 1 molecule, enable those buttons
+  ["easy", "medium", "hard"].forEach(d => {
+    const btn = document.getElementById(`btn-${d}`);
+    if (pool[d].length > 0) btn.disabled = false;
+  });
+
+  // show ready hint when all pools have at least 3
+  const allPartlyReady = ["easy","medium","hard"].every(d => pool[d].length >= 3);
+  document.getElementById("ready-hint").classList.toggle("visible", allPartlyReady);
+
+  if (total >= POOL_SIZE * 3 && !poolReady) {
+    poolReady = true;
+    // hide overlay after short delay
+    setTimeout(hideLoadingOverlay, 800);
+  }
+}
+
+function showLoadingOverlay() {
+  document.getElementById("loading-overlay").classList.add("visible");
+  // disable all buttons initially
+  ["easy","medium","hard"].forEach(d => {
+    document.getElementById(`btn-${d}`).disabled = true;
+  });
+  startFactCycle();
+}
+
+function hideLoadingOverlay() {
+  document.getElementById("loading-overlay").classList.remove("visible");
+  ["easy","medium","hard"].forEach(d => {
+    document.getElementById(`btn-${d}`).disabled = false;
+  });
+  stopFactCycle();
+}
 
 function topUpPool(difficulty) {
   const needed = POOL_SIZE - pool[difficulty].length - fetching[difficulty];
@@ -485,12 +777,14 @@ function topUpPool(difficulty) {
     fetch(`${API_BASE}/molecule?difficulty=${difficulty}`)
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then(data => {
-        if (!data.error) pool[difficulty].push(data);
+        if (!data.error) {
+          pool[difficulty].push(data);
+          updateLoadingUI();
+        }
       })
       .catch(() => {})
       .finally(() => {
         fetching[difficulty]--;
-        // keep topping up if still low
         if (pool[difficulty].length + fetching[difficulty] < POOL_SIZE) {
           topUpPool(difficulty);
         }
@@ -498,11 +792,13 @@ function topUpPool(difficulty) {
   }
 }
 
-// start prefetching all difficulties immediately on page load
+// kick off prefetch on page load
+showLoadingOverlay();
 topUpPool("easy");
-topUpPool("medium");
-topUpPool("hard");
+setTimeout(() => topUpPool("medium"), 300);
+setTimeout(() => topUpPool("hard"), 600);
 
+// ── state ──────────────────────────────────────────────────────────────────────
 let state = {
   difficulty:    "medium",
   correct:       0,
@@ -537,7 +833,11 @@ function endSession() {
   showResults();
 }
 function playAgain() { startSession(state.difficulty); }
-function showHome()  { show("screen-home"); }
+function showHome()  {
+  show("screen-home");
+  // re-show overlay if pool still building
+  if (!poolReady) showLoadingOverlay();
+}
 
 function resetPips() {
   for (let i = 1; i <= MAX_ATTEMPTS; i++) {
@@ -579,14 +879,11 @@ async function loadNext() {
 
   try {
     let data;
-
     if (pool[state.difficulty].length > 0) {
-      // instant — grab from pool
       data = pool[state.difficulty].shift();
-      // refill what we just consumed
       topUpPool(state.difficulty);
+      updateLoadingUI();
     } else {
-      // pool empty — fetch live and show a waiting message
       showToast("⏳ Fetching molecule…");
       const res = await fetch(`${API_BASE}/molecule?difficulty=${state.difficulty}`);
       if (!res.ok) throw new Error("Server error " + res.status);
