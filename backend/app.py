@@ -2,6 +2,7 @@ import base64
 import io
 import threading
 import queue
+from collections import deque
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
@@ -25,7 +26,8 @@ _pools = {
     "hard":   queue.Queue(maxsize=POOL_SIZE),
 }
 
-seen = []
+seen = deque(maxlen=10)
+seen_lock = threading.Lock()
 
 def _bake_one(difficulty):
     """Generate one molecule dict, return it or None on failure."""
@@ -34,9 +36,10 @@ def _bake_one(difficulty):
         try:
             mol = generator()
             smiles = Chem.MolToSmiles(mol)
-            if smiles in seen:
-                continue
-            seen.append(smiles)
+            with seen_lock:
+                if smiles in seen:
+                    continue
+                seen.append(smiles)
             name = smiles_to_name(smiles)
             if name is None:
                 continue
