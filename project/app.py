@@ -18,8 +18,8 @@ app = Flask(__name__,
 CORS(app)
 
 DIFFICULTY_MAP = {"easy": easy, "medium": medium, "hard": hard}
-MAX_ATTEMPTS = 10
-POOL_SIZE = 5  # molecules pre-baked per difficulty
+MAX_ATTEMPTS = 5
+POOL_SIZE = 2  # molecules pre-baked per difficulty
 
 # One queue per difficulty — holds ready-to-serve dicts
 _pools = {
