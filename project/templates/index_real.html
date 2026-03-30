@@ -55,7 +55,7 @@
     display: none;
     min-height: 100vh;
     min-height: 100dvh;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 1rem;
     animation: fadeUp .35s ease both;
@@ -66,7 +66,7 @@
   .screen.active { display: flex; }
 
   /* Side-by-side only on wide screens */
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     .screen {
       flex-direction: row;
       align-items: flex-start;
@@ -567,17 +567,44 @@
       <div class="label">Choose difficulty</div>
       <div class="difficulty-grid">
         <button class="diff-btn" data-d="easy" id="btn-easy" onclick="startSession('easy')">
-          <span class="icon">⬡</span>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="4"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+          </span>
           <span class="name">Easy</span>
           <span class="desc">Simple chains &amp; one group</span>
         </button>
         <button class="diff-btn" data-d="medium" id="btn-medium" onclick="startSession('medium')">
-          <span class="icon">⬡⬡</span>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="3"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="3"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+          </span>
           <span class="name">Medium</span>
           <span class="desc">Esters, amides &amp; 2 groups</span>
         </button>
         <button class="diff-btn" data-d="hard" id="btn-hard" onclick="startSession('hard')">
-          <span class="icon">⬡⬡⬡</span>
+          <span class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="3"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="3"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="11 5 78 90" width="20" height="20">
+              <polygon points="50,5 89,27.5 89,72.5 50,95 11,72.5 11,27.5" fill="none" stroke="black" stroke-width="3"/>
+              <circle cx="50" cy="50" r="25" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+          </span>
           <span class="name">Hard</span>
           <span class="desc">Anhydrides &amp; 3+ groups</span>
         </button>
@@ -590,7 +617,7 @@
     <div class="loading-overlay" id="loading-overlay">
       <div class="loading-status">
         <div class="loading-label" id="loading-text">Building &amp; naming molecules</div>
-        <div class="loading-count" id="loading-count">0 / 9 ready</div>
+        <div class="loading-count" id="loading-count">0 / 21 ready</div>
       </div>
 
       <div class="progress-track" style="width:100%">
@@ -601,17 +628,17 @@
         <div class="diff-row">
           <span class="diff-row-label">Easy</span>
           <div class="diff-row-track"><div class="diff-row-fill easy" id="bar-easy"></div></div>
-          <span class="diff-row-count" id="count-easy">0/3</span>
+          <span class="diff-row-count" id="count-easy">0/7</span>
         </div>
         <div class="diff-row">
           <span class="diff-row-label">Medium</span>
           <div class="diff-row-track"><div class="diff-row-fill medium" id="bar-medium"></div></div>
-          <span class="diff-row-count" id="count-medium">0/3</span>
+          <span class="diff-row-count" id="count-medium">0/7</span>
         </div>
         <div class="diff-row">
           <span class="diff-row-label">Hard</span>
           <div class="diff-row-track"><div class="diff-row-fill hard" id="bar-hard"></div></div>
-          <span class="diff-row-count" id="count-hard">0/3</span>
+          <span class="diff-row-count" id="count-hard">0/7</span>
         </div>
       </div>
 
@@ -732,7 +759,7 @@
 <script>
 const API_BASE = "/api";
 const MAX_ATTEMPTS = 2;
-const POOL_SIZE = 3;
+const POOL_SIZE = 1;
 
 const TEXTS = [
         "Moving equilibrium with catalysts...",
