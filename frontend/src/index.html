@@ -234,11 +234,8 @@
   function typeText(text) {
     const el = document.getElementById("flameLabel");
     el.textContent = text;
-    let i = 0;
-    const dots = ['', '.', '..', '...'];
     if (dotTimer) clearInterval(dotTimer);
     dotTimer = setInterval(() => {
-      i = (i + 1) % dots.length;
       el.textContent = text + dots[i];
     }, 600);
   }
