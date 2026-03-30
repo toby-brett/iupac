@@ -13,8 +13,8 @@ from molecule import easy, medium, hard, smiles_to_name
 from normalize import normalize, get_message
 
 app = Flask(__name__,
-            static_folder="frontend/static",
-            template_folder="frontend/templates")
+            static_folder="static",
+            template_folder="templates")
 CORS(app)
 
 DIFFICULTY_MAP = {"easy": easy, "medium": medium, "hard": hard}
@@ -105,7 +105,7 @@ def help_message():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index_real.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
