@@ -1,755 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-      <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6EMDSENMY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D6EMDSENMY');
-  </script>
-    <meta charset="UTF-8" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nomenclature</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg:       #f5f2ed;
-    --surface: #f8f6f4;
-    --border:   #e0dbd3;
-    --text:     #1a1916;
-    --muted:    #8a8580;
-    --accent:   #2d5a3d;
-    --accent-l: #e8f0eb;
-    --danger:   #8b3a2f;
-    --danger-l: #f5e8e6;
-    --warn:     #7a5c1e;
-    --warn-l:   #faf6ec;
-    --easy:     #2d5a3d;
-    --medium:   #7a5c1e;
-    --hard:     #6b2d2d;
-    --radius:   10px;
-    --mono:     'DM Mono', monospace;
-    --sans:     'DM Sans', sans-serif;
-  }
-
-  html, body {
-    height: 100%;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 15px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .screen {
-    display: none;
-    min-height: 100vh;
-    min-height: 100dvh;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
-    animation: fadeUp .35s ease both;
-    /* Stack vertically on mobile by default */
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .screen.active { display: flex; }
-
-  /* Side-by-side only on wide screens */
-  @media (min-width: 900px) {
-    .screen {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-
-    /* Vertically centre single-card screens (quiz, results) */
-    #screen-quiz,
-    #screen-results {
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  /* Centre home cards vertically when there's enough height */
-  @media (min-width: 900px) and (min-height: 600px) {
-    #screen-home {
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.75rem 1.5rem;
-    width: 100%;
-    max-width: 520px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.05);
-    position: relative;
-    overflow: hidden;
-    /* Don't shrink below content on desktop */
-    flex-shrink: 0;
-  }
-
-  .label {
-    font-family: var(--mono);
-    font-size: .7rem;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: .5rem;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 500;
-    letter-spacing: -.02em;
-    line-height: 1.2;
-  }
-
-  p.sub {
-    color: var(--muted);
-    font-size: .9rem;
-    margin-bottom: 2rem;
-  }
-
-  p.patch {
-    color: var(--muted);
-    font-size: .9rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  /* home */
-  .home-header { margin-bottom: 2rem; }
-  .home-header .eyebrow {
-    font-family: var(--mono);
-    font-size: .7rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: .6rem;
-  }
-
-  .difficulty-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: .5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .diff-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .4rem;
-    padding: 1rem .5rem;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    background: transparent;
-    cursor: pointer;
-    transition: all .18s ease;
-    text-align: center;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-  .diff-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.08); }
-  .diff-btn:active { transform: translateY(0); opacity: .85; }
-  .diff-btn:disabled { opacity: .4; cursor: default; transform: none; box-shadow: none; }
-  .diff-btn .icon { font-size: 1.2rem; }
-  .diff-btn .name {
-    font-family: var(--mono);
-    font-size: .7rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .diff-btn .desc { font-size: .68rem; color: var(--muted); line-height: 1.3; }
-
-  .diff-btn[data-d="easy"]            { border-color: #b5d4be; }
-  .diff-btn[data-d="easy"]:not(:disabled):hover      { background: #f0f8f2; border-color: var(--easy); }
-  .diff-btn[data-d="easy"] .name      { color: var(--easy); }
-  .diff-btn[data-d="medium"]          { border-color: #ddd0a8; }
-  .diff-btn[data-d="medium"]:not(:disabled):hover    { background: #faf6ec; border-color: var(--medium); }
-  .diff-btn[data-d="medium"] .name    { color: var(--medium); }
-  .diff-btn[data-d="hard"]            { border-color: #d4a8a8; }
-  .diff-btn[data-d="hard"]:not(:disabled):hover      { background: #fdf0ee; border-color: var(--hard); }
-  .diff-btn[data-d="hard"] .name      { color: var(--hard); }
-
-  .hint-text {
-    font-size: .75rem;
-    color: var(--muted);
-    font-family: var(--mono);
-    text-align: center;
-    margin-top: .5rem;
-  }
-
-  /* ── loading overlay ───────────────────────────────────────────────────── */
-  .loading-overlay {
-    position: absolute;
-    inset: 0;
-    background: var(--surface);
-    border-radius: var(--radius);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    gap: 1.2rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s ease;
-    z-index: 10;
-  }
-  .loading-overlay.visible {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .loading-status { text-align: center; }
-  .loading-label {
-    font-family: var(--mono);
-    font-size: .65rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: .4rem;
-    transition: opacity .4s ease;
-  }
-  .loading-label.fade { opacity: 0; }
-  .loading-count {
-    font-family: var(--mono);
-    font-size: 1.1rem;
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  .progress-track {
-    width: 100%;
-    height: 4px;
-    background: var(--border);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    background: var(--accent);
-    border-radius: 999px;
-    transition: width .4s ease;
-    width: 0%;
-  }
-
-  .diff-progress {
-    display: flex;
-    flex-direction: column;
-    gap: .4rem;
-    width: 100%;
-  }
-  .diff-row {
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-    font-family: var(--mono);
-    font-size: .7rem;
-  }
-  .diff-row-label {
-    width: 3.5rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: .08em;
-  }
-  .diff-row-track {
-    flex: 1;
-    height: 3px;
-    background: var(--border);
-    border-radius: 999px;
-    overflow: hidden;
-  }
-  .diff-row-fill {
-    height: 100%;
-    border-radius: 999px;
-    transition: width .4s ease;
-    width: 0%;
-  }
-  .diff-row-fill.easy   { background: var(--easy); }
-  .diff-row-fill.medium { background: var(--medium); }
-  .diff-row-fill.hard   { background: var(--hard); }
-  .diff-row-count {
-    width: 2rem;
-    text-align: right;
-    color: var(--muted);
-  }
-
-  .fact-box {
-    background: var(--accent-l);
-    border: 1px solid #b5d4be;
-    border-radius: 8px;
-    padding: .8rem 1rem;
-    width: 100%;
-  }
-  .fact-eyebrow {
-    font-family: var(--mono);
-    font-size: .6rem;
-    letter-spacing: .15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: .3rem;
-  }
-  .fact-text {
-    font-size: .8rem;
-    color: var(--text);
-    line-height: 1.55;
-    min-height: 2.8rem;
-    transition: opacity .4s ease;
-  }
-  .fact-text.fade { opacity: 0; }
-
-  .loading-ready-hint {
-    font-family: var(--mono);
-    font-size: .7rem;
-    color: var(--accent);
-    text-align: center;
-    opacity: 0;
-    transition: opacity .5s ease;
-  }
-  .loading-ready-hint.visible { opacity: 1; }
-
-  /* quiz */
-  #screen-quiz .card { max-width: 580px; }
-
-  .quiz-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.25rem;
-    gap: .5rem;
-  }
-
-  .quiz-top-left { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
-
-  .badge {
-    font-family: var(--mono);
-    font-size: .65rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    padding: .25rem .6rem;
-    border-radius: 999px;
-    border: 1px solid;
-  }
-  .badge-easy   { color: var(--easy);   border-color: #b5d4be; background: #f0f8f2; }
-  .badge-medium { color: var(--medium); border-color: #ddd0a8; background: #faf6ec; }
-  .badge-hard   { color: var(--hard);   border-color: #d4a8a8; background: #fdf0ee; }
-
-  .attempt-pips { display: flex; gap: 5px; align-items: center; }
-  .pip {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    border: 1.5px solid var(--border);
-    background: transparent;
-    transition: all .2s;
-  }
-  .pip.used-wrong { background: var(--danger); border-color: var(--danger); }
-  .pip.used-right { background: var(--accent); border-color: var(--accent); }
-  .pip.active     { border-color: var(--text); }
-
-  .score-display {
-    font-family: var(--mono);
-    font-size: .78rem;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-  .score-display span { color: var(--text); font-weight: 500; }
-
-  .mol-wrap {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    margin-bottom: 1.25rem;
-    overflow: hidden;
-    position: relative;
-  }
-  .mol-wrap img { max-height: 180px; max-width: 100%; object-fit: contain; }
-
-  .skeleton {
-    position: absolute; inset: 0;
-    background: linear-gradient(90deg, var(--bg) 25%, var(--border) 50%, var(--bg) 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.2s infinite;
-    border-radius: var(--radius);
-  }
-  @keyframes shimmer {
-    0%   { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  .input-row {
-    display: flex;
-    gap: .5rem;
-    margin-bottom: .75rem;
-  }
-  .mol-input {
-    flex: 1;
-    padding: .75rem .9rem;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    font-family: var(--mono);
-    font-size: 1rem; /* 16px prevents iOS zoom */
-    background: var(--surface);
-    color: var(--text);
-    transition: border-color .15s;
-    outline: none;
-    min-width: 0;
-    -webkit-appearance: none;
-  }
-  .mol-input:focus   { border-color: var(--accent); }
-  .mol-input.correct { border-color: var(--accent); background: var(--accent-l); }
-  .mol-input.wrong   { border-color: var(--danger); background: var(--danger-l); }
-
-  .btn {
-    padding: .75rem 1.1rem;
-    border-radius: var(--radius);
-    font-family: var(--sans);
-    font-size: .88rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .15s;
-    border: 1.5px solid transparent;
-    white-space: nowrap;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-  .btn:active { opacity: .8; transform: scale(0.98); }
-  .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
-  .btn-primary:hover:not(:disabled) { opacity: .85; }
-  .btn-primary:disabled { opacity: .4; cursor: default; transform: none; }
-  .btn-ghost   { background: transparent; color: var(--muted); border-color: var(--border); }
-  .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
-  .btn-danger  { background: transparent; color: var(--danger); border-color: #d4a8a8; }
-  .btn-danger:hover { background: var(--danger-l); }
-
-  .feedback-area { margin-bottom: .75rem; min-height: 2.75rem; }
-  .feedback {
-    font-size: .83rem;
-    font-family: var(--mono);
-    padding: .6rem .85rem;
-    border-radius: 7px;
-    border: 1px solid transparent;
-    opacity: 0;
-    transition: opacity .2s;
-    line-height: 1.5;
-  }
-  .feedback.visible { opacity: 1; }
-  .feedback.correct { color: var(--accent); background: var(--accent-l); border-color: #b5d4be; }
-  .feedback.wrong   { color: var(--danger); background: var(--danger-l); border-color: #d4a8a8; }
-  .feedback.hint    { color: var(--warn);   background: var(--warn-l);   border-color: #ddd0a8; }
-
-  .quiz-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: .75rem;
-    gap: .5rem;
-  }
-
-  .result-stat {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: .75rem 0;
-    border-bottom: 1px solid var(--border);
-    gap: 1rem;
-  }
-  .result-stat:last-of-type { border-bottom: none; }
-  .stat-label { font-size: .85rem; color: var(--muted); }
-  .stat-value { font-family: var(--mono); font-size: 1.2rem; font-weight: 500; flex-shrink: 0; }
-  .stat-value.good { color: var(--accent); }
-  .stat-value.ok   { color: var(--medium); }
-  .stat-value.poor { color: var(--danger); }
-
-  .results-header { margin-bottom: 1.5rem; }
-  .results-footer { margin-top: 1.5rem; display: flex; gap: .6rem; flex-wrap: wrap; }
-  .results-footer .btn { flex: 1; text-align: center; min-width: 100px; }
-
-  .history { margin-top: 1.25rem; }
-  .history-title {
-    font-family: var(--mono);
-    font-size: .68rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: var(--muted);
-    margin-bottom: .75rem;
-  }
-  .history-item {
-    display: flex;
-    align-items: flex-start;
-    gap: .6rem;
-    padding: .6rem 0;
-    border-bottom: 1px solid var(--border);
-    font-size: .8rem;
-  }
-  .history-item:last-child { border-bottom: none; }
-  .h-dot { width: 7px; height: 7px; border-radius: 50%; margin-top: .45rem; flex-shrink: 0; }
-  .h-dot.c  { background: var(--accent); }
-  .h-dot.w  { background: var(--danger); }
-  .h-dot.w2 { background: var(--warn); }
-  .h-answer { font-family: var(--mono); color: var(--text); word-break: break-word; }
-  .h-sub    { color: var(--muted); font-size: .75rem; margin-top: .1rem; }
-
-  .toast {
-    position: fixed;
-    bottom: 1.5rem; left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: var(--danger);
-    color: #fff;
-    padding: .6rem 1.2rem;
-    border-radius: 999px;
-    font-size: .82rem;
-    font-family: var(--mono);
-    opacity: 0;
-    transition: all .25s ease;
-    pointer-events: none;
-    z-index: 99;
-    white-space: nowrap;
-    max-width: calc(100vw - 2rem);
-    text-align: center;
-  }
-  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-  /* ── desktop enhancements ──────────────────────────────────────────────── */
-  @media (min-width: 540px) {
-    .card { padding: 2.5rem 3rem; }
-    h1 { font-size: 2rem; }
-    .home-header { margin-bottom: 2.5rem; }
-    .difficulty-grid { gap: .75rem; }
-    .diff-btn { padding: 1.2rem .75rem; gap: .5rem; }
-    .diff-btn .icon { font-size: 1.4rem; }
-    .diff-btn .name { font-size: .75rem; }
-    .diff-btn .desc { font-size: .75rem; }
-    .mol-wrap { height: 220px; }
-    .mol-wrap img { max-height: 200px; }
-    .loading-overlay { padding: 2rem 2.5rem; gap: 1.5rem; }
-  }
-</style>
-</head>
-<body>
-
-<!-- HOME -->
-<div id="screen-home" class="screen active">
-  <div class="card">
-    <div id="home-content">
-      <div class="home-header">
-        <div class="eyebrow">Organic Chemistry</div>
-        <h1>Nomenclature<br>Practice</h1>
-        <p class="sub" style="margin-top:.5rem">Name randomly generated molecules using IUPAC conventions. You get 2 attempts per molecule.</p>
-      </div>
-      <div class="label">Choose difficulty</div>
-      <div class="difficulty-grid">
-        <button class="diff-btn" data-d="easy" id="btn-easy" onclick="startSession('easy')">
-          <span class="icon">⬡</span>
-          <span class="name">Easy</span>
-          <span class="desc">Simple chains &amp; one group</span>
-        </button>
-        <button class="diff-btn" data-d="medium" id="btn-medium" onclick="startSession('medium')">
-          <span class="icon">⬡⬡</span>
-          <span class="name">Medium</span>
-          <span class="desc">Esters, amides &amp; 2 groups</span>
-        </button>
-        <button class="diff-btn" data-d="hard" id="btn-hard" onclick="startSession('hard')">
-          <span class="icon">⬡⬡⬡</span>
-          <span class="name">Hard</span>
-          <span class="desc">Anhydrides &amp; 3+ groups</span>
-        </button>
-      </div>
-      <p class="hint-text" id="hint-text">Molecules are fetched live — requires an internet connection.</p>
-    </div>
-
-
-    <!-- loading overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-      <div class="loading-status">
-        <div class="loading-label" id="loading-text">Building &amp; naming molecules</div>
-        <div class="loading-count" id="loading-count">0 / 9 ready</div>
-      </div>
-
-      <div class="progress-track" style="width:100%">
-        <div class="progress-fill" id="progress-fill"></div>
-      </div>
-
-      <div class="diff-progress">
-        <div class="diff-row">
-          <span class="diff-row-label">Easy</span>
-          <div class="diff-row-track"><div class="diff-row-fill easy" id="bar-easy"></div></div>
-          <span class="diff-row-count" id="count-easy">0/3</span>
-        </div>
-        <div class="diff-row">
-          <span class="diff-row-label">Medium</span>
-          <div class="diff-row-track"><div class="diff-row-fill medium" id="bar-medium"></div></div>
-          <span class="diff-row-count" id="count-medium">0/3</span>
-        </div>
-        <div class="diff-row">
-          <span class="diff-row-label">Hard</span>
-          <div class="diff-row-track"><div class="diff-row-fill hard" id="bar-hard"></div></div>
-          <span class="diff-row-count" id="count-hard">0/3</span>
-        </div>
-      </div>
-
-      <div class="fact-box">
-        <div class="fact-eyebrow">💡 Did you know?</div>
-        <div class="fact-text" id="fact-text"></div>
-      </div>
-
-      <div class="loading-ready-hint" id="ready-hint">
-        ✓ Ready — select a difficulty above to begin
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div id="patch-content">
-      <div class="home-header">
-        <div class="eyebrow">Patch Notes</div>
-        <h1>30/03/2026</h1>
-        <p class="patch" style="margin-top:.5rem">Made a recently seen molecules queue, so repeat molecules will not appear within 10 of each other.</p>
-        <p class="patch">Improved the molecule generation, so more interesting and difficulty specific structures are observed.</p>
-        <p class="patch">Removed hints (for now), as more work is needed on them.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- QUIZ -->
-<div id="screen-quiz" class="screen">
-  <div class="card">
-    <div class="quiz-top">
-      <div class="quiz-top-left">
-        <span id="diff-badge" class="badge"></span>
-        <div class="attempt-pips" id="attempt-pips">
-          <div class="pip" id="pip-1"></div>
-          <div class="pip" id="pip-2"></div>
-        </div>
-      </div>
-      <span class="score-display">
-        <span id="score-correct">0</span> / <span id="score-total">0</span> correct
-      </span>
-    </div>
-
-    <div class="mol-wrap">
-      <div class="skeleton" id="skeleton"></div>
-      <img id="mol-img" src="" alt="molecule" style="display:none" />
-    </div>
-
-    <div class="input-row">
-      <input
-        id="answer-input"
-        class="mol-input"
-        type="text"
-        placeholder="e.g. propan-1-ol"
-        autocomplete="off"
-        autocorrect="off"
-        autocapitalize="none"
-        spellcheck="false"
-        disabled
-      />
-      <button id="submit-btn" class="btn btn-primary" onclick="submitAnswer()" disabled>
-        Submit
-      </button>
-    </div>
-
-    <div class="feedback-area">
-      <div id="feedback" class="feedback"></div>
-    </div>
-
-    <div class="quiz-actions">
-      <button id="next-btn" class="btn btn-ghost" onclick="loadNext()" style="display:none">
-        Next →
-      </button>
-      <div></div>
-      <button class="btn btn-danger" onclick="endSession()">End session</button>
-    </div>
-  </div>
-</div>
-
-<!-- RESULTS -->
-<div id="screen-results" class="screen">
-  <div class="card">
-    <div class="results-header">
-      <div class="label">Session complete</div>
-      <h1>Results</h1>
-    </div>
-    <div id="result-stats">
-      <div class="result-stat">
-        <span class="stat-label">Questions answered</span>
-        <span class="stat-value" id="res-total">—</span>
-      </div>
-      <div class="result-stat">
-        <span class="stat-label">Correct (first attempt)</span>
-        <span class="stat-value" id="res-first">—</span>
-      </div>
-      <div class="result-stat">
-        <span class="stat-label">Correct (second attempt)</span>
-        <span class="stat-value" id="res-second">—</span>
-      </div>
-      <div class="result-stat">
-        <span class="stat-label">Score</span>
-        <span class="stat-value" id="res-pct">—</span>
-      </div>
-    </div>
-    <div class="history" id="history-wrap" style="display:none">
-      <div class="history-title">Answer history</div>
-      <div id="history-list"></div>
-    </div>
-    <div class="results-footer">
-      <button class="btn btn-primary" onclick="playAgain()">Play again</button>
-      <button class="btn btn-ghost" onclick="showHome()">Home</button>
-    </div>
-  </div>
-</div>
-
-<div id="toast" class="toast"></div>
-
-<script>
 const API_BASE = "/api";
 const MAX_ATTEMPTS = 2;
 const POOL_SIZE = 3;
 
 const TEXTS = [
-        "Moving equilibrium with catalysts...",
-        "Taking temperature below 0K to make reaction feasible...",
-        "Using exothermic reaction to create energy...",
-        "Obtaining NMR spectrum of iron sample...",
-        "Filling 1d orbital...",
-        "Separating enantiomers by distillation...",
-        "Increasing entropy of isolated system...",
-        "Fissioning hydrogen nuclei...",
-        "Stabilising Aluminium Chloride by mixing with water...",
-        "Washing the crude product with ionised water to remove impurities...",
-        "Removing residual water by heating the sample to 40°C...",
-        "Achieving 100% atom economy in a Friedel-Crafts acylation...",
-        "Removing bunsen from cracking to ensure maximum suckback...",
-        "Separating stereoisomers by solubility..."
-]
+  "Moving equilibrium with catalysts...",
+  "Taking temperature below 0K to make reaction feasible...",
+  "Using exothermic reaction to create energy...",
+  "Obtaining NMR spectrum of iron sample...",
+  "Filling 1d orbital...",
+  "Separating enantiomers by distillation...",
+  "Increasing entropy of isolated system...",
+  "Fissioning hydrogen nuclei...",
+  "Stabilising Aluminium Chloride by mixing with water...",
+  "Washing the crude product with ionised water to remove impurities...",
+  "Removing residual water by heating the sample to 40°C...",
+  "Achieving 100% atom economy in a Friedel-Crafts acylation...",
+  "Removing bunsen from cracking to ensure maximum suckback...",
+  "Separating stereoisomers by solubility..."
+];
 
 const FACTS = [
   "The strongest known acid, fluoroantimonic acid, is about 10²⁰ times stronger than pure sulphuric acid.",
@@ -892,6 +160,8 @@ const FACTS = [
   "Water exerts about 170 MPa of pressure when it freezes in a crack — enough to split rock.",
 ];
 
+// ── cycling text/facts ───────────────────────────────────────────────────────
+
 let factIndex = 0;
 let factShuffled = [...FACTS].sort(() => Math.random() - 0.5);
 let factTimer = null;
@@ -929,7 +199,7 @@ function startFactCycle() {
 function startTextCycle() {
   const el = document.getElementById("loading-text");
   el.textContent = textShuffled[textIndex];
-  textTimer = setInterval(nextText, 5000)
+  textTimer = setInterval(nextText, 5000);
 }
 
 function stopFactCycle() {
@@ -941,6 +211,8 @@ function stopTextCycle() {
   clearInterval(textTimer);
   textTimer = null;
 }
+
+// ── pool management ──────────────────────────────────────────────────────────
 
 const pool = { easy: [], medium: [], hard: [] };
 const fetching = { easy: 0, medium: 0, hard: 0 };
@@ -1017,10 +289,7 @@ function topUpPool(difficulty) {
   }
 }
 
-showLoadingOverlay();
-topUpPool("easy");
-setTimeout(() => topUpPool("medium"), 300);
-setTimeout(() => topUpPool("hard"), 600);
+// ── session state ────────────────────────────────────────────────────────────
 
 let state = {
   difficulty:    "medium",
@@ -1032,6 +301,8 @@ let state = {
   loading:       false,
   history:       [],
 };
+
+// ── screen navigation ────────────────────────────────────────────────────────
 
 function show(id) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
@@ -1056,11 +327,15 @@ function endSession() {
   if (state.total === 0) { showHome(); return; }
   showResults();
 }
+
 function playAgain() { startSession(state.difficulty); }
-function showHome()  {
+
+function showHome() {
   show("screen-home");
   if (!poolReady) showLoadingOverlay();
 }
+
+// ── pip helpers ──────────────────────────────────────────────────────────────
 
 function resetPips() {
   for (let i = 1; i <= MAX_ATTEMPTS; i++) {
@@ -1068,12 +343,15 @@ function resetPips() {
     pip.className = "pip" + (i === 1 ? " active" : "");
   }
 }
+
 function markPip(attemptIndex, correct) {
   const pip = document.getElementById(`pip-${attemptIndex + 1}`);
   pip.className = "pip " + (correct ? "used-right" : "used-wrong");
   const next = document.getElementById(`pip-${attemptIndex + 2}`);
   if (next) next.className = "pip active";
 }
+
+// ── quiz logic ───────────────────────────────────────────────────────────────
 
 async function loadNext() {
   if (state.loading) return;
@@ -1226,6 +504,8 @@ function updateScore() {
   document.getElementById("score-total").textContent   = state.total;
 }
 
+// ── results ──────────────────────────────────────────────────────────────────
+
 function showResults() {
   const firstAttempt  = state.history.filter(h => h.result === "correct" && h.attempt === 1).length;
   const secondAttempt = state.history.filter(h => h.result === "correct" && h.attempt === 2).length;
@@ -1268,6 +548,8 @@ function showResults() {
   show("screen-results");
 }
 
+// ── toast ────────────────────────────────────────────────────────────────────
+
 let toastTimer;
 function showToast(msg) {
   const t = document.getElementById("toast");
@@ -1277,9 +559,15 @@ function showToast(msg) {
   toastTimer = setTimeout(() => t.classList.remove("show"), 3500);
 }
 
+// ── utilities ────────────────────────────────────────────────────────────────
+
 function escHtml(s) {
   return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
-</script>
-</body>
-</html>
+
+// ── init ─────────────────────────────────────────────────────────────────────
+
+showLoadingOverlay();
+topUpPool("easy");
+setTimeout(() => topUpPool("medium"), 300);
+setTimeout(() => topUpPool("hard"), 600);

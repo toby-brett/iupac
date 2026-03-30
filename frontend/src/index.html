@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6EMDSENMY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D6EMDSENMY');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nomenclature</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- HOME -->
+<div id="screen-home" class="screen active">
+  <div class="card">
+    <div id="home-content">
+      <div class="home-header">
+        <div class="eyebrow">Organic Chemistry</div>
+        <h1>Nomenclature<br>Practice</h1>
+        <p class="sub" style="margin-top:.5rem">Name randomly generated molecules using IUPAC conventions. You get 2 attempts per molecule.</p>
+      </div>
+      <div class="label">Choose difficulty</div>
+      <div class="difficulty-grid">
+        <button class="diff-btn" data-d="easy" id="btn-easy" onclick="startSession('easy')">
+          <span class="icon">⬡</span>
+          <span class="name">Easy</span>
+          <span class="desc">Simple chains &amp; one group</span>
+        </button>
+        <button class="diff-btn" data-d="medium" id="btn-medium" onclick="startSession('medium')">
+          <span class="icon">⬡⬡</span>
+          <span class="name">Medium</span>
+          <span class="desc">Esters, amides &amp; 2 groups</span>
+        </button>
+        <button class="diff-btn" data-d="hard" id="btn-hard" onclick="startSession('hard')">
+          <span class="icon">⬡⬡⬡</span>
+          <span class="name">Hard</span>
+          <span class="desc">Anhydrides &amp; 3+ groups</span>
+        </button>
+      </div>
+      <p class="hint-text" id="hint-text">Molecules are fetched live — requires an internet connection.</p>
+    </div>
+
+    <!-- loading overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="loading-status">
+        <div class="loading-label" id="loading-text">Building &amp; naming molecules</div>
+        <div class="loading-count" id="loading-count">0 / 9 ready</div>
+      </div>
+
+      <div class="progress-track" style="width:100%">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="diff-progress">
+        <div class="diff-row">
+          <span class="diff-row-label">Easy</span>
+          <div class="diff-row-track"><div class="diff-row-fill easy" id="bar-easy"></div></div>
+          <span class="diff-row-count" id="count-easy">0/3</span>
+        </div>
+        <div class="diff-row">
+          <span class="diff-row-label">Medium</span>
+          <div class="diff-row-track"><div class="diff-row-fill medium" id="bar-medium"></div></div>
+          <span class="diff-row-count" id="count-medium">0/3</span>
+        </div>
+        <div class="diff-row">
+          <span class="diff-row-label">Hard</span>
+          <div class="diff-row-track"><div class="diff-row-fill hard" id="bar-hard"></div></div>
+          <span class="diff-row-count" id="count-hard">0/3</span>
+        </div>
+      </div>
+
+      <div class="fact-box">
+        <div class="fact-eyebrow">💡 Did you know?</div>
+        <div class="fact-text" id="fact-text"></div>
+      </div>
+
+      <div class="loading-ready-hint" id="ready-hint">
+        ✓ Ready — select a difficulty above to begin
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div id="patch-content">
+      <div class="home-header">
+        <div class="eyebrow">Patch Notes</div>
+        <h1>30/03/2026</h1>
+        <p class="patch" style="margin-top:.5rem">Made a recently seen molecules queue, so repeat molecules will not appear within 10 of each other.</p>
+        <p class="patch">Improved the molecule generation, so more interesting and difficulty specific structures are observed.</p>
+        <p class="patch">Removed hints (for now), as more work is needed on them.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="screen-quiz" class="screen">
+  <div class="card">
+    <div class="quiz-top">
+      <div class="quiz-top-left">
+        <span id="diff-badge" class="badge"></span>
+        <div class="attempt-pips" id="attempt-pips">
+          <div class="pip" id="pip-1"></div>
+          <div class="pip" id="pip-2"></div>
+        </div>
+      </div>
+      <span class="score-display">
+        <span id="score-correct">0</span> / <span id="score-total">0</span> correct
+      </span>
+    </div>
+
+    <div class="mol-wrap">
+      <div class="skeleton" id="skeleton"></div>
+      <img id="mol-img" src="" alt="molecule" style="display:none" />
+    </div>
+
+    <div class="input-row">
+      <input
+        id="answer-input"
+        class="mol-input"
+        type="text"
+        placeholder="e.g. propan-1-ol"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        disabled
+      />
+      <button id="submit-btn" class="btn btn-primary" onclick="submitAnswer()" disabled>
+        Submit
+      </button>
+    </div>
+
+    <div class="feedback-area">
+      <div id="feedback" class="feedback"></div>
+    </div>
+
+    <div class="quiz-actions">
+      <button id="next-btn" class="btn btn-ghost" onclick="loadNext()" style="display:none">
+        Next →
+      </button>
+      <div></div>
+      <button class="btn btn-danger" onclick="endSession()">End session</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="screen-results" class="screen">
+  <div class="card">
+    <div class="results-header">
+      <div class="label">Session complete</div>
+      <h1>Results</h1>
+    </div>
+    <div id="result-stats">
+      <div class="result-stat">
+        <span class="stat-label">Questions answered</span>
+        <span class="stat-value" id="res-total">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Correct (first attempt)</span>
+        <span class="stat-value" id="res-first">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Correct (second attempt)</span>
+        <span class="stat-value" id="res-second">—</span>
+      </div>
+      <div class="result-stat">
+        <span class="stat-label">Score</span>
+        <span class="stat-value" id="res-pct">—</span>
+      </div>
+    </div>
+    <div class="history" id="history-wrap" style="display:none">
+      <div class="history-title">Answer history</div>
+      <div id="history-list"></div>
+    </div>
+    <div class="results-footer">
+      <button class="btn btn-primary" onclick="playAgain()">Play again</button>
+      <button class="btn btn-ghost" onclick="showHome()">Home</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
