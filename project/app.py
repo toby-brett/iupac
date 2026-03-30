@@ -54,15 +54,17 @@ def _bake_one(difficulty):
             print(f"  [{difficulty}] attempt {attempt+1} error: {e}")
     return None
 
+import time # Add this at the top
+
 def _worker(difficulty):
-    """Background thread: keep the pool full."""
     q = _pools[difficulty]
     while True:
-        # Block until there's space in the queue
-        # (put blocks when full, so this naturally throttles)
         item = _bake_one(difficulty)
         if item is not None:
-            q.put(item)   # blocks if queue is full — that's fine
+            q.put(item)
+            time.sleep(1) # Wait 1 second between successful generations
+        else:
+            time.sleep(5) # If it fails, wait 5 seconds before trying again
 
 # Start one worker thread per difficulty
 for diff in DIFFICULTY_MAP:
