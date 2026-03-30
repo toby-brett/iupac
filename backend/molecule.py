@@ -90,11 +90,8 @@ def generate_alkyl(length: int):
     return mol
 
 def generate_benzene():
-    mol = Chem.RWMol()
-    atoms = [mol.AddAtom(Chem.Atom("C")) for _ in range(6)]
-    for i in range(6):
-        mol.AddBond(atoms[i], atoms[(i+1) % 6], Chem.BondType.DOUBLE if i%2==0 else Chem.BondType.SINGLE)
-
+    # Build from SMILES — guaranteed valid aromatic ring
+    mol = Chem.RWMol(Chem.MolFromSmiles("c1ccccc1"))
     return mol
 
 def get_valid_alkene_bonds(mol: Chem.RWMol):
