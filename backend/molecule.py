@@ -1,4 +1,5 @@
 import random
+from functools import partial
 
 import requests
 from rdkit import Chem
@@ -157,19 +158,17 @@ def add_alcohol(mol: Chem.RWMol):
 
 def add_carboxylic(mol: Chem.RWMol):
 
-    carbon_indices = get_available_carbons(mol, 1)
+    carbon_indices = get_available_carbons(mol, 3)
     if not carbon_indices:
         return mol
 
     target = random.choice(carbon_indices)
 
     o1_idx = mol.AddAtom(Chem.Atom("O"))
-    c_idx = mol.AddAtom(Chem.Atom("C"))
     o2_index = mol.AddAtom(Chem.Atom("O"))
 
-    mol.AddBond(target, c_idx, Chem.BondType.SINGLE)
-    mol.AddBond(c_idx, o1_idx, Chem.BondType.DOUBLE)
-    mol.AddBond(c_idx, o2_index, Chem.BondType.SINGLE)
+    mol.AddBond(target, o1_idx, Chem.BondType.DOUBLE)
+    mol.AddBond(target, o2_index, Chem.BondType.SINGLE)
 
     return mol
 
@@ -274,6 +273,8 @@ def add_halo(mol: Chem.RWMol):
     mol.AddBond(target, n_idx, Chem.BondType.SINGLE)
     return mol
 
+def add_nothing(mol: Chem.RWMol):
+    return mol
 
 def smiles_to_name(smiles):
     result = smiles_to_name_pubchem(smiles)
@@ -310,28 +311,38 @@ def smiles_to_name_cactus(smiles):
         return name.lower()
 
     return None
+import subprocess
 
+def opsin_name(smiles):
+    try:
+        out = subprocess.run(
+            ["java", "-jar", "opsin-cli.jar", "-osmi", smiles],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        return out.stdout.strip().lower()
+    except:
+        return None
 
-def hard():
-    lengths = list(range(3, 10 + 1))
-    length = random.choice(lengths)
+BASE_GROUP_RULES_EASY = {
+    "alkyl": [add_alcohol, add_alkene, add_aldehyde, add_ketone, add_amine, add_nitrile, add_halo, add_carboxylic],
+    "benzene": [add_alkyl_branch, add_halo, add_amine, add_alcohol],
+    "ester": [add_nothing],
+    "amide": [add_nothing],
+    "acid_anhydride": [add_nothing],
+}
 
-    rand = random.random()
-    if rand < 0.2:
-        base = generate_benzene()
-    elif rand < 0.4:
-        base = generate_ester(max(3, length))
-    elif rand < 0.6:
-        base = generate_amide(max(3, length))
-    elif rand < 0.8:
-        base = generate_acid_anhydride(max(3, length))
-    else:
-        base = generate_alkyl(length)
+BASE_GROUP_RULES_MEDIUM = {
+    "alkyl": [add_alcohol, add_alkene, add_amine, add_halo],  # fewer than easy
+    "benzene": [add_alkyl_branch, add_halo, add_amine],       # drop alcohol for medium
+    "ester": [add_alkyl_branch, add_halo],                    # can add simple branches or halogens
+    "amide": [add_alkyl_branch, add_halo, add_alcohol],       # slightly more complex than easy
+    "acid_anhydride": [add_alkyl_branch, add_halo],          # only simple additions
+}
 
-    for i in range(random.choice([0, 0, 0, 0, 1, 1, 1, 2, 2, 3])):
-        base = add_alkyl_branch(base, max_length=random.randint(1, 4))
-
-    group_fns = [
+BASE_GROUP_RULES_HARD = {
+    "alkyl": [
         add_alcohol,
         add_alkene,
         add_aldehyde,
@@ -341,12 +352,62 @@ def hard():
         add_halo,
         add_carboxylic,
         add_acyl_chloride,
+    ],  # almost all groups allowed
+    "benzene": [
+        add_alkyl_branch,
+        add_halo,
+        add_amine,
+        add_alcohol,
+        add_alkene,
+        add_ketone,
+    ],  # can decorate benzene heavily
+    "ester": [
+        add_alkyl_branch,
+        add_halo,
+        add_alcohol,
+        add_alkene,
+    ],  # functionalize esters
+    "amide": [
+        add_alkyl_branch,
+        add_halo,
+        add_alcohol,
+        add_ketone,
+        add_alkene,
+    ],  # allow multiple decorations
+    "acid_anhydride": [
+        add_alkyl_branch,
+        add_halo,
+        add_alkene,
+        add_alcohol,
+    ],  # slightly more complex than medium
+}
+
+
+def hard():
+
+    lengths = list(range(1, 10))
+    length = random.choice(lengths)
+
+    base_functions = {
+        "benzene": generate_benzene,
+        "ester": partial(generate_ester, max(3, length)),
+        "amide": partial(generate_amide, max(3, length)),
+        "acid_anhydride": partial(generate_acid_anhydride, max(3, length)),
+        "alkyl": partial(generate_alkyl, max(3, length)),
+    }
+    weights = [
+        5,
+        5,
+        5,
+        5,
+        5
     ]
 
-    mol = base
-    groups = random.randint(3, 3)
-    for _ in range(groups):
-        fn = random.choice(group_fns)
+    base = random.choices(list(base_functions.keys()), weights=weights)[0]
+    mol = base_functions[base]()
+
+    for _ in range(3):
+        fn = random.choice(BASE_GROUP_RULES_HARD[base])
         mol = fn(mol)
 
     mol = mol.GetMol()
@@ -356,38 +417,29 @@ def hard():
 
 def medium():
 
-    lengths = list(range(1, 6 + 1))
+    lengths = list(range(1, 9))
     length = random.choice(lengths)
 
-    rand = random.random()
-    if rand < 0.2:
-        base = generate_benzene()
-    elif rand < 0.4:
-        base = generate_ester(max(3, length))
-    elif rand < 0.6:
-        base = generate_amide(max(3, length))
-    elif rand < 0.8:
-        base = generate_acid_anhydride(max(3, length))
-    else:
-        base = generate_alkyl(length)
-
-    group_fns = [
-        add_alcohol,
-        add_alkene,
-        add_aldehyde,
-        add_ketone,
-        add_amine,
-        add_nitrile,
-        add_halo,
-        add_carboxylic,
-        add_acyl_chloride,
-        lambda m: add_alkyl_branch(m, max_length=random.randint(1, 4)),
+    base_functions = {
+        "benzene": generate_benzene,
+        "ester": partial(generate_ester, max(3, length)),
+        "amide": partial(generate_amide, max(3, length)),
+        "acid_anhydride": partial(generate_acid_anhydride, max(3, length)),
+        "alkyl": partial(generate_alkyl, max(3, length)),
+    }
+    weights = [
+        5,
+        4,
+        4,
+        3,
+        8
     ]
 
-    mol = base
-    groups = random.randint(2, 2)
-    for _ in range(groups):
-        fn = random.choice(group_fns)
+    base = random.choices(list(base_functions.keys()), weights=weights)[0]
+    mol = base_functions[base]()
+
+    for _ in range(2):
+        fn = random.choice(BASE_GROUP_RULES_MEDIUM[base])
         mol = fn(mol)
 
     mol = mol.GetMol()
@@ -397,38 +449,29 @@ def medium():
 
 def easy():
 
-    lengths = list(range(1, 4 + 1))
+    lengths = list(range(1, 8))
     length = random.choice(lengths)
 
-    rand = random.random()
-    if rand < 0.2:
-        base = generate_benzene()
-    elif rand < 0.4:
-        base = generate_ester(max(3, length))
-    elif rand < 0.6:
-        base = generate_amide(max(3, length))
-    elif rand < 0.8:
-        base = generate_acid_anhydride(max(3, length))
-    else:
-        base = generate_alkyl(length)
-
-    group_fns = [
-        add_alcohol,
-        add_alkene,
-        add_aldehyde,
-        add_ketone,
-        add_amine,
-        add_nitrile,
-        add_halo,
-        add_carboxylic,
-        add_acyl_chloride,
-        lambda m: add_alkyl_branch(m, max_length=random.randint(1, 4)),
+    base_functions = {
+        "benzene": generate_benzene,
+        "ester": partial(generate_ester, max(3, length)),
+        "amide": partial(generate_amide, max(3, length)),
+        "acid_anhydride": partial(generate_acid_anhydride, max(3, length)),
+        "alkyl": partial(generate_alkyl, max(3, length)),
+    }
+    weights = [
+        5,
+        2,
+        3,
+        1,
+        10
     ]
 
-    mol = base
-    groups = random.randint(1, 1)
-    for _ in range(groups):
-        fn = random.choice(group_fns)
+    base = random.choices(list(base_functions.keys()), weights=weights)[0]
+    mol = base_functions[base]()
+
+    for _ in range(1):
+        fn = random.choice(BASE_GROUP_RULES_EASY[base])
         mol = fn(mol)
 
     mol = mol.GetMol()
@@ -436,7 +479,3 @@ def easy():
 
     return mol
 
-
-if __name__ == "__main__":
-    molecule = medium()
-    print(smiles_to_name(Chem.MolToSmiles(molecule)))
