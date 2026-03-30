@@ -25,6 +25,8 @@ _pools = {
     "hard":   queue.Queue(maxsize=POOL_SIZE),
 }
 
+seen = []
+
 def _bake_one(difficulty):
     """Generate one molecule dict, return it or None on failure."""
     generator = DIFFICULTY_MAP[difficulty]
@@ -32,6 +34,9 @@ def _bake_one(difficulty):
         try:
             mol = generator()
             smiles = Chem.MolToSmiles(mol)
+            if smiles in seen:
+                continue
+            seen.append(smiles)
             name = smiles_to_name(smiles)
             if name is None:
                 continue
