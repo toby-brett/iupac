@@ -13,8 +13,8 @@ from molecule import easy, medium, hard, smiles_to_name
 from normalize import normalize, get_message
 
 app = Flask(__name__,
-            static_folder="static",
-            template_folder="templates")
+            static_folder="frontend/static",
+            template_folder="frontend/templates")
 CORS(app)
 
 DIFFICULTY_MAP = {"easy": easy, "medium": medium, "hard": hard}
