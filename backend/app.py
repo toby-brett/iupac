@@ -82,8 +82,8 @@ def help_message():
     norm_answer = normalize(answer)
     norm_correct = normalize(correct)
 
-    message = get_message(norm_answer, norm_correct)
-    print(norm_answer, norm_correct)
+   # message = get_message(norm_answer, norm_correct)
+    message = "Hints will be available soon - until then, you're on your own sorry!"
     return jsonify({
         "correct": norm_answer == norm_correct,
         "normalized_answer": norm_answer,
