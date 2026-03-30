@@ -4,7 +4,7 @@ import threading
 import queue
 from collections import deque
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, render_template
 from flask_cors import CORS
 from rdkit import Chem
 from rdkit.Chem import Draw
@@ -12,7 +12,9 @@ from rdkit.Chem import Draw
 from molecule import easy, medium, hard, smiles_to_name
 from normalize import normalize, get_message
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_folder="frontend/static",
+            template_folder="frontend/templates")
 CORS(app)
 
 DIFFICULTY_MAP = {"easy": easy, "medium": medium, "hard": hard}
@@ -101,7 +103,7 @@ def help_message():
 
 @app.route("/")
 def index():
-    return send_from_directory("../frontend/src/", "index_real.html")
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

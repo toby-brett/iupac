@@ -78,6 +78,83 @@ DEF_PREFIX_SUFFIX = {
     "phenyl": "benzene"
 }
 
+
+def tokenize(string):
+
+    # 2,3-diamino-4-methylbutanoicacid
+
+    branch_prefix = re.findall(r'(?:([\d]+(?:,\d+)*)(\s*-?\s*)?)?(di|tri)?([a-z]+)yl', string)
+    branch_suffix = re.findall(r'([a-z]+?)(ane|ene)$', string)
+
+    alcohol_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?hydroxy', string)
+    alcohol_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s+-?\s)(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?ol$', string)
+
+    aldehyde_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?formyl', string)
+    aldehyde_suffix = re.findall(r'([a-z]+?)(?:an)?(?:-(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?al$', string)
+
+    benzene_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?phenyl', string)
+    benzene_suffix = re.findall(r'([a-z]+?)(?:an)?(?:-(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?benzene$', string)
+
+    amine_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?amino', string)
+    amine_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?amine$', string)
+
+    carboxylic_prefix = re.findall(r'(\d+(?:,\d+)*)(-)?(di|tri)?amino', string)
+    carboxylic_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(oic|dioic|tricarboxylic)?acid$', string)
+
+    nitrile_prefix = re.findall(r'(\d+(?:,\d+)*)(-)?(di|tri)?cyano', string)
+    nitrile_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(oic|dioic|tricarboxylic)?nitrile$', string)
+
+    return {
+    "branch_prefix": branch_prefix,
+    "branch_suffix": branch_suffix,
+    "alcohol_prefix": alcohol_prefix,
+    "alcohol_suffix": alcohol_suffix,
+    "aldehyde_prefix": aldehyde_prefix,
+    "aldehyde_suffix": aldehyde_suffix,
+    "benzene_prefix": benzene_prefix,
+    "benzene_suffix": benzene_suffix,
+    "amine_prefix": amine_prefix,
+    "amine_suffix": amine_suffix,
+    "carboxylic_prefix": carboxylic_prefix,
+    "carboxylic_suffix": carboxylic_suffix,
+    "nitrile_prefix": nitrile_prefix,
+    "nitrile_suffix": nitrile_suffix,
+    }
+
+
+def generate_hints(tokenize_answer, tokenize_correct):
+
+    hints = []
+
+    for key in tokenize_answer:
+
+        token_answer = tokenize_answer[key]
+        token_correct = tokenize_correct[key]
+
+        if token_answer == token_correct:
+            continue
+        if token_correct == []:
+            continue
+
+        for tok_answer, tok_correct in zip(token_answer, token_correct):
+
+            if tok_answer == tok_correct and tok_answer != "":
+                continue
+
+            print(token_answer)
+            hints.append(f"Is {tok_answer} correct?")
+
+    print(hints)
+
+string = "carboxylic acid"
+string2 = "3-aminoe-4-chloro-4-oxobutaneoicacid"
+
+ts = tokenize(string)
+ts2 = tokenize(string2)
+
+print(ts, ts2)
+# generate_hints(ts, ts2)
+
 def which_starters(string):
     starters = []
     for starter in DEF_STARTERS:
