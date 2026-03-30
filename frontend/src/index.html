@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Chemistry - Down for maintenance</title>
+  <title>Daily Chemistry — Down for maintenance</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,13 +14,29 @@
       font-family: 'Libre Baskerville', Georgia, serif;
       min-height: 100vh;
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding: 4rem 5vw;
+      align-items: stretch;
     }
 
-    main {
-      max-width: 520px;
+    .left {
+      flex: 0 0 auto;
+      width: min(520px, 100%);
+      padding: 4rem 3rem 4rem 5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .right {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 260px;
+    }
+
+    @media (max-width: 700px) {
+      body { flex-direction: column; }
+      .right { padding: 2rem 0 3rem; min-width: 0; }
     }
 
     .site-name {
@@ -39,20 +55,13 @@
       margin-bottom: 1.8rem;
     }
 
-    h1 span {
-      font-style: italic;
-      font-weight: 400;
-    }
+    h1 span { font-style: italic; font-weight: 400; }
 
     p {
       font-size: 1rem;
       line-height: 1.75;
       color: #444;
       margin-bottom: 1.2rem;
-    }
-
-    p a {
-      color: inherit;
     }
 
     .note {
@@ -64,10 +73,7 @@
       line-height: 1.7;
     }
 
-    .note strong {
-      color: #444;
-      font-weight: 700;
-    }
+    .note strong { color: #444; font-weight: 700; }
 
     ul {
       margin: 0.6rem 0 1.2rem 0;
@@ -87,33 +93,324 @@
       color: #bbb;
       letter-spacing: 0.03em;
     }
+
+    canvas {
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .flame-label {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+      transition: opacity .4s ease;
+    }
+    .flame-label.fade { opacity: 0; }
+
+    .scene-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .scene-wrap:active canvas { transform: scale(0.98); }
   </style>
 </head>
 <body>
-  <main>
+
+  <div class="left">
     <div class="site-name">dailychemistry.co.uk</div>
-
     <h1>Down for a bit.<br><span>Back soon.</span></h1>
-
-    <p>
-      The site is offline while I fix a handful of bugs that were reported.
-      Thanks to everyone who played and left feedback - it's genuinely helpful.
-    </p>
-
+    <p>The site is offline while I fix a handful of bugs that were reported. Thanks to everyone who played and left feedback — it's genuinely helpful.</p>
     <p>Things being worked on:</p>
-
     <ul>
-      <li>Some letters substituting incorrectly in compound names (t → 2, etc.)</li>
-      <li>Accepted name formats - e.g. <em>hexan-3-amine</em> vs <em>3-hexanamine</em></li>
+      <li>Some letters substituting incorrectly in compound names (t&nbsp;→&nbsp;2, etc.)</li>
+      <li>Accepted name formats — e.g. <em>hexan-3-amine</em> vs <em>3-hexanamine</em></li>
       <li>Repeated molecules on Easy mode</li>
     </ul>
-
     <div class="note">
       <strong>Quick note:</strong> this is a free hobby project I made for my own A-level revision.
       No ads, no paywall, no data collected. Just a naming game.
-      Bear with me - exams are in two months so fixes might be slow,
-      but I'll get there.
+      Bear with me — exams are in two months so fixes might be slow, but I'll get there.
     </div>
-  </main>
+    <div class="footer">— made by a student, for students</div>
+  </div>
+
+  <div class="right">
+    <div class="scene-wrap" id="sceneWrap" title="Click to toggle flame">
+      <canvas id="c" width="200" height="320"></canvas>
+      <div class="flame-label" id="flameLabel">roaring flame — click to toggle</div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const canvas = document.getElementById('c');
+  const ctx    = canvas.getContext('2d');
+  const W = 200, H = 320;
+  const PX = 5;
+
+  const COL = {
+    bg:          '#f5f2eb',
+    mat:         '#b5b09a',
+    matDark:     '#9a9585',
+    barrel:      '#888',
+    barrelDark:  '#666',
+    base:        '#555',
+    baseDark:    '#333',
+    tubing:      '#444',
+    stand:       '#888',
+    clamp:       '#666',
+    glass:       '#c8e6f5',
+    glassDark:   '#a0c8e0',
+    liquid:      '#22c97a',
+    liquidLight: '#5de6a0',
+    liquidDark:  '#16905a',
+    bubble:      '#ffffff',  // fixed: was transparent
+    flameOuter:  '#f97316',
+    flameMid:    '#facc15',
+    flameInner:  '#fef08a',
+    safeOuter:   '#3b82f6',
+    safeMid:     '#93c5fd',
+    safeInner:   '#e0f2fe',
+    steam:       '#d7dcdd',  // fixed: was black rgb(0,0,0)
+  };
+
+  let roaring = true;
+  let tick = 0;
+
+  // tube constants — used by both drawTestTube and spawnBubble
+  const TX = 64, TY = 0, TW = 24, TH = 140;
+
+  const bubbles = [];
+  function spawnBubble() {
+    // spawn randomly within the inner tube width
+    const x = TX + PX + Math.floor(Math.random() * (TW - PX*2 - PX));
+    const liquidTop = roaring ? TY + 55 : TY + 80;
+    const liquidBot = TY + TH - PX*3;
+    // start near the bottom of the liquid
+    const y = liquidBot - PX;
+    bubbles.push({ x, y, size: PX, alpha: 1.0 });
+  }
+
+  const steamParticles = [];
+
+  const TEXTS = [
+        "Moving equilibrium with catalysts",
+        "Taking temperature below 0K to make reaction feasible ",
+        "Using exothermic reaction to create energy ",
+        "Obtaining NMR spectrum of iron sample ",
+        "Filling 1d orbital ",
+        "Separating enantiomers by distillation ",
+        "Increasing entropy of isolated system ",
+        "Fissioning hydrogen nuclei ",
+        "Stabilising Aluminium Chloride by mixing with water ",
+        "Washing the crude product with ionised water to remove impurities ",
+        "Removing residual water by heating the sample to 40°C ",
+        "Achieving 100% atom economy in a Friedel-Crafts acylation ",
+        "Removing bunsen from cracking to ensure maximum suckback ",
+        "Separating stereoisomers by solubility ",
+         "Adding protons to catalyse pH reading ",
+    "Removing HCl to shift eqm. pos. left ",
+          "Displacing chloride with bromine ",
+          "exciting electrons to produce light ",
+          "Extending the Chromaphore to remove colour ",
+          "Stabilising Francium with water ",
+          "Addition of benzene to stabilise de-localised ring ",
+          "Nitration of benzene at 80 degrees ",
+]
+
+  let textIndex = 0;
+  let textShuffled = [...TEXTS].sort(() => Math.random() - 0.5);
+  let textTimer = null;
+
+  let dotTimer = null;
+
+  function typeText(text) {
+    const el = document.getElementById("flameLabel");
+    el.textContent = text;
+    let i = 0;
+    const dots = ['', '.', '..', '...'];
+    if (dotTimer) clearInterval(dotTimer);
+    dotTimer = setInterval(() => {
+      i = (i + 1) % dots.length;
+      el.textContent = text + dots[i];
+    }, 600);
+  }
+
+    function nextText() {
+      const el = document.getElementById("flameLabel");
+      el.classList.add("fade");
+      setTimeout(() => {
+        if (dotTimer) clearInterval(dotTimer);
+        dotTimer = null;
+        textIndex = (textIndex + 1) % textShuffled.length;
+        typeText(textShuffled[textIndex]);
+        el.classList.remove("fade");
+      }, 400);
+    }
+
+  function startTextCycle() {
+  typeText(textShuffled[textIndex]);
+  textTimer = setInterval(nextText, 5000);
+  }
+
+  function stopTextCycle() {
+    clearInterval(textTimer);
+    textTimer = null;
+  }
+
+  startTextCycle();
+
+
+  function px(x, y, w, h, col) {
+    ctx.fillStyle = col;
+    ctx.fillRect(x, y, w || PX, h || PX);
+  }
+
+  function drawMat() {
+    const MX = 35, MY = 260, MW = 130, MH = 20;
+    px(MX, MY, MW, MH, COL.mat);
+    ctx.strokeStyle = COL.matDark;
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= MW; i += 10) {
+      ctx.beginPath(); ctx.moveTo(MX+i, MY); ctx.lineTo(MX+i, MY+MH); ctx.stroke();
+    }
+    for (let j = 0; j <= MH; j += 10) {
+      ctx.beginPath(); ctx.moveTo(MX, MY+j); ctx.lineTo(MX+MW, MY+j); ctx.stroke();
+    }
+    px(MX-2, MY-2, MW+4, 2, COL.matDark);
+    px(MX-2, MY+MH, MW+4, 2, COL.matDark);
+  }
+
+  function drawBunsen() {
+    px(52, 250, 46, 10, COL.base);
+    px(50, 252, 50, 8, COL.baseDark);
+    px(60, 190, 30, 62, COL.barrel);
+    px(60, 190, 4, 62, COL.barrelDark);
+    px(62, 220, 26, 6, '#555');
+    px(64, 222, 22, 2, '#333');
+    px(64, 186, 22, 6, COL.barrelDark);
+    px(52, 238, 8, 6, COL.baseDark);
+    px(44, 239, 10, 4, COL.tubing);
+    for (let i = 0; i < 6; i++) {
+      px(44, 244 + i*PX, PX, PX, i%2===0 ? COL.tubing : '#333');
+    }
+  }
+
+  function drawFlame() {
+    const f = roaring;
+    const flick = Math.sin(tick * 0.25) > 0 ? 0 : PX;
+    if (f) {
+      px(65,  168+flick, PX, PX*3, COL.flameOuter);
+      px(80,  168+flick, PX, PX*3, COL.flameOuter);
+      px(70,  155+flick, PX, PX*3, COL.flameOuter);
+      px(75,  155+flick, PX, PX*3, COL.flameOuter);
+      px(68,  163+flick, PX*2, PX*2, COL.flameMid);
+      px(72,  158+flick, PX*2, PX*3, COL.flameMid);
+      px(70,  164+flick, PX, PX*2, COL.flameInner);
+      px(72,  150+flick, PX, PX, COL.flameMid);
+    } else {
+      px(68,  176+flick, PX*2, PX*2, COL.safeOuter);
+      px(70,  172+flick, PX*2, PX*2, COL.safeMid);
+      px(71,  175+flick, PX,   PX,   COL.safeInner);
+    }
+  }
+
+  function drawStandAndClamp() {
+    px(138, 50, PX, 215, COL.stand);
+    px(135, 260, 12, PX, COL.stand);
+    px(100, 100, 38, PX, COL.clamp);
+    px(92, 90, PX*2, PX*4, COL.clamp);
+    px(92, 188, PX*2, 2, '#444');
+    px(92, 106, PX*2, 2, '#444');
+  }
+
+  function drawTestTube() {
+    px(TX,       TY,    PX,        TH,        COL.glassDark);
+    px(TX+TW-PX, TY,    PX,        TH,        COL.glassDark);
+    px(TX+PX,    TY,    TW-PX*2,   PX*2,      COL.glass);
+    px(TX+PX,    TY+PX*2, TW-PX*2, TH-PX*4,  '#e8f7ff');
+    px(TX+PX,    TY+TH-PX*2, TW-PX*2, PX,    COL.glassDark);
+    px(TX+PX*2,  TY+TH-PX,   TW-PX*4, PX,    COL.glassDark);
+
+    const liquidTop = roaring ? TY + 55 : TY + 80;
+    const liquidH   = (TY + TH - PX*3) - liquidTop;
+    px(TX+PX, liquidTop, TW-PX*2, liquidH, COL.liquid);
+    px(TX+PX+2, liquidTop+3, 3, liquidH-6, COL.liquidLight);
+    const rip = tick % 4;
+    px(TX+PX + rip, liquidTop, 3, 3, COL.liquidLight);
+    px(TX+PX+2, TY+PX*2+2, 3, 30, 'rgba(255,255,255,0.5)');
+  }
+
+  function drawBubbles() {
+    const liquidTop = roaring ? TY + 55 : TY + 80;
+    for (let i = bubbles.length-1; i >= 0; i--) {
+      const b = bubbles[i];
+      ctx.globalAlpha = b.alpha;
+      ctx.fillStyle = COL.bubble;
+      ctx.fillRect(b.x, b.y, b.size, b.size);
+      ctx.fillStyle = 'rgba(200,240,255,0.8)';
+      ctx.fillRect(b.x+1, b.y+1, 2, 2);
+      ctx.globalAlpha = 1;
+      b.y -= (roaring ? 2 : 1);
+      b.alpha -= (roaring ? 0.04 : 0.025);
+      // remove when above liquid surface or faded out
+      if (b.alpha <= 0 || b.y < liquidTop) bubbles.splice(i, 1);
+    }
+  }
+
+  function drawSteam() {
+    if (!roaring) return;
+    if (tick % 8 === 0) {
+      steamParticles.push({
+        x: TX + PX + Math.floor(Math.random() * (TW - PX*2)),
+        y: TY + 52,
+        life: 0,
+        wobble: (Math.random() - 0.5) * 0.01
+      });
+    }
+    for (let i = steamParticles.length - 1; i >= 0; i--) {
+      const p = steamParticles[i];
+      p.life++;
+      p.x += Math.sin(p.life * p.wobble) * 0.8;
+      p.y -= 0.7;
+      const alpha = 0.5 * (1 - p.life / 40);
+      if (alpha <= 0) { steamParticles.splice(i, 1); continue; }
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = COL.steam;
+      ctx.fillRect(Math.round(p.x), Math.round(p.y), PX, PX);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function frame() {
+    tick++;
+    const rate = roaring ? 6 : 14;
+    if (tick % rate === 0) spawnBubble();
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = COL.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    drawMat();
+    drawBunsen();
+    drawFlame();
+    drawStandAndClamp();
+    drawTestTube();
+    drawBubbles();
+    drawSteam();
+
+    requestAnimationFrame(frame);
+  }
+
+  frame();
+})();
+</script>
 </body>
 </html>
