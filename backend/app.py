@@ -59,7 +59,7 @@ for diff in DIFFICULTY_MAP:
     t = threading.Thread(target=_worker, args=(diff,), daemon=True)
     t.start()
 
-@app.route("/molecule", methods=["GET"])
+@app.route("/api/molecule", methods=["GET"])
 def get_molecule():
     difficulty = request.args.get("difficulty", "medium").lower()
     if difficulty not in DIFFICULTY_MAP:
@@ -73,7 +73,7 @@ def get_molecule():
     except queue.Empty:
         return jsonify({"error": "Timed out generating molecule. Try again."}), 500
 
-@app.route("/try1", methods=["POST"])
+@app.route("/api/try1", methods=["POST"])
 def help_message():
     body = request.get_json(force=True)
     answer = body.get("answer", "")
@@ -93,7 +93,7 @@ def help_message():
 
 @app.route("/")
 def index():
-    return send_from_directory("..", "index.html")
+    return send_from_directory("../frontend/src/", "index_real.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
