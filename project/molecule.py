@@ -1,8 +1,32 @@
+import json
 import random
 from functools import partial
 
 import requests
 from rdkit import Chem
+
+
+def generate_phenyldiazene():
+
+    benz1 = generate_benzene()
+    benz2 = generate_benzene()
+
+    combined = Chem.RWMol(Chem.CombineMols(benz1, benz2))
+    offset = benz1.GetNumAtoms()
+
+    benz1_target = random.choice(get_available_carbons(benz1, 1))
+    benz2_target = random.choice([
+        i + offset for i in get_available_carbons(benz2, 1)
+    ])
+
+    N1 = combined.AddAtom(Chem.Atom("N"))
+    N2 = combined.AddAtom(Chem.Atom("N"))
+
+    combined.AddBond(N1, benz1_target, Chem.BondType.SINGLE)
+    combined.AddBond(N1, N2, Chem.BondType.DOUBLE)
+    combined.AddBond(N2, benz2_target, Chem.BondType.SINGLE)
+
+    return combined
 
 def generate_acid_anhydride(max_length: int = 10):
 
@@ -156,6 +180,24 @@ def add_alcohol(mol: Chem.RWMol):
 
     return mol
 
+def add_nitro(mol: Chem.RWMol):
+
+    carbon_indices = get_available_carbons(mol, 1)
+    if not carbon_indices:
+        return mol
+
+    target = random.choice(carbon_indices)
+
+    n_index = mol.AddAtom(Chem.Atom("N"))
+    o1_idx = mol.AddAtom(Chem.Atom("O"))
+    o2_idx = mol.AddAtom(Chem.Atom("O"))
+
+    mol.AddBond(target, n_index, Chem.BondType.SINGLE)
+    mol.AddBond(n_index, o1_idx, Chem.BondType.DOUBLE)
+    mol.AddBond(n_index, o2_idx, Chem.BondType.DOUBLE)
+
+    return mol
+
 def add_carboxylic(mol: Chem.RWMol):
 
     carbon_indices = get_available_carbons(mol, 3)
@@ -276,12 +318,15 @@ def add_halo(mol: Chem.RWMol):
 def add_nothing(mol: Chem.RWMol):
     return mol
 
+
+
 def smiles_to_name(smiles):
     result = smiles_to_name_pubchem(smiles)
     if result is None:
         result = smiles_to_name_cactus(smiles)
 
     return result
+
 def smiles_to_name_pubchem(smiles):
     encoded = requests.utils.quote(smiles)
 
@@ -301,6 +346,7 @@ def smiles_to_name_pubchem(smiles):
         return name.lower()
 
     return None
+
 def smiles_to_name_cactus(smiles):
     encoded = requests.utils.quote(smiles)
     r = requests.get(
@@ -311,104 +357,55 @@ def smiles_to_name_cactus(smiles):
         return name.lower()
 
     return None
-import subprocess
 
-def opsin_name(smiles):
-    try:
-        out = subprocess.run(
-            ["java", "-jar", "opsin-cli.jar", "-osmi", smiles],
-            capture_output=True,
-            text=True,
-            timeout=5
-        )
-        return out.stdout.strip().lower()
-    except:
-        return None
-
-BASE_GROUP_RULES_EASY = {
-    "alkyl": [add_alcohol, add_alkene, add_aldehyde, add_ketone, add_amine, add_nitrile, add_halo, add_carboxylic],
-    "benzene": [add_alkyl_branch, add_halo, add_amine, add_alcohol],
-    "ester": [add_nothing],
-    "amide": [add_nothing],
-    "acid_anhydride": [add_nothing],
+function_map = {
+    "add_alcohol": add_alcohol,
+    "add_alkene": add_alkene,
+    "add_ketone": add_ketone,
+    "add_aldehyde": add_aldehyde,
+    "add_amine": add_amine,
+    "add_nitrile": add_nitrile,
+    "add_halo": add_halo,
+    "add_carboxylic": add_carboxylic,
+    "add_none": add_nothing,
+    "add_nitro": add_nitro,
 }
-
-BASE_GROUP_RULES_MEDIUM = {
-    "alkyl": [add_alcohol, add_alkene, add_amine, add_halo],  # fewer than easy
-    "benzene": [add_alkyl_branch, add_halo, add_amine],       # drop alcohol for medium
-    "ester": [add_alkyl_branch, add_halo],                    # can add simple branches or halogens
-    "amide": [add_alkyl_branch, add_halo, add_alcohol],       # slightly more complex than easy
-    "acid_anhydride": [add_alkyl_branch, add_halo],          # only simple additions
-}
-
-BASE_GROUP_RULES_HARD = {
-    "alkyl": [
-        add_alcohol,
-        add_alkene,
-        add_aldehyde,
-        add_ketone,
-        add_amine,
-        add_nitrile,
-        add_halo,
-        add_carboxylic,
-        add_acyl_chloride,
-    ],  # almost all groups allowed
-    "benzene": [
-        add_alkyl_branch,
-        add_halo,
-        add_amine,
-        add_alcohol,
-        add_alkene,
-        add_ketone,
-    ],  # can decorate benzene heavily
-    "ester": [
-        add_alkyl_branch,
-        add_halo,
-        add_alcohol,
-        add_alkene,
-    ],  # functionalize esters
-    "amide": [
-        add_alkyl_branch,
-        add_halo,
-        add_alcohol,
-        add_ketone,
-        add_alkene,
-    ],  # allow multiple decorations
-    "acid_anhydride": [
-        add_alkyl_branch,
-        add_halo,
-        add_alkene,
-        add_alcohol,
-    ],  # slightly more complex than medium
-}
-
+with open("rules.json") as f:
+    skill_map = json.load(f)
 
 def hard():
 
-    lengths = list(range(1, 10))
+    lengths = list(range(1, 12))
     length = random.choice(lengths)
 
     base_functions = {
-        "benzene": generate_benzene,
         "ester": partial(generate_ester, max(3, length)),
         "amide": partial(generate_amide, max(3, length)),
         "acid_anhydride": partial(generate_acid_anhydride, max(3, length)),
         "alkyl": partial(generate_alkyl, max(3, length)),
     }
     weights = [
+        2,
+        3,
         5,
-        5,
-        5,
-        5,
-        5
+        7
     ]
 
     base = random.choices(list(base_functions.keys()), weights=weights)[0]
     mol = base_functions[base]()
 
     for _ in range(3):
-        fn = random.choice(BASE_GROUP_RULES_HARD[base])
-        mol = fn(mol)
+
+        hard_map = skill_map["hard"]
+        base_map = hard_map[base]
+        function_lists = list(base_map.keys())
+        function_str = random.choice(function_lists)
+        number = base_map[function_str]
+        function = function_map[function_str]
+
+        groups = random.randint(1, number)
+        for i in range(groups):
+            mol = function(mol)
 
     mol = mol.GetMol()
     Chem.SanitizeMol(mol)
@@ -439,8 +436,17 @@ def medium():
     mol = base_functions[base]()
 
     for _ in range(2):
-        fn = random.choice(BASE_GROUP_RULES_MEDIUM[base])
-        mol = fn(mol)
+
+        hard_map = skill_map["medium"]
+        base_map = hard_map[base]
+        function_lists = list(base_map.keys())
+        function_str = random.choice(function_lists)
+        number = base_map[function_str]
+        function = function_map[function_str]
+
+        groups = random.randint(1, number)
+        for i in range(groups):
+            mol = function(mol)
 
     mol = mol.GetMol()
     Chem.SanitizeMol(mol)
@@ -471,11 +477,31 @@ def easy():
     mol = base_functions[base]()
 
     for _ in range(1):
-        fn = random.choice(BASE_GROUP_RULES_EASY[base])
-        mol = fn(mol)
+
+        hard_map = skill_map["easy"]
+        base_map = hard_map[base]
+        function_lists = list(base_map.keys())
+        function_str = random.choice(function_lists)
+        number = base_map[function_str]
+        function = function_map[function_str]
+
+        groups = random.randint(1, number)
+        for i in range(groups):
+            print(i, function)
+            mol = function(mol)
 
     mol = mol.GetMol()
     Chem.SanitizeMol(mol)
 
     return mol
 
+
+if __name__ == "__main__":
+    from rdkit.Chem import Draw
+
+    molecule = easy()
+
+    img = Draw.MolToImage(molecule)
+    img.show()
+
+    print(smiles_to_name(Chem.MolToSmiles(molecule)))
