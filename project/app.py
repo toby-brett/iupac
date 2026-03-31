@@ -1,16 +1,17 @@
+
 import base64
 import io
 import threading
 import queue
 from collections import deque
 
-from flask import Flask, jsonify, request, send_from_directory, render_template
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 from rdkit import Chem
 from rdkit.Chem import Draw
 
 from molecule import easy, medium, hard, smiles_to_name
-from normalize import normalize, get_message
+from normalize import normalize
 
 app = Flask(__name__,
             static_folder="static",

@@ -1,0 +1,111 @@
+{
+  "easy": {
+    "alkyl": {
+      "add_alcohol": 3,
+      "add_alkene": 4,
+      "add_ketone": 2,
+      "add_aldehyde": 2,
+      "add_amine": 3,
+      "add_nitrile": 1,
+      "add_halo": 4,
+      "add_carboxylic": 1,
+      "add_nitro": 1
+    },
+    "benzene": {
+      "add_alcohol": 2,
+      "add_alkene": 3,
+      "add_amine": 2,
+      "add_halo": 3,
+      "add_nitro": 1
+    },
+    "ester": {
+      "add_none": 1
+    },
+    "amide": {
+      "add_none": 1
+    },
+    "acid_anhydride": {
+      "add_none": 1
+    }
+  },
+  "medium": {
+    "alkyl": {
+      "add_alcohol": 3,
+      "add_alkene": 4,
+      "add_ketone": 2,
+      "add_aldehyde": 2,
+      "add_amine": 3,
+      "add_nitrile": 2,
+      "add_halo": 4,
+      "add_carboxylic": 2,
+      "add_nitro": 2
+    },
+    "benzene": {
+      "add_alcohol": 3,
+      "add_alkene": 4,
+      "add_ketone": 2,
+      "add_aldehyde": 2,
+      "add_amine": 3,
+      "add_nitrile": 1,
+      "add_halo": 4,
+      "add_carboxylic": 1,
+      "add_nitro": 2
+    },
+    "ester": {
+      "add_alkene": 2,
+      "add_halo": 2,
+      "add_nitro": 1
+    },
+    "amide": {
+      "add_alcohol": 2,
+      "add_alkene": 3,
+      "add_halo": 3,
+      "add_nitro": 1
+    },
+    "acid_anhydride": {
+      "add_alkene": 2,
+      "add_halo": 2,
+      "add_nitro": 1
+    }
+  },
+  "hard": {
+    "alkyl": {
+      "add_alcohol": 3,
+      "add_alkene": 4,
+      "add_ketone": 2,
+      "add_aldehyde": 2,
+      "add_amine": 3,
+      "add_nitrile": 2,
+      "add_halo": 4,
+      "add_carboxylic": 2,
+      "add_nitro": 2
+    },
+    "benzene": {
+      "add_alcohol": 3,
+      "add_alkene": 4,
+      "add_ketone": 2,
+      "add_aldehyde": 2,
+      "add_amine": 3,
+      "add_nitrile": 1,
+      "add_halo": 4,
+      "add_carboxylic": 1,
+      "add_nitro": 2
+    },
+    "ester": {
+      "add_alkene": 2,
+      "add_halo": 2,
+      "add_nitro": 1
+    },
+    "amide": {
+      "add_alcohol": 2,
+      "add_alkene": 3,
+      "add_halo": 3,
+      "add_nitro": 1
+    },
+    "acid_anhydride": {
+      "add_alkene": 2,
+      "add_halo": 2,
+      "add_nitro": 1
+    }
+  }
+}
