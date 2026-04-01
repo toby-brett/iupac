@@ -1,17 +1,20 @@
 
 import base64
 import io
+import json
+import random
 import threading
 import queue
 from collections import deque
 
+from PIL.ImageOps import contain
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 from rdkit import Chem
 from rdkit.Chem import Draw
 
 from molecule import easy, medium, hard, smiles_to_name
-from normalize import normalize
+from normalize import normalize, pick_hint
 
 app = Flask(__name__,
             static_folder="static",
@@ -30,29 +33,30 @@ _pools = {
 }
 
 seen = deque(maxlen=10)
-seen_lock = threading.Lock()
 
 def _bake_one(difficulty):
-    """Generate one molecule dict, return it or None on failure."""
-    generator = DIFFICULTY_MAP[difficulty]
-    for attempt in range(MAX_ATTEMPTS):
-        try:
-            mol = generator()
-            smiles = Chem.MolToSmiles(mol)
-            with seen_lock:
+    """Load one molecule dict, return it or None on failure."""
+    with open(f"molecules/{difficulty}.json", "r") as f:
+        while True:
+            try:
+                molecules = json.load(f)
+                molecule = random.choice(molecules)
+                smiles = molecule["smiles"]
+                name = molecule["name"]
                 if smiles in seen:
                     continue
                 seen.append(smiles)
-            name = smiles_to_name(smiles)
-            if name is None:
-                continue
-            img = Draw.MolToImage(mol, size=(400, 300))
-            buf = io.BytesIO()
-            img.save(buf, format="PNG")
-            img_b64 = base64.b64encode(buf.getvalue()).decode()
-            return {"image": img_b64, "name": name, "smiles": smiles}
-        except Exception as e:
-            print(f"  [{difficulty}] attempt {attempt+1} error: {e}")
+                if name is None:
+                    continue
+                mol = Chem.MolFromSmiles(smiles)
+                img = Draw.MolToImage(mol, size=(400, 300))
+                buf = io.BytesIO()
+                img.save(buf, format="PNG")
+                img_b64 = base64.b64encode(buf.getvalue()).decode()
+                return {"image": img_b64, "name": name, "smiles": smiles}
+            except Exception as e:
+                print(f"[{difficulty}] error: {e}")
+                break
     return None
 
 import time # Add this at the top
@@ -96,7 +100,7 @@ def help_message():
     norm_correct = normalize(correct)
 
    # message = get_message(norm_answer, norm_correct)
-    message = "Hints will be available soon - until then, you're on your own sorry!"
+    message = pick_hint(norm_answer, norm_correct)
     return jsonify({
         "correct": norm_answer == norm_correct,
         "normalized_answer": norm_answer,

@@ -1,9 +1,17 @@
 import json
+from pathlib import Path
 import random
 from functools import partial
 
 import requests
 from rdkit import Chem
+
+
+
+BASE_DIR = Path(__file__).resolve().parent
+RULES_PATH = BASE_DIR / "rules.json"
+with open(RULES_PATH) as f:
+    skill_map = json.load(f)
 
 
 def generate_phenyldiazene():
@@ -358,6 +366,9 @@ def smiles_to_name_cactus(smiles):
 
     return None
 
+
+
+
 function_map = {
     "add_alcohol": add_alcohol,
     "add_alkene": add_alkene,
@@ -370,8 +381,6 @@ function_map = {
     "add_none": add_nothing,
     "add_nitro": add_nitro,
 }
-with open("rules.json") as f:
-    skill_map = json.load(f)
 
 def hard():
 
@@ -499,7 +508,8 @@ def easy():
 if __name__ == "__main__":
     from rdkit.Chem import Draw
 
-    molecule = easy()
+    molecule = generate_phenyldiazene()
+    molecule = add_alcohol(molecule)
 
     img = Draw.MolToImage(molecule)
     img.show()

@@ -1,0 +1,1722 @@
+[
+  {
+    "name": "acetyl 2-chloroacetate",
+    "smiles": "CC(=O)OC(=O)CCl"
+  },
+  {
+    "name": "prop-2-enoyl but-3-enoate",
+    "smiles": "C=CCC(=O)OC(=O)C=C"
+  },
+  {
+    "name": "2,2,3,3-tetrahydroxybutanedioic acid",
+    "smiles": "O=C(O)C(O)(O)C(O)(O)C(=O)O"
+  },
+  {
+    "name": "acetyl 2-fluoroacetate",
+    "smiles": "CC(=O)OC(=O)CF"
+  },
+  {
+    "name": "pent-2-enedioic acid",
+    "smiles": "O=C(O)C=CCC(=O)O"
+  },
+  {
+    "name": "(2-nitroacetyl) prop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "2-methylidenebutanedial",
+    "smiles": "C=C(C=O)CC=O"
+  },
+  {
+    "name": "7-oxohept-3-enoic acid",
+    "smiles": "O=CCCC=CCC(=O)O"
+  },
+  {
+    "name": "3-hydroxyprop-2-enoic acid",
+    "smiles": "O=C(O)C=CO"
+  },
+  {
+    "name": "5-oxopenta-2,4-dienal",
+    "smiles": "O=C=CC=CC=O"
+  },
+  {
+    "name": "2-nitropropanedioic acid",
+    "smiles": "O=C(O)C(C(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "deca-1,4,9-triene",
+    "smiles": "C=CCC=CCCCC=C"
+  },
+  {
+    "name": "3-hydroxypent-4-enoic acid",
+    "smiles": "C=CC(O)CC(=O)O"
+  },
+  {
+    "name": "2,5-dihydroxyoctanedioic acid",
+    "smiles": "O=C(O)CCC(O)CCC(O)C(=O)O"
+  },
+  {
+    "name": "2-hydroxypropanedioic acid",
+    "smiles": "O=C(O)C(O)C(=O)O"
+  },
+  {
+    "name": "2-hydroxy-3-nitropropanoic acid",
+    "smiles": "O=C(O)C(O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "2,2,3-trihydroxyhexanedioic acid",
+    "smiles": "O=C(O)CCC(O)C(O)(O)C(=O)O"
+  },
+  {
+    "name": "acetyl acetate",
+    "smiles": "CC(=O)OC(C)=O"
+  },
+  {
+    "name": "3-amino-2-oxopropanamide",
+    "smiles": "NCC(=O)C(N)=O"
+  },
+  {
+    "name": "buta-1,3-dien-1-one",
+    "smiles": "C=CC=C=O"
+  },
+  {
+    "name": "2,3-diaminobutanedinitrile",
+    "smiles": "N#CC(N)C(N)C#N"
+  },
+  {
+    "name": "1-nitroprop-1-en-2-ol",
+    "smiles": "CC(O)=C[N+](=O)[O-]"
+  },
+  {
+    "name": "acetyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC(C)=O"
+  },
+  {
+    "name": "prop-2-enoic acid",
+    "smiles": "C=CC(=O)O"
+  },
+  {
+    "name": "2,4-dihydroxyheptanedioic acid",
+    "smiles": "O=C(O)CCC(O)CC(O)C(=O)O"
+  },
+  {
+    "name": "3-nitro-2-oxopropanoic acid",
+    "smiles": "O=C(O)C(=O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "carbonyl dicyanide",
+    "smiles": "N#CC(=O)C#N"
+  },
+  {
+    "name": "prop-2-enenitrile",
+    "smiles": "C=CC#N"
+  },
+  {
+    "name": "2-methylprop-2-enal",
+    "smiles": "C=C(C)C=O"
+  },
+  {
+    "name": "1-nitroprop-1-ene",
+    "smiles": "CC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "5-nitroundecanedioic acid",
+    "smiles": "O=C(O)CCCCCC(CCCC(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "1,1,1,3-tetrahydroxypropan-2-one",
+    "smiles": "O=C(CO)C(O)(O)O"
+  },
+  {
+    "name": "1,3-dinitropropane-1,2,3-trione",
+    "smiles": "O=C(C(=O)[N+](=O)[O-])C(=O)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-bromo-2-fluoropropanedioic acid",
+    "smiles": "O=C(O)C(F)(Br)C(=O)O"
+  },
+  {
+    "name": "4-hydroxybut-3-enal",
+    "smiles": "O=CCC=CO"
+  },
+  {
+    "name": "5-nitropentanoic acid",
+    "smiles": "O=C(O)CCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-amino-10-cyanodecanoic acid",
+    "smiles": "N#CCCCCCCCCC(N)C(=O)O"
+  },
+  {
+    "name": "3-chloropropanenitrile",
+    "smiles": "N#CCCCl"
+  },
+  {
+    "name": "2,2-diaminopropanedioic acid",
+    "smiles": "NC(N)(C(=O)O)C(=O)O"
+  },
+  {
+    "name": "but-2-enoyl but-2-enoate",
+    "smiles": "CC=CC(=O)OC(=O)C=CC"
+  },
+  {
+    "name": "2-aminopropane-1,1,3-triol",
+    "smiles": "NC(CO)C(O)O"
+  },
+  {
+    "name": "prop-1-ene-1,2,3-triamine",
+    "smiles": "NC=C(N)CN"
+  },
+  {
+    "name": "2,3-dioxopropanoic acid",
+    "smiles": "O=CC(=O)C(=O)O"
+  },
+  {
+    "name": "7-cyano-5-oxoheptanoic acid",
+    "smiles": "N#CCCC(=O)CCCC(=O)O"
+  },
+  {
+    "name": "penta-1,4-diene",
+    "smiles": "C=CCC=C"
+  },
+  {
+    "name": "2-fluoropropanedinitrile",
+    "smiles": "N#CC(F)C#N"
+  },
+  {
+    "name": "(2-bromoacetyl) 2-fluoroacetate",
+    "smiles": "O=C(CF)OC(=O)CBr"
+  },
+  {
+    "name": "5,6,7-trihydroxyheptanoic acid",
+    "smiles": "O=C(O)CCCC(O)C(O)CO"
+  },
+  {
+    "name": "5-aminoundecanedioic acid",
+    "smiles": "NC(CCCCCC(=O)O)CCCC(=O)O"
+  },
+  {
+    "name": "3,3-dihydroxy-2-oxopropanoic acid",
+    "smiles": "O=C(O)C(=O)C(O)O"
+  },
+  {
+    "name": "n-(nitromethyl)acetamide",
+    "smiles": "CC(=O)NC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-nitropentanedioic acid",
+    "smiles": "O=C(O)CCC(C(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "hexa-2,4-dienoic acid",
+    "smiles": "CC=CC=CC(=O)O"
+  },
+  {
+    "name": "2-fluoro-3-oxopropanoyl chloride",
+    "smiles": "O=CC(F)C(=O)Cl"
+  },
+  {
+    "name": "1-chloroethenyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC(=C)Cl"
+  },
+  {
+    "name": "2-bromopropanedinitrile",
+    "smiles": "N#CC(Br)C#N"
+  },
+  {
+    "name": "2-chloropropanedinitrile",
+    "smiles": "N#CC(Cl)C#N"
+  },
+  {
+    "name": "1,3-dinitropenta-1,3-diene",
+    "smiles": "CC=C(C=C[N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "3-(carboxymethyl)-2-hydroxy-4-oxopentanedioic acid",
+    "smiles": "O=C(O)CC(C(=O)C(=O)O)C(O)C(=O)O"
+  },
+  {
+    "name": "2-bromo-3-oxobutanedial",
+    "smiles": "O=CC(=O)C(Br)C=O"
+  },
+  {
+    "name": "prop-1-ene-1,1,3-triamine",
+    "smiles": "NCC=C(N)N"
+  },
+  {
+    "name": "5-iodopentane-1,4-diol",
+    "smiles": "OCCCC(O)CI"
+  },
+  {
+    "name": "3-hydroxy-2-(hydroxymethyl)prop-2-enoic acid",
+    "smiles": "O=CC(CO)=C(O)O"
+  },
+  {
+    "name": "1-nitroprop-2-enyl acetate",
+    "smiles": "C=CC(OC(C)=O)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-oxoprop-2-enenitrile",
+    "smiles": "N#CC=C=O"
+  },
+  {
+    "name": "2-amino-2-oxoacetyl cyanide",
+    "smiles": "N#CC(=O)C(N)=O"
+  },
+  {
+    "name": "acetyl 2-nitroacetate",
+    "smiles": "CC(=O)OC(=O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "2-oxoacetyl cyanide",
+    "smiles": "N#CC(=O)C=O"
+  },
+  {
+    "name": "2-fluoro-1-nitropropane-1,3-diol",
+    "smiles": "O=[N+]([O-])C(O)C(F)CO"
+  },
+  {
+    "name": "nonanedioic acid",
+    "smiles": "O=C(O)CCCCCCCC(=O)O"
+  },
+  {
+    "name": "prop-2-enoyl 3,3-difluoroprop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C=C(F)F"
+  },
+  {
+    "name": "3-amino-2,3-dioxopropanoic acid",
+    "smiles": "NC(=O)C(=O)C(=O)O"
+  },
+  {
+    "name": "propane-1,2,3-triamine",
+    "smiles": "NCC(N)CN"
+  },
+  {
+    "name": "2-formyl-2-methyl-3-oxopropanoic acid",
+    "smiles": "CC(C=O)(C=O)C(=O)O"
+  },
+  {
+    "name": "pent-2-enedinitrile",
+    "smiles": "N#CC=CCC#N"
+  },
+  {
+    "name": "(2-nitroacetyl) 2-nitroacetate",
+    "smiles": "O=C(C[N+](=O)[O-])OC(=O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "9-cyanononanoic acid",
+    "smiles": "N#CCCCCCCCCC(=O)O"
+  },
+  {
+    "name": "undecanedinitrile",
+    "smiles": "N#CCCCCCCCCCC#N"
+  },
+  {
+    "name": "2-aminopropanedioic acid",
+    "smiles": "NC(C(=O)O)C(=O)O"
+  },
+  {
+    "name": "2-oxopropanedioic acid",
+    "smiles": "O=C(O)C(=O)C(=O)O"
+  },
+  {
+    "name": "3-hydroxypropanoic acid",
+    "smiles": "O=C(O)CCO"
+  },
+  {
+    "name": "2-bromo-2-iodopropanedioic acid",
+    "smiles": "O=C(O)C(Br)(I)C(=O)O"
+  },
+  {
+    "name": "3-nitropropanenitrile",
+    "smiles": "N#CCC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-formyl-3-oxobutanenitrile",
+    "smiles": "CC(=O)C(C#N)C=O"
+  },
+  {
+    "name": "nonanedinitrile",
+    "smiles": "N#CCCCCCCCC#N"
+  },
+  {
+    "name": "2-nitrooctanedioic acid",
+    "smiles": "O=C(O)CCCCCC(C(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-amino-4,5-dioxopentanoic acid",
+    "smiles": "NC(CC(=O)O)C(=O)C=O"
+  },
+  {
+    "name": "2-amino-2-methylpropanedial",
+    "smiles": "CC(N)(C=O)C=O"
+  },
+  {
+    "name": "ethenyl prop-2-enoate",
+    "smiles": "C=COC(=O)C=C"
+  },
+  {
+    "name": "2-iodononanedioic acid",
+    "smiles": "O=C(O)CCCCCCC(I)C(=O)O"
+  },
+  {
+    "name": "ethenyl hexa-2,4-dienoate",
+    "smiles": "C=COC(=O)C=CC=CC"
+  },
+  {
+    "name": "2,2-dihydroxy-n-methylacetamide",
+    "smiles": "CNC(=O)C(O)O"
+  },
+  {
+    "name": "acetyl but-3-enoate",
+    "smiles": "C=CCC(=O)OC(C)=O"
+  },
+  {
+    "name": "n-(2-hydroxyprop-2-enyl)prop-2-enamide",
+    "smiles": "C=CC(=O)NCC(=C)O"
+  },
+  {
+    "name": "3-oxopropanoyl cyanide",
+    "smiles": "N#CC(=O)CC=O"
+  },
+  {
+    "name": "decanedioic acid",
+    "smiles": "O=C(O)CCCCCCCCC(=O)O"
+  },
+  {
+    "name": "2-oxopent-4-enal",
+    "smiles": "C=CCC(=O)C=O"
+  },
+  {
+    "name": "3-bromo-3-oxopropanoic acid",
+    "smiles": "O=C(O)CC(=O)Br"
+  },
+  {
+    "name": "3-bromo-1-iodoprop-1-ene",
+    "smiles": "BrCC=CI"
+  },
+  {
+    "name": "2,4-dioxobut-3-enal",
+    "smiles": "O=C=CC(=O)C=O"
+  },
+  {
+    "name": "2-ethylbutanedioic acid",
+    "smiles": "CCC(CC(=O)O)C(=O)O"
+  },
+  {
+    "name": "1-fluoroprop-2-enyl acetate",
+    "smiles": "C=CC(F)OC(C)=O"
+  },
+  {
+    "name": "3,5-diaminopentanal",
+    "smiles": "NCCC(N)CC=O"
+  },
+  {
+    "name": "6-hydroxyhexanenitrile",
+    "smiles": "N#CCCCCCO"
+  },
+  {
+    "name": "4-oxohexa-2,5-dienal",
+    "smiles": "C=CC(=O)C=CC=O"
+  },
+  {
+    "name": "2-cyanoacetic acid",
+    "smiles": "N#CCC(=O)O"
+  },
+  {
+    "name": "2-formyl-3-oxopropanoic acid",
+    "smiles": "O=CC(C=O)C(=O)O"
+  },
+  {
+    "name": "n-ethenylprop-2-enamide",
+    "smiles": "C=CNC(=O)C=C"
+  },
+  {
+    "name": "2-hydroxypentanedinitrile",
+    "smiles": "N#CCCC(O)C#N"
+  },
+  {
+    "name": "acetyl 2-iodoacetate",
+    "smiles": "CC(=O)OC(=O)CI"
+  },
+  {
+    "name": "undeca-1,4,7,10-tetraene",
+    "smiles": "C=CCC=CCC=CCC=C"
+  },
+  {
+    "name": "8,10-dioxoundecanoic acid",
+    "smiles": "CC(=O)CC(=O)CCCCCCC(=O)O"
+  },
+  {
+    "name": "8-cyanooctanoic acid",
+    "smiles": "N#CCCCCCCCC(=O)O"
+  },
+  {
+    "name": "3,11-dihydroxyundecanoic acid",
+    "smiles": "O=C(O)CC(O)CCCCCCCCO"
+  },
+  {
+    "name": "hexa-1,3,5-triene",
+    "smiles": "C=CC=CC=C"
+  },
+  {
+    "name": "2,2,3-triaminopropanoic acid",
+    "smiles": "NCC(N)(N)C(=O)O"
+  },
+  {
+    "name": "4-oxohepta-2,5-dienedinitrile",
+    "smiles": "N#CC=CC(=O)C=CC#N"
+  },
+  {
+    "name": "2-amino-2-hydroxyheptanedioic acid",
+    "smiles": "NC(O)(CCCCC(=O)O)C(=O)O"
+  },
+  {
+    "name": "3,4-dihydroxybutanal",
+    "smiles": "O=CCC(O)CO"
+  },
+  {
+    "name": "n-ethenylbut-2-enamide",
+    "smiles": "C=CNC(=O)C=CC"
+  },
+  {
+    "name": "prop-2-enoyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C=C"
+  },
+  {
+    "name": "penta-2,4-dienoic acid",
+    "smiles": "C=CC=CC(=O)O"
+  },
+  {
+    "name": "ethenyl acetate",
+    "smiles": "C=COC(C)=O"
+  },
+  {
+    "name": "1,6-diaminohexan-3-one",
+    "smiles": "NCCCC(=O)CCN"
+  },
+  {
+    "name": "3-fluoro-2,4-dihydroxypentanal",
+    "smiles": "CC(O)C(F)C(O)C=O"
+  },
+  {
+    "name": "2,3,4,5-tetrahydroxypentanoic acid",
+    "smiles": "O=C(O)C(O)C(O)C(O)CO"
+  },
+  {
+    "name": "2,2-dinitropropanedinitrile",
+    "smiles": "N#CC(C#N)([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "1-iodoethenyl acetate",
+    "smiles": "C=C(I)OC(C)=O"
+  },
+  {
+    "name": "acetyl but-2-enoate",
+    "smiles": "CC=CC(=O)OC(C)=O"
+  },
+  {
+    "name": "3-cyanoprop-2-enoic acid",
+    "smiles": "N#CC=CC(=O)O"
+  },
+  {
+    "name": "3-amino-3-cyanopropanamide",
+    "smiles": "N#CC(N)CC(N)=O"
+  },
+  {
+    "name": "n-(2-nitroethenyl)acetamide",
+    "smiles": "CC(=O)NC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "2-cyano-2-oxoacetic acid",
+    "smiles": "N#CC(=O)C(=O)O"
+  },
+  {
+    "name": "2,3,4-trioxobutanoic acid",
+    "smiles": "O=CC(=O)C(=O)C(=O)O"
+  },
+  {
+    "name": "2-bromoprop-2-enoyl bromide",
+    "smiles": "C=C(Br)C(=O)Br"
+  },
+  {
+    "name": "n-(fluoromethyl)acetamide",
+    "smiles": "CC(=O)NCF"
+  },
+  {
+    "name": "2,3-diamino-3-oxopropanoic acid",
+    "smiles": "NC(=O)C(N)C(=O)O"
+  },
+  {
+    "name": "dec-9-enenitrile",
+    "smiles": "C=CCCCCCCCC#N"
+  },
+  {
+    "name": "3-oxobutanoic acid",
+    "smiles": "CC(=O)CC(=O)O"
+  },
+  {
+    "name": "ethenyl but-2-enoate",
+    "smiles": "C=COC(=O)C=CC"
+  },
+  {
+    "name": "butanedioic acid",
+    "smiles": "O=C(O)CCC(=O)O"
+  },
+  {
+    "name": "2,6-dihydroxyheptanedinitrile",
+    "smiles": "N#CC(O)CCCC(O)C#N"
+  },
+  {
+    "name": "3-nitro-4-oxobutanoic acid",
+    "smiles": "O=CC(CC(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "(2-chloroacetyl) prop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)CCl"
+  },
+  {
+    "name": "n-methyl-3-nitroprop-2-enamide",
+    "smiles": "CNC(=O)C=C[N+](=O)[O-]"
+  },
+  {
+    "name": "1,3-diaminopropane-2,2-diol",
+    "smiles": "NCC(O)(O)CN"
+  },
+  {
+    "name": "2,3-dioxopent-4-enal",
+    "smiles": "C=CC(=O)C(=O)C=O"
+  },
+  {
+    "name": "3,4-diaminobutanenitrile",
+    "smiles": "N#CCC(N)CN"
+  },
+  {
+    "name": "2,3-dioxobutanedial",
+    "smiles": "O=CC(=O)C(=O)C=O"
+  },
+  {
+    "name": "but-2-enyl prop-2-enoate",
+    "smiles": "C=CC(=O)OCC=CC"
+  },
+  {
+    "name": "3-aminohexanedioic acid",
+    "smiles": "NC(CCC(=O)O)CC(=O)O"
+  },
+  {
+    "name": "n-but-2-enylprop-2-enamide",
+    "smiles": "C=CC(=O)NCC=CC"
+  },
+  {
+    "name": "2-bromo-3-iodoprop-1-ene",
+    "smiles": "C=C(Br)CI"
+  },
+  {
+    "name": "buta-1,3-diene-1,2-diamine",
+    "smiles": "C=CC(N)=CN"
+  },
+  {
+    "name": "5-oxopentanenitrile",
+    "smiles": "N#CCCCC=O"
+  },
+  {
+    "name": "penta-1,4-diene-2,3-diamine",
+    "smiles": "C=CC(N)C(=C)N"
+  },
+  {
+    "name": "heptanedinitrile",
+    "smiles": "N#CCCCCCC#N"
+  },
+  {
+    "name": "5-hydroxy-2,4-dioxopentanal",
+    "smiles": "O=CC(=O)CC(=O)CO"
+  },
+  {
+    "name": "propanedial",
+    "smiles": "O=CCC=O"
+  },
+  {
+    "name": "acetyl 2-bromoacetate",
+    "smiles": "CC(=O)OC(=O)CBr"
+  },
+  {
+    "name": "3-hydroxyprop-2-enenitrile",
+    "smiles": "N#CC=CO"
+  },
+  {
+    "name": "prop-2-enyl 2-nitroacetate",
+    "smiles": "C=CCOC(=O)C[N+](=O)[O-]"
+  },
+  {
+    "name": "2,3,3-trinitropropyl acetate",
+    "smiles": "CC(=O)OCC(C([N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "prop-2-ene-1,1,3-triol",
+    "smiles": "OC=CC(O)O"
+  },
+  {
+    "name": "1,2-diaminoprop-2-en-1-ol",
+    "smiles": "C=C(N)C(N)O"
+  },
+  {
+    "name": "propanedinitrile",
+    "smiles": "N#CCC#N"
+  },
+  {
+    "name": "4,8-dioxoundecanedioic acid",
+    "smiles": "O=C(O)CCC(=O)CCCC(=O)CCC(=O)O"
+  },
+  {
+    "name": "6-cyanohexanoic acid",
+    "smiles": "N#CCCCCCC(=O)O"
+  },
+  {
+    "name": "3-hydroxy-n-methylprop-2-enamide",
+    "smiles": "CNC(=O)C=CO"
+  },
+  {
+    "name": "4-hydroxyoctanedioic acid",
+    "smiles": "O=C(O)CCCC(O)CCC(=O)O"
+  },
+  {
+    "name": "hepta-1,3,6-triene",
+    "smiles": "C=CC=CCC=C"
+  },
+  {
+    "name": "1-aminopent-3-en-2-one",
+    "smiles": "CC=CC(=O)CN"
+  },
+  {
+    "name": "3-aminoprop-2-ene-1,2-diol",
+    "smiles": "NC=C(O)CO"
+  },
+  {
+    "name": "2-hydroxy-3-oxopropanoic acid",
+    "smiles": "O=CC(O)C(=O)O"
+  },
+  {
+    "name": "1-nitropropane-1,2-dione",
+    "smiles": "CC(=O)C(=O)[N+](=O)[O-]"
+  },
+  {
+    "name": "nona-2,4,7-trienedioic acid",
+    "smiles": "O=C(O)C=CC=CCC=CC(=O)O"
+  },
+  {
+    "name": "propanedioic acid",
+    "smiles": "O=C(O)CC(=O)O"
+  },
+  {
+    "name": "but-2-enedinitrile",
+    "smiles": "N#CC=CC#N"
+  },
+  {
+    "name": "hexa-1,3,5-triene-1,6-dione",
+    "smiles": "O=C=CC=CC=C=O"
+  },
+  {
+    "name": "3-hydroxyoctanedinitrile",
+    "smiles": "N#CCCCCC(O)CC#N"
+  },
+  {
+    "name": "hexanedinitrile",
+    "smiles": "N#CCCCCC#N"
+  },
+  {
+    "name": "octa-2,5-dienedial",
+    "smiles": "O=CC=CCC=CCC=O"
+  },
+  {
+    "name": "prop-2-ene-1,2-diol",
+    "smiles": "C=C(O)CO"
+  },
+  {
+    "name": "2,3-dioxobutanedioic acid",
+    "smiles": "O=C(O)C(=O)C(=O)C(=O)O"
+  },
+  {
+    "name": "hexa-2,4-dienedioic acid",
+    "smiles": "O=C(O)C=CC=CC(=O)O"
+  },
+  {
+    "name": "2-oxaldehydoylpropanedioic acid",
+    "smiles": "O=CC(=O)C(C(=O)O)C(=O)O"
+  },
+  {
+    "name": "n-methyl-2-nitroprop-2-enamide",
+    "smiles": "C=C(C(=O)NC)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-chloro-n-prop-2-enylprop-2-enamide",
+    "smiles": "C=CCNC(=O)C(=C)Cl"
+  },
+  {
+    "name": "3-nitropropanoic acid",
+    "smiles": "O=C(O)CC[N+](=O)[O-]"
+  },
+  {
+    "name": "2,3,4,5-tetraoxohexanedial",
+    "smiles": "O=CC(=O)C(=O)C(=O)C(=O)C=O"
+  },
+  {
+    "name": "ethenyl 2-fluoroacetate",
+    "smiles": "C=COC(=O)CF"
+  },
+  {
+    "name": "2,2-dihydroxy-n-methylpropanamide",
+    "smiles": "CNC(=O)C(C)(O)O"
+  },
+  {
+    "name": "2,3,4-trioxopentanedial",
+    "smiles": "O=CC(=O)C(=O)C(=O)C=O"
+  },
+  {
+    "name": "4,5-dioxopentanenitrile",
+    "smiles": "N#CCCC(=O)C=O"
+  },
+  {
+    "name": "decanedinitrile",
+    "smiles": "N#CCCCCCCCCC#N"
+  },
+  {
+    "name": "octa-1,7-diene",
+    "smiles": "C=CCCCCC=C"
+  },
+  {
+    "name": "n-methylprop-2-enamide",
+    "smiles": "C=CC(=O)NC"
+  },
+  {
+    "name": "2-chloroundecanedioic acid",
+    "smiles": "O=C(O)CCCCCCCCC(Cl)C(=O)O"
+  },
+  {
+    "name": "2,3-difluoro-3-hydroxypropanoic acid",
+    "smiles": "O=C(O)C(F)C(O)F"
+  },
+  {
+    "name": "2-bromo-2-chloropropanedioic acid",
+    "smiles": "O=C(O)C(Cl)(Br)C(=O)O"
+  },
+  {
+    "name": "4-hydroxy-2-oxobutanoic acid",
+    "smiles": "O=C(O)C(=O)CCO"
+  },
+  {
+    "name": "prop-2-ene-1,2-diamine",
+    "smiles": "C=C(N)CN"
+  },
+  {
+    "name": "(2-chloroacetyl) 2-chloroacetate",
+    "smiles": "O=C(CCl)OC(=O)CCl"
+  },
+  {
+    "name": "octa-2,4,6-trienenitrile",
+    "smiles": "CC=CC=CC=CC#N"
+  },
+  {
+    "name": "5-oxopent-3-enoic acid",
+    "smiles": "O=CC=CCC(=O)O"
+  },
+  {
+    "name": "propanediamide",
+    "smiles": "NC(=O)CC(N)=O"
+  },
+  {
+    "name": "2,2,3-trihydroxybutanedioic acid",
+    "smiles": "O=C(O)C(O)C(O)(O)C(=O)O"
+  },
+  {
+    "name": "hepta-2,4,6-trienoic acid",
+    "smiles": "C=CC=CC=CC(=O)O"
+  },
+  {
+    "name": "2-bromoprop-1-en-1-ol",
+    "smiles": "CC(Br)=CO"
+  },
+  {
+    "name": "n-(hydroxymethyl)prop-2-enamide",
+    "smiles": "C=CC(=O)NCO"
+  },
+  {
+    "name": "n-prop-1-enylprop-2-enamide",
+    "smiles": "C=CC(=O)NC=CC"
+  },
+  {
+    "name": "6-nitrohex-5-enenitrile",
+    "smiles": "N#CCCCC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "2-hydroxybut-3-enenitrile",
+    "smiles": "C=CC(O)C#N"
+  },
+  {
+    "name": "prop-2-enyl acetate",
+    "smiles": "C=CCOC(C)=O"
+  },
+  {
+    "name": "2-oxopropanediamide",
+    "smiles": "NC(=O)C(=O)C(N)=O"
+  },
+  {
+    "name": "10-cyanodecanoic acid",
+    "smiles": "N#CCCCCCCCCCC(=O)O"
+  },
+  {
+    "name": "2-prop-2-enylbutanedial",
+    "smiles": "C=CCC(C=O)CC=O"
+  },
+  {
+    "name": "octa-1,3,5,7-tetraene",
+    "smiles": "C=CC=CC=CC=C"
+  },
+  {
+    "name": "hept-3-ene-2,6-dione",
+    "smiles": "CC(=O)C=CCC(C)=O"
+  },
+  {
+    "name": "3-aminopentanedinitrile",
+    "smiles": "N#CCC(N)CC#N"
+  },
+  {
+    "name": "prop-2-enal",
+    "smiles": "C=CC=O"
+  },
+  {
+    "name": "1-nitroprop-2-enyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC(C=C)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-nitroprop-1-enyl acetate",
+    "smiles": "CC(=O)OC=C(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-nitroprop-2-enal",
+    "smiles": "O=CC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "3,4-dioxobutanenitrile",
+    "smiles": "N#CCC(=O)C=O"
+  },
+  {
+    "name": "(2-chloroacetyl) 2-fluoroacetate",
+    "smiles": "O=C(CF)OC(=O)CCl"
+  },
+  {
+    "name": "1,1-diamino-2-nitropropane-1,2,3-triol",
+    "smiles": "NC(N)(O)C(O)(CO)[N+](=O)[O-]"
+  },
+  {
+    "name": "pentanedioic acid",
+    "smiles": "O=C(O)CCCC(=O)O"
+  },
+  {
+    "name": "2-(hydroxymethyl)prop-2-enal",
+    "smiles": "C=C(C=O)CO"
+  },
+  {
+    "name": "3-oxopropanoate",
+    "smiles": "O=C=CC(=O)O"
+  },
+  {
+    "name": "hexa-1,4-dien-3-one",
+    "smiles": "C=CC(=O)C=CC"
+  },
+  {
+    "name": "4-oxobut-2-enoic acid",
+    "smiles": "O=CC=CC(=O)O"
+  },
+  {
+    "name": "1,1-dinitroethyl acetate",
+    "smiles": "CC(=O)OC(C)([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "4-oxobut-2-enoyl chloride",
+    "smiles": "O=CC=CC(=O)Cl"
+  },
+  {
+    "name": "3-bromobut-2-enyl acetate",
+    "smiles": "CC(=O)OCC=C(C)Br"
+  },
+  {
+    "name": "2,2-dinitropropanedioic acid",
+    "smiles": "O=C(O)C(C(=O)O)([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "2-bromoprop-2-enoic acid",
+    "smiles": "C=C(Br)C(=O)O"
+  },
+  {
+    "name": "2-oxopentanedial",
+    "smiles": "O=CCCC(=O)C=O"
+  },
+  {
+    "name": "butane-1,2,3,4-tetrol",
+    "smiles": "OCC(O)C(O)CO"
+  },
+  {
+    "name": "n-(2,2,2-trihydroxyethyl)acetamide",
+    "smiles": "CC(=O)NCC(O)(O)O"
+  },
+  {
+    "name": "3-hydroxy-5-oxopent-2-enoic acid",
+    "smiles": "O=CCC(O)=CC(=O)O"
+  },
+  {
+    "name": "butanedial",
+    "smiles": "O=CCCC=O"
+  },
+  {
+    "name": "2-chloro-3-oxoprop-2-enal",
+    "smiles": "O=C=C(Cl)C=O"
+  },
+  {
+    "name": "prop-2-enoyl 3-chloroprop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C=CCl"
+  },
+  {
+    "name": "butanedinitrile",
+    "smiles": "N#CCCC#N"
+  },
+  {
+    "name": "2,3-dihydroxy-2-nitropropanoic acid",
+    "smiles": "O=C(O)C(O)(CO)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-nitroethenyl acetate",
+    "smiles": "CC(=O)OC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "prop-2-enoyl 2,3-difluoroprop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C(F)=CF"
+  },
+  {
+    "name": "2,2-dihydroxypropanedioic acid",
+    "smiles": "O=C(O)C(O)(O)C(=O)O"
+  },
+  {
+    "name": "3-nitroprop-1-ene",
+    "smiles": "C=CC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-hydroxy-n-methylprop-2-enamide",
+    "smiles": "C=C(O)C(=O)NC"
+  },
+  {
+    "name": "2-bromobutanedioic acid",
+    "smiles": "O=C(O)CC(Br)C(=O)O"
+  },
+  {
+    "name": "2-bromo-4-oxobutanenitrile",
+    "smiles": "N#CC(Br)CC=O"
+  },
+  {
+    "name": "2-aminoprop-2-enamide",
+    "smiles": "C=C(N)C(N)=O"
+  },
+  {
+    "name": "5-hydroxy-2,3-dioxopentanal",
+    "smiles": "O=CC(=O)C(=O)CCO"
+  },
+  {
+    "name": "3-amino-4-oxobutanamide",
+    "smiles": "NC(=O)CC(N)C=O"
+  },
+  {
+    "name": "3,3,3-trihydroxy-2-oxopropanoic acid",
+    "smiles": "O=C(O)C(=O)C(O)(O)O"
+  },
+  {
+    "name": "buta-1,3-dienyl acetate",
+    "smiles": "C=CC=COC(C)=O"
+  },
+  {
+    "name": "penta-1,3-dienyl acetate",
+    "smiles": "CC=CC=COC(C)=O"
+  },
+  {
+    "name": "2,3-diamino-3-hydroxypropanoic acid",
+    "smiles": "NC(O)C(N)C(=O)O"
+  },
+  {
+    "name": "acetyl 3-chloroprop-2-enoate",
+    "smiles": "CC(=O)OC(=O)C=CCl"
+  },
+  {
+    "name": "2,4-dioxopentanedial",
+    "smiles": "O=CC(=O)CC(=O)C=O"
+  },
+  {
+    "name": "undeca-3,5,7,9-tetraenoic acid",
+    "smiles": "CC=CC=CC=CC=CCC(=O)O"
+  },
+  {
+    "name": "acetyl penta-2,4-dienoate",
+    "smiles": "C=CC=CC(=O)OC(C)=O"
+  },
+  {
+    "name": "octa-1,4,7-triene",
+    "smiles": "C=CCC=CCC=C"
+  },
+  {
+    "name": "4-aminodecanedioic acid",
+    "smiles": "NC(CCCCCC(=O)O)CCC(=O)O"
+  },
+  {
+    "name": "deca-4,9-dienoic acid",
+    "smiles": "C=CCCCC=CCCC(=O)O"
+  },
+  {
+    "name": "2,3,4,5-tetraoxohexanal",
+    "smiles": "CC(=O)C(=O)C(=O)C(=O)C=O"
+  },
+  {
+    "name": "3-bromohexa-2,4-dien-1-ol",
+    "smiles": "CC=CC(Br)=CCO"
+  },
+  {
+    "name": "nona-1,3,5,7-tetraene",
+    "smiles": "C=CC=CC=CC=CC"
+  },
+  {
+    "name": "2-hydroxybut-2-enedinitrile",
+    "smiles": "N#CC=C(O)C#N"
+  },
+  {
+    "name": "n-ethenylacetamide",
+    "smiles": "C=CNC(C)=O"
+  },
+  {
+    "name": "2-formylprop-2-enenitrile",
+    "smiles": "C=C(C#N)C=O"
+  },
+  {
+    "name": "2-bromo-2-fluoro-n-methylacetamide",
+    "smiles": "CNC(=O)C(F)Br"
+  },
+  {
+    "name": "2-oxopropanedial",
+    "smiles": "O=CC(=O)C=O"
+  },
+  {
+    "name": "buta-1,3-diene-1,4-dione",
+    "smiles": "O=C=CC=C=O"
+  },
+  {
+    "name": "prop-1-ene-1,2,3-tricarbaldehyde",
+    "smiles": "O=CC=C(C=O)CC=O"
+  },
+  {
+    "name": "2-bromoethenyl acetate",
+    "smiles": "CC(=O)OC=CBr"
+  },
+  {
+    "name": "prop-1-ene-1,1-diamine",
+    "smiles": "CC=C(N)N"
+  },
+  {
+    "name": "prop-1-ene-1,1,3-triol",
+    "smiles": "OCC=C(O)O"
+  },
+  {
+    "name": "6-hydroxy-4-oxohexanoic acid",
+    "smiles": "O=C(O)CCC(=O)CCO"
+  },
+  {
+    "name": "3-bromohexanedinitrile",
+    "smiles": "N#CCCC(Br)CC#N"
+  },
+  {
+    "name": "2-ethenylpent-4-enal",
+    "smiles": "C=CCC(C=C)C=O"
+  },
+  {
+    "name": "undeca-1,3,8,10-tetraene",
+    "smiles": "C=CC=CCCCC=CC=C"
+  },
+  {
+    "name": "2-formyl-4-oxobutanenitrile",
+    "smiles": "N#CC(C=O)CC=O"
+  },
+  {
+    "name": "4-nitrobutanenitrile",
+    "smiles": "N#CCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-fluoro-3-oxopropanoic acid",
+    "smiles": "O=CC(F)C(=O)O"
+  },
+  {
+    "name": "2,4,4-trihydroxybutanoic acid",
+    "smiles": "O=C(O)C(O)CC(O)O"
+  },
+  {
+    "name": "undeca-2,4,7,9-tetraene",
+    "smiles": "CC=CC=CCC=CC=CC"
+  },
+  {
+    "name": "n-(2,2-dihydroxyethyl)prop-2-enamide",
+    "smiles": "C=CC(=O)NCC(O)O"
+  },
+  {
+    "name": "3-chloroprop-2-enyl acetate",
+    "smiles": "CC(=O)OCC=CCl"
+  },
+  {
+    "name": "4-cyanobutanoyl cyanide",
+    "smiles": "N#CCCCC(=O)C#N"
+  },
+  {
+    "name": "prop-1-en-1-one",
+    "smiles": "CC=C=O"
+  },
+  {
+    "name": "2-nitrononanedioic acid",
+    "smiles": "O=C(O)CCCCCCC(C(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "2,3-dihydroxyprop-2-enoic acid",
+    "smiles": "O=C(O)C(O)=CO"
+  },
+  {
+    "name": "2-amino-2-cyanoacetic acid",
+    "smiles": "N#CC(N)C(=O)O"
+  },
+  {
+    "name": "hepta-1,6-diene",
+    "smiles": "C=CCCCC=C"
+  },
+  {
+    "name": "prop-1-en-2-amine",
+    "smiles": "C=C(C)N"
+  },
+  {
+    "name": "ethane-1,1,2-tricarbaldehyde",
+    "smiles": "O=CCC(C=O)C=O"
+  },
+  {
+    "name": "n-methylpent-3-enamide",
+    "smiles": "CC=CCC(=O)NC"
+  },
+  {
+    "name": "3-nitroprop-2-enenitrile",
+    "smiles": "N#CC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "3-bromoprop-2-enal",
+    "smiles": "O=CC=CBr"
+  },
+  {
+    "name": "but-3-enoyl but-2-enoate",
+    "smiles": "C=CCC(=O)OC(=O)C=CC"
+  },
+  {
+    "name": "prop-2-enoyl 2-fluoroprop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C(=C)F"
+  },
+  {
+    "name": "2,4-dihydroxy-3-oxobutanal",
+    "smiles": "O=CC(O)C(=O)CO"
+  },
+  {
+    "name": "2,4-dioxobutanoic acid",
+    "smiles": "O=CCC(=O)C(=O)O"
+  },
+  {
+    "name": "prop-1-ene-1,1,2,3-tetrol",
+    "smiles": "OCC(O)=C(O)O"
+  },
+  {
+    "name": "undeca-4,10-dienoic acid",
+    "smiles": "C=CCCCCC=CCCC(=O)O"
+  },
+  {
+    "name": "hepta-2,5-dien-1-amine",
+    "smiles": "CC=CCC=CCN"
+  },
+  {
+    "name": "n-methyl-2,2-dinitroacetamide",
+    "smiles": "CNC(=O)C([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "6-amino-7-oxoheptanoic acid",
+    "smiles": "NC(C=O)CCCCC(=O)O"
+  },
+  {
+    "name": "2-(3-aminopropyl)propanediamide",
+    "smiles": "NCCCC(C(N)=O)C(N)=O"
+  },
+  {
+    "name": "2-formylpropanedinitrile",
+    "smiles": "N#CC(C#N)C=O"
+  },
+  {
+    "name": "3,3-dichloro-2-fluoropropanoic acid",
+    "smiles": "O=C(O)C(F)C(Cl)Cl"
+  },
+  {
+    "name": "but-2-enenitrile",
+    "smiles": "CC=CC#N"
+  },
+  {
+    "name": "2-aminopentanedial",
+    "smiles": "NC(C=O)CCC=O"
+  },
+  {
+    "name": "2,3-diaminopropanoic acid",
+    "smiles": "NCC(N)C(=O)O"
+  },
+  {
+    "name": "3-oxopropanenitrile",
+    "smiles": "N#CCC=O"
+  },
+  {
+    "name": "2-methyl-3-oxobutanedial",
+    "smiles": "CC(C=O)C(=O)C=O"
+  },
+  {
+    "name": "8-chlorooctan-1-ol",
+    "smiles": "OCCCCCCCCCl"
+  },
+  {
+    "name": "1,2-dibromo-3-chloro-1-iodoprop-1-ene",
+    "smiles": "ClCC(Br)=C(Br)I"
+  },
+  {
+    "name": "hepta-2,4-dienedinitrile",
+    "smiles": "N#CC=CC=CCC#N"
+  },
+  {
+    "name": "4-oxohexa-2,5-dienenitrile",
+    "smiles": "C=CC(=O)C=CC#N"
+  },
+  {
+    "name": "2-oxohexanedial",
+    "smiles": "O=CCCCC(=O)C=O"
+  },
+  {
+    "name": "2-chloro-n-ethenylacetamide",
+    "smiles": "C=CNC(=O)CCl"
+  },
+  {
+    "name": "methanetricarbaldehyde",
+    "smiles": "O=CC(C=O)C=O"
+  },
+  {
+    "name": "3-oxohexanedinitrile",
+    "smiles": "N#CCCC(=O)CC#N"
+  },
+  {
+    "name": "7,8-dioxooctanoic acid",
+    "smiles": "O=CC(=O)CCCCCC(=O)O"
+  },
+  {
+    "name": "1-fluoropropan-2-one",
+    "smiles": "CC(=O)CF"
+  },
+  {
+    "name": "3-bromo-2,2,3,3-tetrachloropropanoic acid",
+    "smiles": "O=C(O)C(Cl)(Cl)C(Cl)(Cl)Br"
+  },
+  {
+    "name": "ethane-1,1,1,2-tetracarbaldehyde",
+    "smiles": "O=CCC(C=O)(C=O)C=O"
+  },
+  {
+    "name": "1-chloro-4-iodobut-2-ene",
+    "smiles": "ClCC=CCI"
+  },
+  {
+    "name": "prop-1-ene-1,3-diamine",
+    "smiles": "NC=CCN"
+  },
+  {
+    "name": "5-hydroxypenta-2,4-dienoic acid",
+    "smiles": "O=C(O)C=CC=CO"
+  },
+  {
+    "name": "2-formylpropanedioic acid",
+    "smiles": "O=CC(C(=O)O)C(=O)O"
+  },
+  {
+    "name": "2,6-diaminohexanoic acid",
+    "smiles": "NCCCCC(N)C(=O)O"
+  },
+  {
+    "name": "1-chloro-2,3-dinitropropane",
+    "smiles": "O=[N+]([O-])CC(CCl)[N+](=O)[O-]"
+  },
+  {
+    "name": "prop-2-enoyl 2-chloroprop-2-enoate",
+    "smiles": "C=CC(=O)OC(=O)C(=C)Cl"
+  },
+  {
+    "name": "nonane-1,3,5,9-tetrol",
+    "smiles": "OCCCCC(O)CC(O)CCO"
+  },
+  {
+    "name": "2,2-dinitrobutanedioic acid",
+    "smiles": "O=C(O)CC(C(=O)O)([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "2-methylbut-2-enedial",
+    "smiles": "CC(C=O)=CC=O"
+  },
+  {
+    "name": "2-hydroxyheptanedioic acid",
+    "smiles": "O=C(O)CCCCC(O)C(=O)O"
+  },
+  {
+    "name": "octanedioic acid",
+    "smiles": "O=C(O)CCCCCCC(=O)O"
+  },
+  {
+    "name": "2-hydroxy-3-oxopentanedioic acid",
+    "smiles": "O=C(O)CC(=O)C(O)C(=O)O"
+  },
+  {
+    "name": "2-formyl-4-oxobutanoic acid",
+    "smiles": "O=CCC(C=O)C(=O)O"
+  },
+  {
+    "name": "ethane-1,1,2-tricarboxylic acid",
+    "smiles": "O=C(O)CC(C(=O)O)C(=O)O"
+  },
+  {
+    "name": "2-ethenylpenta-2,4-dienal",
+    "smiles": "C=CC=C(C=C)C=O"
+  },
+  {
+    "name": "hexa-2,5-dien-3-ol",
+    "smiles": "C=CCC(O)=CC"
+  },
+  {
+    "name": "prop-2-en-1-ol",
+    "smiles": "C=CCO"
+  },
+  {
+    "name": "2,3-dibromoprop-2-enyl acetate",
+    "smiles": "CC(=O)OCC(Br)=CBr"
+  },
+  {
+    "name": "propane-1,2,3-triol",
+    "smiles": "OCC(O)CO"
+  },
+  {
+    "name": "2-cyano-2-hydroxyacetic acid",
+    "smiles": "N#CC(O)C(=O)O"
+  },
+  {
+    "name": "acetyl 2,2-difluoroacetate",
+    "smiles": "CC(=O)OC(=O)C(F)F"
+  },
+  {
+    "name": "2,3-diaminoprop-1-en-1-ol",
+    "smiles": "NCC(N)=CO"
+  },
+  {
+    "name": "2,3,3,3-tetrahydroxypropanoic acid",
+    "smiles": "O=C(O)C(O)C(O)(O)O"
+  },
+  {
+    "name": "3-bromo-2-chloro-2,3,3-trifluoropropanoic acid",
+    "smiles": "O=C(O)C(F)(Cl)C(F)(F)Br"
+  },
+  {
+    "name": "3-bromo-2-chloro-2-fluorobutanedioic acid",
+    "smiles": "O=C(O)C(Br)C(F)(Cl)C(=O)O"
+  },
+  {
+    "name": "3-amino-3-nitropropanoic acid",
+    "smiles": "NC(CC(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-nitrobutanoic acid",
+    "smiles": "CC(CC(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "hexanedioic acid",
+    "smiles": "O=C(O)CCCCC(=O)O"
+  },
+  {
+    "name": "2-(1,2-dihydroxyethyl)-2-hydroxypropanedial",
+    "smiles": "O=CC(O)(C=O)C(O)CO"
+  },
+  {
+    "name": "2,2-diaminopropanedinitrile",
+    "smiles": "N#CC(N)(N)C#N"
+  },
+  {
+    "name": "3-hydroxyoct-6-enoic acid",
+    "smiles": "CC=CCCC(O)CC(=O)O"
+  },
+  {
+    "name": "2,3-diaminoprop-2-enamide",
+    "smiles": "NC=C(N)C(N)=O"
+  },
+  {
+    "name": "2-bromo-2-fluoropropanedinitrile",
+    "smiles": "N#CC(F)(Br)C#N"
+  },
+  {
+    "name": "4-formyloctanedioic acid",
+    "smiles": "O=CC(CCCC(=O)O)CCC(=O)O"
+  },
+  {
+    "name": "1-bromobut-2-ene",
+    "smiles": "CC=CCBr"
+  },
+  {
+    "name": "propane-1,1,2,2-tetrol",
+    "smiles": "CC(O)(O)C(O)O"
+  },
+  {
+    "name": "2,3,4-trihydroxy-2-methylbutanamide",
+    "smiles": "CC(O)(C(N)=O)C(O)CO"
+  },
+  {
+    "name": "2-methylhepta-2,4-dienal",
+    "smiles": "CCC=CC=C(C)C=O"
+  },
+  {
+    "name": "2-chloroethenyl acetate",
+    "smiles": "CC(=O)OC=CCl"
+  },
+  {
+    "name": "2,2,3,3,3-pentahydroxypropanoic acid",
+    "smiles": "O=C(O)C(O)(O)C(O)(O)O"
+  },
+  {
+    "name": "propane-1,1,1,3,3-pentamine",
+    "smiles": "NC(N)CC(N)(N)N"
+  },
+  {
+    "name": "1,5-dinitropenta-1,3-diene",
+    "smiles": "O=[N+]([O-])C=CC=CC[N+](=O)[O-]"
+  },
+  {
+    "name": "2,3-dihydroxypropanenitrile",
+    "smiles": "N#CC(O)CO"
+  },
+  {
+    "name": "4-aminobutanoyl fluoride",
+    "smiles": "NCCCC(=O)F"
+  },
+  {
+    "name": "deca-1,3,5,7,9-pentaene",
+    "smiles": "C=CC=CC=CC=CC=C"
+  },
+  {
+    "name": "3-nitroprop-2-enoic acid",
+    "smiles": "O=C(O)C=C[N+](=O)[O-]"
+  },
+  {
+    "name": "pentane-1,1,1,2,2,4,4,5-octamine",
+    "smiles": "NCC(N)(N)CC(N)(N)C(N)(N)N"
+  },
+  {
+    "name": "but-3-enal",
+    "smiles": "C=CCC=O"
+  },
+  {
+    "name": "2,3-dioxoheptanedioic acid",
+    "smiles": "O=C(O)CCCC(=O)C(=O)C(=O)O"
+  },
+  {
+    "name": "n-methylbut-3-enamide",
+    "smiles": "C=CCC(=O)NC"
+  },
+  {
+    "name": "2-amino-3-chloropropan-1-ol",
+    "smiles": "NC(CO)CCl"
+  },
+  {
+    "name": "prop-2-enyl 2-chloroacetate",
+    "smiles": "C=CCOC(=O)CCl"
+  },
+  {
+    "name": "2,3,3-trinitropropanoic acid",
+    "smiles": "O=C(O)C(C([N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "n-ethenyl-2-hydroxyacetamide",
+    "smiles": "C=CNC(=O)CO"
+  },
+  {
+    "name": "3-iodoprop-2-enenitrile",
+    "smiles": "N#CC=CI"
+  },
+  {
+    "name": "2-formylbutanedinitrile",
+    "smiles": "N#CCC(C#N)C=O"
+  },
+  {
+    "name": "3,4-dioxopentanoic acid",
+    "smiles": "CC(=O)C(=O)CC(=O)O"
+  },
+  {
+    "name": "3-oxoprop-2-enoyl fluoride",
+    "smiles": "O=C=CC(=O)F"
+  },
+  {
+    "name": "2,2-diiodopropanedioic acid",
+    "smiles": "O=C(O)C(I)(I)C(=O)O"
+  },
+  {
+    "name": "3,3,3-trihydroxy-n-methylpropanamide",
+    "smiles": "CNC(=O)CC(O)(O)O"
+  },
+  {
+    "name": "3-nitroprop-2-enyl prop-2-enoate",
+    "smiles": "C=CC(=O)OCC=C[N+](=O)[O-]"
+  },
+  {
+    "name": "5-oxopent-2-enoic acid",
+    "smiles": "O=CCC=CC(=O)O"
+  },
+  {
+    "name": "but-1-ene-1,4-diol",
+    "smiles": "OC=CCCO"
+  },
+  {
+    "name": "4,6-diaminohexanenitrile",
+    "smiles": "N#CCCC(N)CCN"
+  },
+  {
+    "name": "4,4-dinitrobuta-1,3-dien-1-amine",
+    "smiles": "NC=CC=C([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "2,3-diaminoprop-2-enenitrile",
+    "smiles": "N#CC(N)=CN"
+  },
+  {
+    "name": "2-fluoroprop-2-enyl acetate",
+    "smiles": "C=C(F)COC(C)=O"
+  },
+  {
+    "name": "2,2,3,3,3-pentafluoropropanoyl fluoride",
+    "smiles": "O=C(F)C(F)(F)C(F)(F)F"
+  },
+  {
+    "name": "butane-1,2,3,4-tetracarbaldehyde",
+    "smiles": "O=CCC(C=O)C(C=O)CC=O"
+  },
+  {
+    "name": "but-2-ene-1,2-diamine",
+    "smiles": "CC=C(N)CN"
+  },
+  {
+    "name": "4-oxobut-2-enenitrile",
+    "smiles": "N#CC=CC=O"
+  },
+  {
+    "name": "6-amino-3-oxohexanal",
+    "smiles": "NCCCC(=O)CC=O"
+  },
+  {
+    "name": "prop-1-enyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC=CC"
+  },
+  {
+    "name": "2-methylhexa-2,5-dienal",
+    "smiles": "C=CCC=C(C)C=O"
+  },
+  {
+    "name": "propane-1,1,2,3-tetramine",
+    "smiles": "NCC(N)C(N)N"
+  },
+  {
+    "name": "2-aminobut-2-enenitrile",
+    "smiles": "CC=C(N)C#N"
+  },
+  {
+    "name": "2-chlorobut-3-enenitrile",
+    "smiles": "C=CC(Cl)C#N"
+  },
+  {
+    "name": "4-hydroxybut-2-enal",
+    "smiles": "O=CC=CCO"
+  },
+  {
+    "name": "hepta-1,3,5-trienyl prop-2-enoate",
+    "smiles": "C=CC(=O)OC=CC=CC=CC"
+  },
+  {
+    "name": "hexa-2,5-dienal",
+    "smiles": "C=CCC=CC=O"
+  },
+  {
+    "name": "prop-1-ene-1,1-diol",
+    "smiles": "CC=C(O)O"
+  },
+  {
+    "name": "but-3-enoic acid",
+    "smiles": "C=CCC(=O)O"
+  },
+  {
+    "name": "2-oxopent-3-enal",
+    "smiles": "CC=CC(=O)C=O"
+  },
+  {
+    "name": "4,5-dioxopent-2-enoic acid",
+    "smiles": "O=CC(=O)C=CC(=O)O"
+  },
+  {
+    "name": "acetyl 2,2-dichloroacetate",
+    "smiles": "CC(=O)OC(=O)C(Cl)Cl"
+  },
+  {
+    "name": "(2-iodoacetyl) 2-iodoacetate",
+    "smiles": "O=C(CI)OC(=O)CI"
+  },
+  {
+    "name": "1,1,1-trinitropropane",
+    "smiles": "CCC([N+](=O)[O-])([N+](=O)[O-])[N+](=O)[O-]"
+  },
+  {
+    "name": "4-nitrobutanal",
+    "smiles": "O=CCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "2,4,7-triaminooctanedioic acid",
+    "smiles": "NC(CCC(N)C(=O)O)CC(N)C(=O)O"
+  },
+  {
+    "name": "2-nitropropanedinitrile",
+    "smiles": "N#CC(C#N)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-nitroprop-1-en-1-ol",
+    "smiles": "CC(=CO)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-aminopentanedioic acid",
+    "smiles": "NC(CCC(=O)O)C(=O)O"
+  },
+  {
+    "name": "(2-chloroacetyl) but-3-enoate",
+    "smiles": "C=CCC(=O)OC(=O)CCl"
+  },
+  {
+    "name": "3-nitroundecanedioic acid",
+    "smiles": "O=C(O)CCCCCCCC(CC(=O)O)[N+](=O)[O-]"
+  },
+  {
+    "name": "2-hydroxy-n-(hydroxymethyl)acetamide",
+    "smiles": "O=C(CO)NCO"
+  },
+  {
+    "name": "1,3-diaminopropan-1-ol",
+    "smiles": "NCCC(N)O"
+  },
+  {
+    "name": "7-aminoheptanoic acid",
+    "smiles": "NCCCCCCC(=O)O"
+  },
+  {
+    "name": "2-nitrobutanedioic acid",
+    "smiles": "O=C(O)CC(C(=O)O)[N+](=O)[O-]"
+  }
+]

@@ -1,4 +1,6 @@
+import random
 import re
+from inspect import CORO_RUNNING
 
 COMMON_TO_IUPAC = {
     # aldehydes
@@ -78,152 +80,242 @@ DEF_PREFIX_SUFFIX = {
     "phenyl": "benzene"
 }
 
+vowels = ["a", "e", "i", "o", "u"]
+
+
+def collect(pattern, string, label, kind):
+    matches = []
+    for m in re.finditer(pattern, string):
+        matches.append({
+            "type": kind,
+            "group": label,
+            "match": m.group(0),
+            "groups": m.groups(),
+            "start": m.start(),
+            "end": m.end()
+        })
+    return matches
 
 def tokenize(string):
 
-    # 2,3-diamino-4-methylbutanoicacid
+    starters = ["meth", "eth", "prop", "but", "pent", "hex", "hept", "oct", "non", "dec", "benzene", "phen"]
+    starters = sorted(starters, key=len, reverse=True)
+    starters_pattern = "|".join(starters)
 
-    branch_prefix = re.findall(r'(?:([\d]+(?:,\d+)*)(\s*-?\s*)?)?(di|tri)?([a-z]+)yl', string)
-    branch_suffix = re.findall(r'([a-z]+?)(ane|ene)$', string)
+    halogens = ["fluoro", "chloro", "bromo", "iodo"]
+    halogens = sorted(halogens, key=len, reverse=True)
+    halogens_pattern = "|".join(halogens)
 
-    alcohol_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?hydroxy', string)
-    alcohol_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s+-?\s)(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?ol$', string)
+    branch_suffix_pattern = rf'({starters_pattern})(ane|ene)$'
+    branch_suffix_groups = collect(branch_suffix_pattern, string, "branch", "suffix")
 
-    aldehyde_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?formyl', string)
-    aldehyde_suffix = re.findall(r'([a-z]+?)(?:an)?(?:-(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?al$', string)
+    alcohol_suffix_pattern = (rf"({starters_pattern})"                          # prop
+                rf"(an|ane)?"                                           # an
+                rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*)(en|ene))?"     # optional -3,4-en
+                rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*))?"             # -4,6-
+                rf"(di|tri|tetra|penta)?(ol)$")
+    alcohol_suffix_groups = collect(alcohol_suffix_pattern, string, "alcohol", "suffix")
 
-    benzene_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?phenyl', string)
-    benzene_suffix = re.findall(r'([a-z]+?)(?:an)?(?:-(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?benzene$', string)
+    amine_suffix_pattern = ( rf"({starters_pattern})"                   # prop
+        rf"(an)?"                                          # an
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*)(en|ene))?"   # optional -3,4-en
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*))?"         # -4,6-
+        rf"(di|tri|tetra|penta)?(amine)$" )
+    amine_suffix_groups = collect(amine_suffix_pattern, string, "amine", "suffix")
 
-    amine_prefix = re.findall(r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri)?amino', string)
-    amine_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri)?amine$', string)
+    aldehyde_suffix_pattern = (rf"({starters_pattern})"  # prop
+        rf"(an|ane)?"  # an
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*)(en|ene))?"  # optional -3,4-en|ene
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*))?"  # -4,6-
+        rf"(di|tri|tetra|penta)?(al)$")
+    aldehyde_suffix_groups = collect(aldehyde_suffix_pattern, string, "aldehyde", "suffix")
 
-    carboxylic_prefix = re.findall(r'(\d+(?:,\d+)*)(-)?(di|tri)?amino', string)
-    carboxylic_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(oic|dioic|tricarboxylic)?acid$', string)
+    carboxylic_suffix_pattern = (rf"({starters_pattern})"  # prop
+        rf"(an|ane)?"  # an
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*)(en|ene))?"  # optional -3,4-en|ene
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*))?"     # -4,6-
+        rf"(di|tri|tetra|penta)?(oic acid)$")
+    carboxylic_suffix_groups = collect(carboxylic_suffix_pattern, string, "carboxylic", "suffix")
 
-    nitrile_prefix = re.findall(r'(\d+(?:,\d+)*)(-)?(di|tri)?cyano', string)
-    nitrile_suffix = re.findall(r'([a-z]+?)(?:an)?(?:(\s*-?\s*)(\d+(?:,\d+)*))?(\s*-?\s*)(oic|dioic|tricarboxylic)?nitrile$', string)
+    nitrile_suffix_pattern = (rf"({starters_pattern})"  # prop
+        rf"(an|ane)?"  # an
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*)(en|ene))?"  # optional -3,4-en|ene
+        rf"(?:(\s*-?\s*)(\d+(?:,\d+)*)(\s*-?\s*))?"  # -4,6-
+        rf"(di|tri|tetra|penta)?(nitrile)$")
+    nitrile_suffix_groups = collect(nitrile_suffix_pattern, string, "nitrile", "suffix")
+
+    benzene_suffix_pattern = (r'(?:-(\d+(?:,\d+)*))?(\s*-?\s*)(di|tri|tetra|penta)?(benzene)')   # -5,3-dibenzene
+    benzene_suffix_groups = collect(benzene_suffix_pattern, string, "benzene", "suffix")
+
+
+
+    branch_prefix_pattern = rf'(?:([\d]+(?:,\d+)*)(\s*-?\s*)?)?(di|tri|tetra|penta)?({starters_pattern})yl'
+    branch_prefix_groups = collect(branch_prefix_pattern, string, "methyl", "prefix")
+
+    alcohol_prefix_pattern = ( r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri|tetra|penta)?(hydroxy)')
+    alcohol_prefix_groups = collect(alcohol_prefix_pattern, string, "alcohol", "prefix")
+
+    aldehyde_prefix_pattern = (r'(\d+(?:,\d+)*)(\s*-?\s*)(di|tri|tetra|penta)?(formyl)')
+    aldehyde_prefix_groups = collect(aldehyde_prefix_pattern, string, "aldehyde", "prefix")
+
+    benzene_prefix_pattern = (r'(\d+(?:,\d+)*)?(\s*-?\s*)?(di|tri|tetra|penta)?(phenyl)')
+    benzene_prefix_groups = collect(benzene_prefix_pattern, string, "benzene", "prefix")
+
+    amine_prefix_pattern = (r'(\d+(?:,\d+)*)?(\s*-?\s*)?(di|tri|tetra|penta)?(amino)')
+    amine_prefix_groups = collect(amine_prefix_pattern, string, "amine", "prefix")
+
+    carboxylic_prefix_pattern = (r'(\d+(?:,\d+)*)?(\s*-?\s*)?(di|tri|tetra|penta)?(carboxy)')
+    carboxylic_prefix_groups = collect(carboxylic_prefix_pattern, string, "carboxylic acid", "prefix")
+
+    nitrile_prefix_pattern = (r'(\d+(?:,\d+)*)?(-)?(di|tri|tetra|penta)?cyano')
+    nitrile_prefix_groups = collect(nitrile_prefix_pattern, string, "nitrile", "prefix")
+
+    nitro_prefix_pattern = (r'(\d+(?:,\d+)*)?(-)?(di|tri|tetra|penta)?nitro')
+    nitro_prefix_groups = collect(nitro_prefix_pattern, string, "nitro", "prefix")
+
+    halo_prefix_pattern = (fr'(\d+(?:,\d+)*)?(-)?(di|tri|tetra|penta)?({halogens_pattern})')
+    halo_prefix_groups = collect(halo_prefix_pattern, string, "halo", "prefix")
 
     return {
-    "branch_prefix": branch_prefix,
-    "branch_suffix": branch_suffix,
-    "alcohol_prefix": alcohol_prefix,
-    "alcohol_suffix": alcohol_suffix,
-    "aldehyde_prefix": aldehyde_prefix,
-    "aldehyde_suffix": aldehyde_suffix,
-    "benzene_prefix": benzene_prefix,
-    "benzene_suffix": benzene_suffix,
-    "amine_prefix": amine_prefix,
-    "amine_suffix": amine_suffix,
-    "carboxylic_prefix": carboxylic_prefix,
-    "carboxylic_suffix": carboxylic_suffix,
-    "nitrile_prefix": nitrile_prefix,
-    "nitrile_suffix": nitrile_suffix,
+        "alkyl": {"suffix": branch_suffix_groups, "prefix": branch_prefix_groups},
+        "alcohol": {"suffix": alcohol_suffix_groups, "prefix": alcohol_prefix_groups},
+        "amine": {"suffix": amine_suffix_groups, "prefix": amine_prefix_groups},
+        "aldehyde": {"suffix": aldehyde_suffix_groups, "prefix": aldehyde_prefix_groups},
+        "carboxylic": {"suffix": carboxylic_suffix_groups, "prefix": carboxylic_prefix_groups},
+        "nitrile": {"suffix": nitrile_suffix_groups, "prefix": nitrile_prefix_groups},
+        "benzene": {"suffix": benzene_suffix_groups, "prefix": benzene_prefix_groups},
+        "halo": {"suffix": [], "prefix": halo_prefix_groups},
+        "nitro": {"suffix": [], "prefix": nitro_prefix_groups}
     }
 
 
-def generate_hints(tokenize_answer, tokenize_correct):
+def get_orders(tokenised):
 
+    i = 0
+    for group, parts in sorted([item for item in tokenised.items() if item[1]["prefix"]], key=lambda x: x[1]["prefix"][0]["start"]):
+        i += 1
+        parts["prefix"][0]["start"] = i
+
+    return tokenised
+
+
+def generate_cross_hints(answer_tokenised, correct_tokenised):
+    """
+    Generates hints by comparing groups to themselves and each other
+
+    :param answer_tokenised:
+    :param correct_tokenised:
+    :return:
+    """
     hints = []
 
-    for key in tokenize_answer:
+    for group, correct_parts in correct_tokenised.items():
+        answer_parts = answer_tokenised[group]
+        # iterating through each group
 
-        token_answer = tokenize_answer[key]
-        token_correct = tokenize_correct[key]
+        answered_suffix = answer_parts["suffix"]
+        correct_suffix = correct_parts["suffix"]
+        answered_prefix = answer_parts["prefix"]
+        correct_prefix = correct_parts["prefix"]
 
-        if token_answer == token_correct:
-            continue
-        if token_correct == []:
-            continue
+        # checks for suffix when prefix should have been used
+        if answered_suffix and correct_prefix and not correct_suffix:
+            hints.append((f"Are you sure {group} is the main group?", 2))
 
-        for tok_answer, tok_correct in zip(token_answer, token_correct):
+        # checks for prefix when suffix should have been used
+        if answered_prefix and correct_suffix and not correct_prefix:
+            hints.append((f"Are you sure {group} isn't the main group?", 2))
 
-            if tok_answer == tok_correct and tok_answer != "":
-                continue
+        # checks the suffix hints
+        if answered_suffix and correct_suffix and answered_suffix != correct_suffix:
 
-            print(token_answer)
-            hints.append(f"Is {tok_answer} correct?")
+            answered_suffix_tokens = answered_suffix[0]["groups"]
+            correct_suffix_tokens = correct_suffix[0]["groups"]
 
-    print(hints)
+            i = 1
+            for token_answered, token_correct in zip(answered_suffix_tokens, correct_suffix_tokens):
+                if token_answered == token_correct:
+                    i += 1
+                    continue
+                if i == 1:
+                    hints.append((f"Double count your carbons", 1))
+                elif i == 2:
+                    hints.append((f"You need \"{token_correct}\" not \"{token_answered}\" on your {group}", 3))
+                elif i in (3, 5, 7, 9):
+                    hints.append((f"Don't forget dashes/spaces", 4))
+                elif i == 6:
+                    hints.append((f"Is \"{token_answered}\" correct?", 5))
+                elif i in (4, 8):
+                    hints.append((f"Are your carbon numbers correct?", 3))
+                elif i == 10:
+                    hints.append((f"How many {group} groups are there?", 4))
+                elif i == 11:
+                    hints.append((f"Is that the correct suffix for {"an" if group[0].lower() in vowels else "a"} {group} group?", 5))
+                i += 1
 
-string = "carboxylic acid"
-string2 = "3-aminoe-4-chloro-4-oxobutaneoicacid"
+        # checks the prefix hints
+        if answered_prefix and correct_prefix and answered_prefix != correct_prefix:
+            answered_prefix_tokens = answered_prefix[0]["groups"]
+            correct_prefix_tokens = correct_prefix[0]["groups"]
 
-ts = tokenize(string)
-ts2 = tokenize(string2)
+            answered_prefix_position = answered_prefix[0]["start"]
+            correct_prefix_position = correct_prefix[0]["start"]
 
-print(ts, ts2)
-# generate_hints(ts, ts2)
+            if answered_prefix_position != correct_prefix_position:
+                hints.append(("Are your prefixes in alphabetical order?", 5))
 
-def which_starters(string):
-    starters = []
-    for starter in DEF_STARTERS:
-        if starter in string:
-            starters.append(starter)
+            i = 1
+            for token_answered, token_correct in zip(answered_prefix_tokens, correct_prefix_tokens):
+                if token_answered == token_correct:
+                    i += 1
+                    continue
 
-    return starters
+                if i == 1:
+                    hints.append((f"Which carbon is you {group} group on?", 2))
+                elif i == 2:
+                    hints.append(("Don't forget dashes/spaces", 4))
+                elif i == 3:
+                    hints.append((f"How many {group} groups are there?", 4))
+                elif i == 4:
+                    hints.append((f"Is {token_answered} correct?", 5))
 
-def same_starters(answer, correct):
-    answer_starters = which_starters(answer)
-    correct_starters = which_starters(correct)
+                i += 1
 
-    wrong_in_answer = []
-    for starter in answer_starters:
-        if starter not in correct_starters:
-            wrong_in_answer.append(starter)
+        # if groups exist that arn't present at all
+        if (answered_prefix or answered_suffix) and (not correct_prefix and not correct_suffix):
+            hints.append((f"Is {group} present here?", 1))
 
-    if len(wrong_in_answer) == 0:
-        return None
+    if not hints:
+        hints.append(("Double check everything", 0))
 
-    return wrong_in_answer
-
-def list_to_string(items):
-    if not items:
-        return ""
-    if len(items) == 1:
-        return items[0]
-    elif len(items) == 2:
-        return f"{items[0]} and {items[1]}"
-    else:
-        string = ""
-        for i in range(len(items) - 1):
-            string += f"{items[i]}-, "
-        string += f"and {items[-1]}-"
-
-    return string
+    return hints
 
 
-def check_number(answer, correct):
-    digits_answer = ''.join(c for c in answer if c.isdigit()).split()
-    digits_correct = ''.join(c for c in correct if c.isdigit()).split()
+def pick_hint(answer, correct):
 
-    digits_correct.sort()
-    digits_answer.sort()
+    tokenized_answer = get_orders(tokenize(answer))
+    tokenized_correct = get_orders(tokenize(correct))
+    hints = generate_cross_hints(tokenized_answer, tokenized_correct)
+    options = {}
+    lowest_score = 100
+    for hint in hints:
+        if int(hint[1]) < lowest_score:
+            lowest_score = hint[1]
+        if int(hint[1]) not in options.keys():
+            options[hint[1]] = []
+        options[hint[1]].append(hint[0])
 
-    incorrect = []
-    for a, c in zip(digits_answer, digits_correct):
-        if a != c:
-            incorrect.append(a)
+    return random.choice(options[lowest_score])
 
-    return incorrect if len(incorrect) > 0 else None
-
-def check_prefix_suffix(answer, correct):
-    for prefix in DEF_PREFIX_SUFFIX:
-        suffix = DEF_PREFIX_SUFFIX[prefix]
-
-        if suffix in answer and suffix not in correct and prefix in correct and prefix not in answer:
-            return "prefix", suffix
-        elif prefix in answer and prefix not in correct and suffix in correct and suffix not in answer:
-            return "suffix", prefix
-
-    return None
 
 def normalize(name: str) -> str:
+
+    print("before:", name)
+
     s = name.lower().strip()
 
     # --- basic cleanup ---
     s = s.replace('–', '-')
-    s = re.sub(r'[()\s]', '', s)
 
     # --- replace common names FIRST ---
     for k, v in COMMON_TO_IUPAC.items():
@@ -241,19 +333,7 @@ def normalize(name: str) -> str:
     # --- remove duplicate hyphens ---
     s = re.sub(r'-+', '-', s)
 
+    print("after:", s)
+
     return s
 
-def get_message(answer, correct):
-
-    message = None
-
-    if re.search(r'-(\d+)-', correct) and not re.search(r'-(\d+)-', answer):
-        message = "Which carbon is the functional group on?"
-    elif same_starters(answer, correct):
-        message = f"Are you sure that the starters \"{list_to_string(same_starters(answer, correct))}\" is correct?"
-    elif check_prefix_suffix(answer, correct) is not None:
-        message = f"Should you use a {check_prefix_suffix(answer, correct)[0]} for {check_prefix_suffix(answer, correct)[1]}?"
-    elif check_number(answer, correct) is not None:
-        message = f"Are the carbon numbers {list_to_string(check_number(answer, correct))} correct?"
-
-    return message
