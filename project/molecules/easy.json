@@ -1,0 +1,4086 @@
+[
+  {
+    "name": "hexanenitrile",
+    "smiles": "CCCCCC#N"
+  },
+  {
+    "name": "1-chloro-2-fluorobenzene",
+    "smiles": "Fc1ccccc1Cl"
+  },
+  {
+    "name": "propane-1,1-diol",
+    "smiles": "CCC(O)O"
+  },
+  {
+    "name": "1-chloro-3-fluorobenzene",
+    "smiles": "Fc1cccc(Cl)c1"
+  },
+  {
+    "name": "ethyl propanoate",
+    "smiles": "CCOC(=O)CC"
+  },
+  {
+    "name": "n-propylpropanamide",
+    "smiles": "CCCNC(=O)CC"
+  },
+  {
+    "name": "2-ethylbutanal",
+    "smiles": "CCC(C=O)CC"
+  },
+  {
+    "name": "1,3-difluorobenzene",
+    "smiles": "Fc1cccc(F)c1"
+  },
+  {
+    "name": "propane-1,3-diol",
+    "smiles": "OCCCO"
+  },
+  {
+    "name": "n-propylbutanamide",
+    "smiles": "CCCNC(=O)CCC"
+  },
+  {
+    "name": "benzene",
+    "smiles": "c1ccccc1"
+  },
+  {
+    "name": "butanenitrile",
+    "smiles": "CCCC#N"
+  },
+  {
+    "name": "hexanoic acid",
+    "smiles": "CCCCCC(=O)O"
+  },
+  {
+    "name": "propan-1-amine",
+    "smiles": "CCCN"
+  },
+  {
+    "name": "1,2,4-trichlorobenzene",
+    "smiles": "Clc1ccc(Cl)c(Cl)c1"
+  },
+  {
+    "name": "propyl acetate",
+    "smiles": "CCCOC(C)=O"
+  },
+  {
+    "name": "propan-2-ol",
+    "smiles": "CC(C)O"
+  },
+  {
+    "name": "n-methylacetamide",
+    "smiles": "CNC(C)=O"
+  },
+  {
+    "name": "pentane-1,1-diol",
+    "smiles": "CCCCC(O)O"
+  },
+  {
+    "name": "n-pentylhexanamide",
+    "smiles": "CCCCCNC(=O)CCCCC"
+  },
+  {
+    "name": "phenol",
+    "smiles": "Oc1ccccc1"
+  },
+  {
+    "name": "2-oxopropanal",
+    "smiles": "CC(=O)C=O"
+  },
+  {
+    "name": "propanoic acid",
+    "smiles": "CCC(=O)O"
+  },
+  {
+    "name": "heptane-2,3,3-triol",
+    "smiles": "CCCCC(O)(O)C(C)O"
+  },
+  {
+    "name": "prop-1-ene",
+    "smiles": "C=CC"
+  },
+  {
+    "name": "pentanenitrile",
+    "smiles": "CCCCC#N"
+  },
+  {
+    "name": "propan-1-ol",
+    "smiles": "CCCO"
+  },
+  {
+    "name": "2-bromo-1,4-dichlorobenzene",
+    "smiles": "Clc1ccc(Cl)c(Br)c1"
+  },
+  {
+    "name": "2-nitrobutane",
+    "smiles": "CCC(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "n-pentylpropanamide",
+    "smiles": "CCCCCNC(=O)CC"
+  },
+  {
+    "name": "2-methylpropanal",
+    "smiles": "CC(C)C=O"
+  },
+  {
+    "name": "pentane-1,4,4-triamine",
+    "smiles": "CC(N)(N)CCCN"
+  },
+  {
+    "name": "butan-2-amine",
+    "smiles": "CCC(C)N"
+  },
+  {
+    "name": "1,4-dichloro-2-iodobenzene",
+    "smiles": "Clc1ccc(Cl)c(I)c1"
+  },
+  {
+    "name": "butyl heptanoate",
+    "smiles": "CCCCCCC(=O)OCCCC"
+  },
+  {
+    "name": "n-propylacetamide",
+    "smiles": "CCCNC(C)=O"
+  },
+  {
+    "name": "propanal",
+    "smiles": "CCC=O"
+  },
+  {
+    "name": "2-methylbutanal",
+    "smiles": "CCC(C)C=O"
+  },
+  {
+    "name": "ethyl acetate",
+    "smiles": "CCOC(C)=O"
+  },
+  {
+    "name": "benzene-1,3-diol",
+    "smiles": "Oc1cccc(O)c1"
+  },
+  {
+    "name": "heptanenitrile",
+    "smiles": "CCCCCCC#N"
+  },
+  {
+    "name": "3-oxobutanal",
+    "smiles": "CC(=O)CC=O"
+  },
+  {
+    "name": "n-methylbutanamide",
+    "smiles": "CCCC(=O)NC"
+  },
+  {
+    "name": "3-nitroheptane",
+    "smiles": "CCCCC(CC)[N+](=O)[O-]"
+  },
+  {
+    "name": "pentan-1-ol",
+    "smiles": "CCCCCO"
+  },
+  {
+    "name": "1-chloropropane",
+    "smiles": "CCCCl"
+  },
+  {
+    "name": "penta-1,3-diene",
+    "smiles": "C=CC=CC"
+  },
+  {
+    "name": "acetyl acetate",
+    "smiles": "CC(=O)OC(C)=O"
+  },
+  {
+    "name": "butane-1,1,2-triamine",
+    "smiles": "CCC(N)C(N)N"
+  },
+  {
+    "name": "1-fluoropropane",
+    "smiles": "CCCF"
+  },
+  {
+    "name": "3-methyl-2-oxohexanal",
+    "smiles": "CCCC(C)C(=O)C=O"
+  },
+  {
+    "name": "n-ethylhexanamide",
+    "smiles": "CCCCCC(=O)NCC"
+  },
+  {
+    "name": "2-ethyl-5-methylhexanedial",
+    "smiles": "CCC(C=O)CCC(C)C=O"
+  },
+  {
+    "name": "1,4-difluorobenzene",
+    "smiles": "Fc1ccc(F)cc1"
+  },
+  {
+    "name": "2,4-dichloro-1-fluorobenzene",
+    "smiles": "Fc1ccc(Cl)cc1Cl"
+  },
+  {
+    "name": "propanenitrile",
+    "smiles": "CCC#N"
+  },
+  {
+    "name": "2-methylbutanedial",
+    "smiles": "CC(C=O)CC=O"
+  },
+  {
+    "name": "benzene-1,4-diamine",
+    "smiles": "Nc1ccc(N)cc1"
+  },
+  {
+    "name": "propane-1,1-diamine",
+    "smiles": "CCC(N)N"
+  },
+  {
+    "name": "2-oxopentanal",
+    "smiles": "CCCC(=O)C=O"
+  },
+  {
+    "name": "nitrobenzene",
+    "smiles": "O=[N+]([O-])c1ccccc1"
+  },
+  {
+    "name": "2,4-dibromo-1-iodobenzene",
+    "smiles": "Brc1ccc(I)c(Br)c1"
+  },
+  {
+    "name": "1-bromo-3-chlorobenzene",
+    "smiles": "Clc1cccc(Br)c1"
+  },
+  {
+    "name": "butyl propanoate",
+    "smiles": "CCCCOC(=O)CC"
+  },
+  {
+    "name": "pentyl butanoate",
+    "smiles": "CCCCCOC(=O)CCC"
+  },
+  {
+    "name": "acetyl propanoate",
+    "smiles": "CCC(=O)OC(C)=O"
+  },
+  {
+    "name": "propan-2-amine",
+    "smiles": "CC(C)N"
+  },
+  {
+    "name": "n-propylpentanamide",
+    "smiles": "CCCCC(=O)NCCC"
+  },
+  {
+    "name": "1-nitrohexane",
+    "smiles": "CCCCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "1-chloro-3-iodopropane",
+    "smiles": "ClCCCI"
+  },
+  {
+    "name": "n-propylhexanamide",
+    "smiles": "CCCCCC(=O)NCCC"
+  },
+  {
+    "name": "hexanedial",
+    "smiles": "O=CCCCCC=O"
+  },
+  {
+    "name": "n-ethylpropanamide",
+    "smiles": "CCNC(=O)CC"
+  },
+  {
+    "name": "heptanoic acid",
+    "smiles": "CCCCCCC(=O)O"
+  },
+  {
+    "name": "n-heptylacetamide",
+    "smiles": "CCCCCCCNC(C)=O"
+  },
+  {
+    "name": "n-propylheptanamide",
+    "smiles": "CCCCCCC(=O)NCCC"
+  },
+  {
+    "name": "butane-2,3-diol",
+    "smiles": "CC(O)C(C)O"
+  },
+  {
+    "name": "n-ethylpentanamide",
+    "smiles": "CCCCC(=O)NCC"
+  },
+  {
+    "name": "2-bromopropane",
+    "smiles": "CC(C)Br"
+  },
+  {
+    "name": "hexa-2,4-diene",
+    "smiles": "CC=CC=CC"
+  },
+  {
+    "name": "1-bromo-2-fluoro-4-iodobenzene",
+    "smiles": "Fc1cc(I)ccc1Br"
+  },
+  {
+    "name": "ethyl pentanoate",
+    "smiles": "CCCCC(=O)OCC"
+  },
+  {
+    "name": "hex-1-ene",
+    "smiles": "C=CCCCC"
+  },
+  {
+    "name": "benzene-1,2-diamine",
+    "smiles": "Nc1ccccc1N"
+  },
+  {
+    "name": "propane-1,2,2-triol",
+    "smiles": "CC(O)(O)CO"
+  },
+  {
+    "name": "1,3-dibromo-5-iodobenzene",
+    "smiles": "Brc1cc(Br)cc(I)c1"
+  },
+  {
+    "name": "heptan-3-ol",
+    "smiles": "CCCCC(O)CC"
+  },
+  {
+    "name": "2-iodopropane",
+    "smiles": "CC(C)I"
+  },
+  {
+    "name": "2-pentylpropanedial",
+    "smiles": "CCCCCC(C=O)C=O"
+  },
+  {
+    "name": "pentane-1,1,3-triol",
+    "smiles": "CCC(O)CC(O)O"
+  },
+  {
+    "name": "benzene-1,2-diol",
+    "smiles": "Oc1ccccc1O"
+  },
+  {
+    "name": "pentanedial",
+    "smiles": "O=CCCCC=O"
+  },
+  {
+    "name": "buta-1,3-diene",
+    "smiles": "C=CC=C"
+  },
+  {
+    "name": "2-methylpentanal",
+    "smiles": "CCCC(C)C=O"
+  },
+  {
+    "name": "1-nitropentane",
+    "smiles": "CCCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "n-methylpropanamide",
+    "smiles": "CCC(=O)NC"
+  },
+  {
+    "name": "n-butylacetamide",
+    "smiles": "CCCCNC(C)=O"
+  },
+  {
+    "name": "aniline",
+    "smiles": "Nc1ccccc1"
+  },
+  {
+    "name": "benzene-1,3-diamine",
+    "smiles": "Nc1cccc(N)c1"
+  },
+  {
+    "name": "hexane-1,2,2-triamine",
+    "smiles": "CCCCC(N)(N)CN"
+  },
+  {
+    "name": "4-nitroheptane",
+    "smiles": "CCCC(CCC)[N+](=O)[O-]"
+  },
+  {
+    "name": "propyl propanoate",
+    "smiles": "CCCOC(=O)CC"
+  },
+  {
+    "name": "n-ethylacetamide",
+    "smiles": "CCNC(C)=O"
+  },
+  {
+    "name": "hexa-1,4-diene",
+    "smiles": "C=CCC=CC"
+  },
+  {
+    "name": "2,2-dimethylpropanedial",
+    "smiles": "CC(C)(C=O)C=O"
+  },
+  {
+    "name": "propyl hexanoate",
+    "smiles": "CCCCCC(=O)OCCC"
+  },
+  {
+    "name": "propanedial",
+    "smiles": "O=CCC=O"
+  },
+  {
+    "name": "1-nitropropane",
+    "smiles": "CCC[N+](=O)[O-]"
+  },
+  {
+    "name": "n-butylpentanamide",
+    "smiles": "CCCCNC(=O)CCCC"
+  },
+  {
+    "name": "2-ethylbutanedial",
+    "smiles": "CCC(C=O)CC=O"
+  },
+  {
+    "name": "n-ethylbutanamide",
+    "smiles": "CCCC(=O)NCC"
+  },
+  {
+    "name": "butanoic acid",
+    "smiles": "CCCC(=O)O"
+  },
+  {
+    "name": "propane-1,3-diamine",
+    "smiles": "NCCCN"
+  },
+  {
+    "name": "propan-2-one",
+    "smiles": "CC(C)=O"
+  },
+  {
+    "name": "butanoyl butanoate",
+    "smiles": "CCCC(=O)OC(=O)CCC"
+  },
+  {
+    "name": "3-nitropentane",
+    "smiles": "CCC(CC)[N+](=O)[O-]"
+  },
+  {
+    "name": "hexyl butanoate",
+    "smiles": "CCCCCCOC(=O)CCC"
+  },
+  {
+    "name": "hexan-1-ol",
+    "smiles": "CCCCCCO"
+  },
+  {
+    "name": "hexyl acetate",
+    "smiles": "CCCCCCOC(C)=O"
+  },
+  {
+    "name": "benzene-1,4-diol",
+    "smiles": "Oc1ccc(O)cc1"
+  },
+  {
+    "name": "ethyl heptanoate",
+    "smiles": "CCCCCCC(=O)OCC"
+  },
+  {
+    "name": "propanoyl butanoate",
+    "smiles": "CCCC(=O)OC(=O)CC"
+  },
+  {
+    "name": "hepta-1,3-diene",
+    "smiles": "C=CC=CCCC"
+  },
+  {
+    "name": "butanal",
+    "smiles": "CCCC=O"
+  },
+  {
+    "name": "1-bromo-2-chloro-3-fluorobenzene",
+    "smiles": "Fc1cccc(Br)c1Cl"
+  },
+  {
+    "name": "2-nitrohexane",
+    "smiles": "CCCCC(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-methyl-2-oxoheptanal",
+    "smiles": "CCCCC(C)C(=O)C=O"
+  },
+  {
+    "name": "propane-1,2-diol",
+    "smiles": "CC(O)CO"
+  },
+  {
+    "name": "propanoyl propanoate",
+    "smiles": "CCC(=O)OC(=O)CC"
+  },
+  {
+    "name": "3-chloro-1-iodopentane",
+    "smiles": "CCC(Cl)CCI"
+  },
+  {
+    "name": "4-oxohexanal",
+    "smiles": "CCC(=O)CCC=O"
+  },
+  {
+    "name": "hexa-1,3-diene",
+    "smiles": "C=CC=CCC"
+  },
+  {
+    "name": "hexane-1,2-diol",
+    "smiles": "CCCCC(O)CO"
+  },
+  {
+    "name": "ethyl butanoate",
+    "smiles": "CCCC(=O)OCC"
+  },
+  {
+    "name": "2,5-dimethylhexanedial",
+    "smiles": "CC(C=O)CCC(C)C=O"
+  },
+  {
+    "name": "1-bromo-2-chlorobenzene",
+    "smiles": "Clc1ccccc1Br"
+  },
+  {
+    "name": "2-oxobutanal",
+    "smiles": "CCC(=O)C=O"
+  },
+  {
+    "name": "heptanal",
+    "smiles": "CCCCCCC=O"
+  },
+  {
+    "name": "acetyl butanoate",
+    "smiles": "CCCC(=O)OC(C)=O"
+  },
+  {
+    "name": "hexanal",
+    "smiles": "CCCCCC=O"
+  },
+  {
+    "name": "propane-1,2-diamine",
+    "smiles": "CC(N)CN"
+  },
+  {
+    "name": "propane-1,1,3-triamine",
+    "smiles": "NCCC(N)N"
+  },
+  {
+    "name": "n-methylhexanamide",
+    "smiles": "CCCCCC(=O)NC"
+  },
+  {
+    "name": "pentane-2,2,3-triol",
+    "smiles": "CCC(O)C(C)(O)O"
+  },
+  {
+    "name": "1-nitroheptane",
+    "smiles": "CCCCCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "2-fluoro-1-iodopropane",
+    "smiles": "CC(F)CI"
+  },
+  {
+    "name": "4-oxoheptanal",
+    "smiles": "CCCC(=O)CCC=O"
+  },
+  {
+    "name": "hept-1-ene",
+    "smiles": "C=CCCCCC"
+  },
+  {
+    "name": "n-hexylpropanamide",
+    "smiles": "CCCCCCNC(=O)CC"
+  },
+  {
+    "name": "hepta-1,3,5-triene",
+    "smiles": "C=CC=CC=CC"
+  },
+  {
+    "name": "n-pentylpentanamide",
+    "smiles": "CCCCCNC(=O)CCCC"
+  },
+  {
+    "name": "butane-1,1,1-triol",
+    "smiles": "CCCC(O)(O)O"
+  },
+  {
+    "name": "iodobenzene",
+    "smiles": "Ic1ccccc1"
+  },
+  {
+    "name": "pent-1-ene",
+    "smiles": "C=CCCC"
+  },
+  {
+    "name": "butyl hexanoate",
+    "smiles": "CCCCCC(=O)OCCCC"
+  },
+  {
+    "name": "2-nitropentane",
+    "smiles": "CCCC(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "pentane-2,3,3-triol",
+    "smiles": "CCC(O)(O)C(C)O"
+  },
+  {
+    "name": "n-butylpropanamide",
+    "smiles": "CCCCNC(=O)CC"
+  },
+  {
+    "name": "2-methylheptanedial",
+    "smiles": "CC(C=O)CCCCC=O"
+  },
+  {
+    "name": "pentane-2,4-diol",
+    "smiles": "CC(O)CC(C)O"
+  },
+  {
+    "name": "1-bromo-4-chlorobenzene",
+    "smiles": "Clc1ccc(Br)cc1"
+  },
+  {
+    "name": "pentane-2,4-dione",
+    "smiles": "CC(=O)CC(C)=O"
+  },
+  {
+    "name": "3-fluoroheptane",
+    "smiles": "CCCCC(F)CC"
+  },
+  {
+    "name": "heptane-1,3,4-triol",
+    "smiles": "CCCC(O)C(O)CCO"
+  },
+  {
+    "name": "1-fluoro-4-iodobenzene",
+    "smiles": "Fc1ccc(I)cc1"
+  },
+  {
+    "name": "3-bromo-1-iodopentane",
+    "smiles": "CCC(Br)CCI"
+  },
+  {
+    "name": "heptane-3,3-diamine",
+    "smiles": "CCCCC(N)(N)CC"
+  },
+  {
+    "name": "1,2-dibromo-4-iodobenzene",
+    "smiles": "Brc1ccc(I)cc1Br"
+  },
+  {
+    "name": "n-butylhexanamide",
+    "smiles": "CCCCCC(=O)NCCCC"
+  },
+  {
+    "name": "n-heptylbutanamide",
+    "smiles": "CCCCCCCNC(=O)CCC"
+  },
+  {
+    "name": "1-bromopropane",
+    "smiles": "CCCBr"
+  },
+  {
+    "name": "chlorobenzene",
+    "smiles": "Clc1ccccc1"
+  },
+  {
+    "name": "1,1,2-trichloropropane",
+    "smiles": "CC(Cl)C(Cl)Cl"
+  },
+  {
+    "name": "4-chloroheptane",
+    "smiles": "CCCC(Cl)CCC"
+  },
+  {
+    "name": "hexane-1,5,5-triamine",
+    "smiles": "CC(N)(N)CCCCN"
+  },
+  {
+    "name": "hexan-2-ol",
+    "smiles": "CCCCC(C)O"
+  },
+  {
+    "name": "hepta-1,3,6-triene",
+    "smiles": "C=CC=CCC=C"
+  },
+  {
+    "name": "pentanal",
+    "smiles": "CCCCC=O"
+  },
+  {
+    "name": "2-butylbutanedial",
+    "smiles": "CCCCC(C=O)CC=O"
+  },
+  {
+    "name": "pentane-2,3-dione",
+    "smiles": "CCC(=O)C(C)=O"
+  },
+  {
+    "name": "1-bromo-3-fluorobenzene",
+    "smiles": "Fc1cccc(Br)c1"
+  },
+  {
+    "name": "1-bromo-4-iodobenzene",
+    "smiles": "Brc1ccc(I)cc1"
+  },
+  {
+    "name": "butyl acetate",
+    "smiles": "CCCCOC(C)=O"
+  },
+  {
+    "name": "heptan-2-ol",
+    "smiles": "CCCCCC(C)O"
+  },
+  {
+    "name": "hexan-2-amine",
+    "smiles": "CCCCC(C)N"
+  },
+  {
+    "name": "heptane-1,4,5-triol",
+    "smiles": "CCC(O)C(O)CCCO"
+  },
+  {
+    "name": "hexan-3-one",
+    "smiles": "CCCC(=O)CC"
+  },
+  {
+    "name": "3-nitrohexane",
+    "smiles": "CCCC(CC)[N+](=O)[O-]"
+  },
+  {
+    "name": "3-oxopentanal",
+    "smiles": "CCC(=O)CC=O"
+  },
+  {
+    "name": "1,2-dibromo-3-iodobenzene",
+    "smiles": "Brc1cccc(I)c1Br"
+  },
+  {
+    "name": "2,4-dimethylpentanedial",
+    "smiles": "CC(C=O)CC(C)C=O"
+  },
+  {
+    "name": "n-heptylheptanamide",
+    "smiles": "CCCCCCCNC(=O)CCCCCC"
+  },
+  {
+    "name": "propane-1,1,3-triol",
+    "smiles": "OCCC(O)O"
+  },
+  {
+    "name": "2-methylhexanal",
+    "smiles": "CCCCC(C)C=O"
+  },
+  {
+    "name": "hepta-1,6-diene",
+    "smiles": "C=CCCCC=C"
+  },
+  {
+    "name": "pentane-1,5-diol",
+    "smiles": "OCCCCCO"
+  },
+  {
+    "name": "2-bromo-1-fluoropropane",
+    "smiles": "CC(Br)CF"
+  },
+  {
+    "name": "2-nitropropane",
+    "smiles": "CC(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "but-1-ene",
+    "smiles": "C=CCC"
+  },
+  {
+    "name": "butan-2-ol",
+    "smiles": "CCC(C)O"
+  },
+  {
+    "name": "pentan-2-amine",
+    "smiles": "CCCC(C)N"
+  },
+  {
+    "name": "heptane-1,2-diol",
+    "smiles": "CCCCCC(O)CO"
+  },
+  {
+    "name": "2-nitroheptane",
+    "smiles": "CCCCCC(C)[N+](=O)[O-]"
+  },
+  {
+    "name": "1,4-diiodobenzene",
+    "smiles": "Ic1ccc(I)cc1"
+  },
+  {
+    "name": "butan-1-amine",
+    "smiles": "CCCCN"
+  },
+  {
+    "name": "n-methylpentanamide",
+    "smiles": "CCCCC(=O)NC"
+  },
+  {
+    "name": "n-hexylbutanamide",
+    "smiles": "CCCCCCNC(=O)CCC"
+  },
+  {
+    "name": "but-2-ene",
+    "smiles": "CC=CC"
+  },
+  {
+    "name": "n-butylbutanamide",
+    "smiles": "CCCCNC(=O)CCC"
+  },
+  {
+    "name": "heptan-2-one",
+    "smiles": "CCCCCC(C)=O"
+  },
+  {
+    "name": "hexane-2,3-diamine",
+    "smiles": "CCCC(N)C(C)N"
+  },
+  {
+    "name": "heptan-3-one",
+    "smiles": "CCCCC(=O)CC"
+  },
+  {
+    "name": "heptyl acetate",
+    "smiles": "CCCCCCCOC(C)=O"
+  },
+  {
+    "name": "2-methylpentanedial",
+    "smiles": "CC(C=O)CCC=O"
+  },
+  {
+    "name": "n-pentylacetamide",
+    "smiles": "CCCCCNC(C)=O"
+  },
+  {
+    "name": "2,3-dimethylbutanedial",
+    "smiles": "CC(C=O)C(C)C=O"
+  },
+  {
+    "name": "butane-1,3-diamine",
+    "smiles": "CC(N)CCN"
+  },
+  {
+    "name": "2-iodoheptane",
+    "smiles": "CCCCCC(C)I"
+  },
+  {
+    "name": "2-chloropentane",
+    "smiles": "CCCC(C)Cl"
+  },
+  {
+    "name": "2-ethylpropanedial",
+    "smiles": "CCC(C=O)C=O"
+  },
+  {
+    "name": "1,4-dibromo-2-chlorobenzene",
+    "smiles": "Clc1cc(Br)ccc1Br"
+  },
+  {
+    "name": "pentyl pentanoate",
+    "smiles": "CCCCCOC(=O)CCCC"
+  },
+  {
+    "name": "heptanedial",
+    "smiles": "O=CCCCCCC=O"
+  },
+  {
+    "name": "2-propylhexanedial",
+    "smiles": "CCCC(C=O)CCCC=O"
+  },
+  {
+    "name": "pentanoic acid",
+    "smiles": "CCCCC(=O)O"
+  },
+  {
+    "name": "pentan-1-amine",
+    "smiles": "CCCCCN"
+  },
+  {
+    "name": "hexan-2-one",
+    "smiles": "CCCCC(C)=O"
+  },
+  {
+    "name": "n-heptylpropanamide",
+    "smiles": "CCCCCCCNC(=O)CC"
+  },
+  {
+    "name": "fluorobenzene",
+    "smiles": "Fc1ccccc1"
+  },
+  {
+    "name": "heptan-4-amine",
+    "smiles": "CCCC(N)CCC"
+  },
+  {
+    "name": "1-bromo-3-fluoro-2-iodobenzene",
+    "smiles": "Fc1cccc(Br)c1I"
+  },
+  {
+    "name": "n-ethylheptanamide",
+    "smiles": "CCCCCCC(=O)NCC"
+  },
+  {
+    "name": "hepta-1,4-diene",
+    "smiles": "C=CCC=CCC"
+  },
+  {
+    "name": "hex-2-ene",
+    "smiles": "CC=CCCC"
+  },
+  {
+    "name": "butanoyl pentanoate",
+    "smiles": "CCCCC(=O)OC(=O)CCC"
+  },
+  {
+    "name": "butane-1,3,3-triamine",
+    "smiles": "CC(N)(N)CCN"
+  },
+  {
+    "name": "butane-2,3-dione",
+    "smiles": "CC(=O)C(C)=O"
+  },
+  {
+    "name": "1-fluoro-2-iodobenzene",
+    "smiles": "Fc1ccccc1I"
+  },
+  {
+    "name": "hexane-1,3-diamine",
+    "smiles": "CCCC(N)CCN"
+  },
+  {
+    "name": "pentan-2-one",
+    "smiles": "CCCC(C)=O"
+  },
+  {
+    "name": "butyl pentanoate",
+    "smiles": "CCCCOC(=O)CCCC"
+  },
+  {
+    "name": "butyl butanoate",
+    "smiles": "CCCCOC(=O)CCC"
+  },
+  {
+    "name": "propane-1,1,2-triol",
+    "smiles": "CC(O)C(O)O"
+  },
+  {
+    "name": "pentane-1,3,5-triol",
+    "smiles": "OCCC(O)CCO"
+  },
+  {
+    "name": "heptane-2,5-diamine",
+    "smiles": "CCC(N)CCC(C)N"
+  },
+  {
+    "name": "1-nitrobutane",
+    "smiles": "CCCC[N+](=O)[O-]"
+  },
+  {
+    "name": "1,2,3-trichloropropane",
+    "smiles": "ClCC(Cl)CCl"
+  },
+  {
+    "name": "propane-1,2,3-triamine",
+    "smiles": "NCC(N)CN"
+  },
+  {
+    "name": "1-bromo-2-chloro-4-fluorobenzene",
+    "smiles": "Fc1ccc(Br)c(Cl)c1"
+  },
+  {
+    "name": "hexanoyl hexanoate",
+    "smiles": "CCCCCC(=O)OC(=O)CCCCC"
+  },
+  {
+    "name": "1-bromo-2-fluorobenzene",
+    "smiles": "Fc1ccccc1Br"
+  },
+  {
+    "name": "heptan-1-ol",
+    "smiles": "CCCCCCCO"
+  },
+  {
+    "name": "pentanoyl hexanoate",
+    "smiles": "CCCCCC(=O)OC(=O)CCCC"
+  },
+  {
+    "name": "butan-1-ol",
+    "smiles": "CCCCO"
+  },
+  {
+    "name": "2-pentylbutanedial",
+    "smiles": "CCCCCC(C=O)CC=O"
+  },
+  {
+    "name": "hexane-1,3-diol",
+    "smiles": "CCCC(O)CCO"
+  },
+  {
+    "name": "heptane-1,4-diol",
+    "smiles": "CCCC(O)CCCO"
+  },
+  {
+    "name": "propyl pentanoate",
+    "smiles": "CCCCC(=O)OCCC"
+  },
+  {
+    "name": "n-pentylbutanamide",
+    "smiles": "CCCCCNC(=O)CCC"
+  },
+  {
+    "name": "n-hexylpentanamide",
+    "smiles": "CCCCCCNC(=O)CCCC"
+  },
+  {
+    "name": "butane-1,2,2-triamine",
+    "smiles": "CCC(N)(N)CN"
+  },
+  {
+    "name": "pentane-2,3,3-triamine",
+    "smiles": "CCC(N)(N)C(C)N"
+  },
+  {
+    "name": "bromobenzene",
+    "smiles": "Brc1ccccc1"
+  },
+  {
+    "name": "pentane-1,2-diamine",
+    "smiles": "CCCC(N)CN"
+  },
+  {
+    "name": "2-chloro-1-iodopropane",
+    "smiles": "CC(Cl)CI"
+  },
+  {
+    "name": "1-bromo-2-fluoroheptane",
+    "smiles": "CCCCCC(F)CBr"
+  },
+  {
+    "name": "hex-3-ene",
+    "smiles": "CCC=CCC"
+  },
+  {
+    "name": "1,2-diiodobenzene",
+    "smiles": "Ic1ccccc1I"
+  },
+  {
+    "name": "1-bromo-3-iodobenzene",
+    "smiles": "Brc1cccc(I)c1"
+  },
+  {
+    "name": "acetyl pentanoate",
+    "smiles": "CCCCC(=O)OC(C)=O"
+  },
+  {
+    "name": "1-chloro-2-iodobenzene",
+    "smiles": "Clc1ccccc1I"
+  },
+  {
+    "name": "hexane-1,1,1-triamine",
+    "smiles": "CCCCCC(N)(N)N"
+  },
+  {
+    "name": "hexan-3-ol",
+    "smiles": "CCCC(O)CC"
+  },
+  {
+    "name": "hexane-1,4-diamine",
+    "smiles": "CCC(N)CCCN"
+  },
+  {
+    "name": "hexyl propanoate",
+    "smiles": "CCCCCCOC(=O)CC"
+  },
+  {
+    "name": "1-bromo-2,3-diiodopropane",
+    "smiles": "BrCC(I)CI"
+  },
+  {
+    "name": "butan-2-one",
+    "smiles": "CCC(C)=O"
+  },
+  {
+    "name": "pentane-1,2-diol",
+    "smiles": "CCCC(O)CO"
+  },
+  {
+    "name": "butane-1,2,3-triamine",
+    "smiles": "CC(N)C(N)CN"
+  },
+  {
+    "name": "1-bromo-6-fluoroheptane",
+    "smiles": "CC(F)CCCCCBr"
+  },
+  {
+    "name": "1-bromo-2,4-difluorobenzene",
+    "smiles": "Fc1ccc(Br)c(F)c1"
+  },
+  {
+    "name": "pentyl hexanoate",
+    "smiles": "CCCCCOC(=O)CCCCC"
+  },
+  {
+    "name": "heptan-4-one",
+    "smiles": "CCCC(=O)CCC"
+  },
+  {
+    "name": "1-fluoropentane",
+    "smiles": "CCCCCF"
+  },
+  {
+    "name": "1,1-dibromo-2-chloropropane",
+    "smiles": "CC(Cl)C(Br)Br"
+  },
+  {
+    "name": "octanedial",
+    "smiles": "O=CCCCCCCC=O"
+  },
+  {
+    "name": "propane-1,2,2-triamine",
+    "smiles": "CC(N)(N)CN"
+  },
+  {
+    "name": "acetyl hexanoate",
+    "smiles": "CCCCCC(=O)OC(C)=O"
+  },
+  {
+    "name": "pentanoyl pentanoate",
+    "smiles": "CCCCC(=O)OC(=O)CCCC"
+  },
+  {
+    "name": "heptan-3-amine",
+    "smiles": "CCCCC(N)CC"
+  },
+  {
+    "name": "1,2-dichloropropane",
+    "smiles": "CC(Cl)CCl"
+  },
+  {
+    "name": "1,2-difluoropropane",
+    "smiles": "CC(F)CF"
+  },
+  {
+    "name": "pentane-1,3-diol",
+    "smiles": "CCC(O)CCO"
+  },
+  {
+    "name": "2,3-diethylbutanedial",
+    "smiles": "CCC(C=O)C(C=O)CC"
+  },
+  {
+    "name": "propane-2,2-diamine",
+    "smiles": "CC(C)(N)N"
+  },
+  {
+    "name": "heptyl pentanoate",
+    "smiles": "CCCCCCCOC(=O)CCCC"
+  },
+  {
+    "name": "ethyl hexanoate",
+    "smiles": "CCCCCC(=O)OCC"
+  },
+  {
+    "name": "4-oxopentanal",
+    "smiles": "CC(=O)CCC=O"
+  },
+  {
+    "name": "n-hexylacetamide",
+    "smiles": "CCCCCCNC(C)=O"
+  },
+  {
+    "name": "heptane-3,4-diamine",
+    "smiles": "CCCC(N)C(N)CC"
+  },
+  {
+    "name": "2-bromopentane",
+    "smiles": "CCCC(C)Br"
+  },
+  {
+    "name": "butane-1,2-diol",
+    "smiles": "CCC(O)CO"
+  },
+  {
+    "name": "2-methylheptanal",
+    "smiles": "CCCCCC(C)C=O"
+  },
+  {
+    "name": "1-fluoro-3-iodobenzene",
+    "smiles": "Fc1cccc(I)c1"
+  },
+  {
+    "name": "1,2-dibromo-3-fluoropropane",
+    "smiles": "FCC(Br)CBr"
+  },
+  {
+    "name": "2-bromo-1-chloro-4-iodobenzene",
+    "smiles": "Clc1ccc(I)cc1Br"
+  },
+  {
+    "name": "hexane-1,3,4-triol",
+    "smiles": "CCC(O)C(O)CCO"
+  },
+  {
+    "name": "butane-1,1,4-triol",
+    "smiles": "OCCCC(O)O"
+  },
+  {
+    "name": "butane-1,4-diamine",
+    "smiles": "NCCCCN"
+  },
+  {
+    "name": "1,1-dichlorohexane",
+    "smiles": "CCCCCC(Cl)Cl"
+  },
+  {
+    "name": "butane-1,2,2-triol",
+    "smiles": "CCC(O)(O)CO"
+  },
+  {
+    "name": "butane-2,2,3-triol",
+    "smiles": "CC(O)C(C)(O)O"
+  },
+  {
+    "name": "n-pentylheptanamide",
+    "smiles": "CCCCCCC(=O)NCCCCC"
+  },
+  {
+    "name": "heptane-1,3-diol",
+    "smiles": "CCCCC(O)CCO"
+  },
+  {
+    "name": "pentyl propanoate",
+    "smiles": "CCCCCOC(=O)CC"
+  },
+  {
+    "name": "octanal",
+    "smiles": "CCCCCCCC=O"
+  },
+  {
+    "name": "4-bromo-1-chloro-2-iodobenzene",
+    "smiles": "Clc1ccc(Br)cc1I"
+  },
+  {
+    "name": "1-chloro-4-iodobenzene",
+    "smiles": "Clc1ccc(I)cc1"
+  },
+  {
+    "name": "3-methyl-2-oxobutanal",
+    "smiles": "CC(C)C(=O)C=O"
+  },
+  {
+    "name": "1,3-dichloro-5-fluorobenzene",
+    "smiles": "Fc1cc(Cl)cc(Cl)c1"
+  },
+  {
+    "name": "butane-2,2-diamine",
+    "smiles": "CCC(C)(N)N"
+  },
+  {
+    "name": "propanoyl pentanoate",
+    "smiles": "CCCCC(=O)OC(=O)CC"
+  },
+  {
+    "name": "pentane-1,1,2-triol",
+    "smiles": "CCCC(O)C(O)O"
+  },
+  {
+    "name": "1-iodopropane",
+    "smiles": "CCCI"
+  },
+  {
+    "name": "1,2-dibromo-1-chloro-2-fluoropropane",
+    "smiles": "CC(F)(Br)C(Cl)Br"
+  },
+  {
+    "name": "hexane-1,5-diamine",
+    "smiles": "CC(N)CCCCN"
+  },
+  {
+    "name": "pentyl acetate",
+    "smiles": "CCCCCOC(C)=O"
+  },
+  {
+    "name": "pentane-1,3,4-triol",
+    "smiles": "CC(O)C(O)CCO"
+  },
+  {
+    "name": "heptane-1,2,7-triamine",
+    "smiles": "NCCCCCC(N)CN"
+  },
+  {
+    "name": "heptan-4-ol",
+    "smiles": "CCCC(O)CCC"
+  },
+  {
+    "name": "2,4-difluoro-1-iodobenzene",
+    "smiles": "Fc1ccc(I)c(F)c1"
+  },
+  {
+    "name": "1-chloro-1-iodopropane",
+    "smiles": "CCC(Cl)I"
+  },
+  {
+    "name": "2,4-diethylpentanedial",
+    "smiles": "CCC(C=O)CC(C=O)CC"
+  },
+  {
+    "name": "butane-1,3-diol",
+    "smiles": "CC(O)CCO"
+  },
+  {
+    "name": "hexane-2,4-dione",
+    "smiles": "CCC(=O)CC(C)=O"
+  },
+  {
+    "name": "hexane-1,2,6-triol",
+    "smiles": "OCCCCC(O)CO"
+  },
+  {
+    "name": "butane-2,2-diol",
+    "smiles": "CCC(C)(O)O"
+  },
+  {
+    "name": "pentan-3-ol",
+    "smiles": "CCC(O)CC"
+  },
+  {
+    "name": "1,4-dichloro-2-fluorobenzene",
+    "smiles": "Fc1cc(Cl)ccc1Cl"
+  },
+  {
+    "name": "2,4-dichloro-1-iodobenzene",
+    "smiles": "Clc1ccc(I)c(Cl)c1"
+  },
+  {
+    "name": "1-bromo-3-chloro-2-iodobenzene",
+    "smiles": "Clc1cccc(Br)c1I"
+  },
+  {
+    "name": "hexane-1,2,4-triamine",
+    "smiles": "CCC(N)CC(N)CN"
+  },
+  {
+    "name": "2-bromo-4-fluoro-1-iodobenzene",
+    "smiles": "Fc1ccc(I)c(Br)c1"
+  },
+  {
+    "name": "4-bromo-2-chloro-1-fluorobenzene",
+    "smiles": "Fc1ccc(Br)cc1Cl"
+  },
+  {
+    "name": "2-fluoro-1,4-diiodobenzene",
+    "smiles": "Fc1cc(I)ccc1I"
+  },
+  {
+    "name": "propyl butanoate",
+    "smiles": "CCCOC(=O)CCC"
+  },
+  {
+    "name": "2-bromo-1-chloro-4-fluorobenzene",
+    "smiles": "Fc1ccc(Cl)c(Br)c1"
+  },
+  {
+    "name": "1-chloro-4-fluoro-2-iodobenzene",
+    "smiles": "Fc1ccc(Cl)c(I)c1"
+  },
+  {
+    "name": "2-butylpentanedial",
+    "smiles": "CCCCC(C=O)CCC=O"
+  },
+  {
+    "name": "heptane-1,6-diamine",
+    "smiles": "CC(N)CCCCCN"
+  },
+  {
+    "name": "2-chloro-3-fluorobutane",
+    "smiles": "CC(F)C(C)Cl"
+  },
+  {
+    "name": "hept-3-ene",
+    "smiles": "CCC=CCCC"
+  },
+  {
+    "name": "heptyl heptanoate",
+    "smiles": "CCCCCCCOC(=O)CCCCCC"
+  },
+  {
+    "name": "butane-1,1,1-triamine",
+    "smiles": "CCCC(N)(N)N"
+  },
+  {
+    "name": "1-bromo-3-chloro-2-fluorobenzene",
+    "smiles": "Fc1c(Cl)cccc1Br"
+  },
+  {
+    "name": "1-chloro-3-iodobenzene",
+    "smiles": "Clc1cccc(I)c1"
+  },
+  {
+    "name": "1-chloro-2,3-difluorobenzene",
+    "smiles": "Fc1cccc(Cl)c1F"
+  },
+  {
+    "name": "1-bromo-4-chloro-2-iodobenzene",
+    "smiles": "Clc1ccc(Br)c(I)c1"
+  },
+  {
+    "name": "hexane-2,3-dione",
+    "smiles": "CCCC(=O)C(C)=O"
+  },
+  {
+    "name": "2,3-diiodopentane",
+    "smiles": "CCC(I)C(C)I"
+  },
+  {
+    "name": "heptane-3,4,5-triol",
+    "smiles": "CCC(O)C(O)C(O)CC"
+  },
+  {
+    "name": "propane-1,2,3-triol",
+    "smiles": "OCC(O)CO"
+  },
+  {
+    "name": "butane-1,2,4-triamine",
+    "smiles": "NCCC(N)CN"
+  },
+  {
+    "name": "hexa-1,3,5-triene",
+    "smiles": "C=CC=CC=C"
+  },
+  {
+    "name": "1,1-difluoropentane",
+    "smiles": "CCCCC(F)F"
+  },
+  {
+    "name": "2-bromo-1-fluoro-3-iodobenzene",
+    "smiles": "Fc1cccc(I)c1Br"
+  },
+  {
+    "name": "heptan-1-amine",
+    "smiles": "CCCCCCCN"
+  },
+  {
+    "name": "heptan-2-amine",
+    "smiles": "CCCCCC(C)N"
+  },
+  {
+    "name": "hexan-1-amine",
+    "smiles": "CCCCCCN"
+  },
+  {
+    "name": "hept-2-ene",
+    "smiles": "CC=CCCCC"
+  },
+  {
+    "name": "6-oxoheptanal",
+    "smiles": "CC(=O)CCCCC=O"
+  },
+  {
+    "name": "pentane-1,2,4-triol",
+    "smiles": "CC(O)CC(O)CO"
+  },
+  {
+    "name": "1,2-dibromopropane",
+    "smiles": "CC(Br)CBr"
+  },
+  {
+    "name": "butane-1,1,3-triol",
+    "smiles": "CC(O)CC(O)O"
+  },
+  {
+    "name": "1,2,3-tribromopropane",
+    "smiles": "BrCC(Br)CBr"
+  },
+  {
+    "name": "2-ethylhexanedial",
+    "smiles": "CCC(C=O)CCCC=O"
+  },
+  {
+    "name": "4-bromo-1-fluoro-2-iodobenzene",
+    "smiles": "Fc1ccc(Br)cc1I"
+  },
+  {
+    "name": "1-bromo-2-chloropropane",
+    "smiles": "CC(Cl)CBr"
+  },
+  {
+    "name": "2-oxohexanal",
+    "smiles": "CCCCC(=O)C=O"
+  },
+  {
+    "name": "1-bromo-3-chlorobutane",
+    "smiles": "CC(Cl)CCBr"
+  },
+  {
+    "name": "1,3-dichlorobenzene",
+    "smiles": "Clc1cccc(Cl)c1"
+  },
+  {
+    "name": "2-chloro-1-fluoro-4-iodobenzene",
+    "smiles": "Fc1ccc(I)cc1Cl"
+  },
+  {
+    "name": "pentane-1,4-diamine",
+    "smiles": "CC(N)CCCN"
+  },
+  {
+    "name": "pentane-1,1,4-triamine",
+    "smiles": "CC(N)CCC(N)N"
+  },
+  {
+    "name": "hexane-1,4,5-triol",
+    "smiles": "CC(O)C(O)CCCO"
+  },
+  {
+    "name": "hepta-1,5-diene",
+    "smiles": "C=CCCC=CC"
+  },
+  {
+    "name": "heptane-1,1,5-triamine",
+    "smiles": "CCC(N)CCCC(N)N"
+  },
+  {
+    "name": "n-butylheptanamide",
+    "smiles": "CCCCCCC(=O)NCCCC"
+  },
+  {
+    "name": "2-ethylhexanal",
+    "smiles": "CCCCC(C=O)CC"
+  },
+  {
+    "name": "propyl heptanoate",
+    "smiles": "CCCCCCC(=O)OCCC"
+  },
+  {
+    "name": "2-ethylpentanal",
+    "smiles": "CCCC(C=O)CC"
+  },
+  {
+    "name": "2-chloropropane",
+    "smiles": "CC(C)Cl"
+  },
+  {
+    "name": "1-chloro-2,4-diiodobenzene",
+    "smiles": "Clc1ccc(I)cc1I"
+  },
+  {
+    "name": "1,2-dichloroheptane",
+    "smiles": "CCCCCC(Cl)CCl"
+  },
+  {
+    "name": "1,2,2-tribromopentane",
+    "smiles": "CCCC(Br)(Br)CBr"
+  },
+  {
+    "name": "penta-1,4-diene",
+    "smiles": "C=CCC=C"
+  },
+  {
+    "name": "2-propylpentanal",
+    "smiles": "CCCC(C=O)CCC"
+  },
+  {
+    "name": "heptane-2,3-dione",
+    "smiles": "CCCCC(=O)C(C)=O"
+  },
+  {
+    "name": "propane-2,2-diol",
+    "smiles": "CC(C)(O)O"
+  },
+  {
+    "name": "2-ethyl-3-methylbutanedial",
+    "smiles": "CCC(C=O)C(C)C=O"
+  },
+  {
+    "name": "1,4-dibromo-2-fluorobenzene",
+    "smiles": "Fc1cc(Br)ccc1Br"
+  },
+  {
+    "name": "1-bromohexane",
+    "smiles": "CCCCCCBr"
+  },
+  {
+    "name": "n-heptylpentanamide",
+    "smiles": "CCCCCCCNC(=O)CCCC"
+  },
+  {
+    "name": "2-fluoropentane",
+    "smiles": "CCCC(C)F"
+  },
+  {
+    "name": "heptyl propanoate",
+    "smiles": "CCCCCCCOC(=O)CC"
+  },
+  {
+    "name": "1-bromo-3-iodopropane",
+    "smiles": "BrCCCI"
+  },
+  {
+    "name": "2-bromo-1-chloro-3-fluorobenzene",
+    "smiles": "Fc1cccc(Cl)c1Br"
+  },
+  {
+    "name": "propanoyl hexanoate",
+    "smiles": "CCCCCC(=O)OC(=O)CC"
+  },
+  {
+    "name": "3-chlorohexane",
+    "smiles": "CCCC(Cl)CC"
+  },
+  {
+    "name": "hexane-1,6-diol",
+    "smiles": "OCCCCCCO"
+  },
+  {
+    "name": "propane-1,1,2-triamine",
+    "smiles": "CC(N)C(N)N"
+  },
+  {
+    "name": "hexa-1,5-diene",
+    "smiles": "C=CCCC=C"
+  },
+  {
+    "name": "1,1,2-triiodopentane",
+    "smiles": "CCCC(I)C(I)I"
+  },
+  {
+    "name": "1,4-dichlorobenzene",
+    "smiles": "Clc1ccc(Cl)cc1"
+  },
+  {
+    "name": "2-chloro-1,4-diiodobenzene",
+    "smiles": "Clc1cc(I)ccc1I"
+  },
+  {
+    "name": "1,2-dibromopentane",
+    "smiles": "CCCC(Br)CBr"
+  },
+  {
+    "name": "1,2-difluorobenzene",
+    "smiles": "Fc1ccccc1F"
+  },
+  {
+    "name": "2-fluoropropane",
+    "smiles": "CC(C)F"
+  },
+  {
+    "name": "heptane-2,3-diol",
+    "smiles": "CCCCC(O)C(C)O"
+  },
+  {
+    "name": "hexane-2,3,4-triol",
+    "smiles": "CCC(O)C(O)C(C)O"
+  },
+  {
+    "name": "hepta-2,5-diene",
+    "smiles": "CC=CCC=CC"
+  },
+  {
+    "name": "heptane-2,4,4-triol",
+    "smiles": "CCCC(O)(O)CC(C)O"
+  },
+  {
+    "name": "pentane-2,2-diamine",
+    "smiles": "CCCC(C)(N)N"
+  },
+  {
+    "name": "pentane-2,2,3-triamine",
+    "smiles": "CCC(N)C(C)(N)N"
+  },
+  {
+    "name": "heptane-1,3,7-triol",
+    "smiles": "OCCCCC(O)CCO"
+  },
+  {
+    "name": "heptane-2,4-diol",
+    "smiles": "CCCC(O)CC(C)O"
+  },
+  {
+    "name": "n-methylheptanamide",
+    "smiles": "CCCCCCC(=O)NC"
+  },
+  {
+    "name": "4-bromo-1,2-difluorobenzene",
+    "smiles": "Fc1ccc(Br)cc1F"
+  },
+  {
+    "name": "2-methyl-2-propylpropanedial",
+    "smiles": "CCCC(C)(C=O)C=O"
+  },
+  {
+    "name": "hexane-2,5-diol",
+    "smiles": "CC(O)CCC(C)O"
+  },
+  {
+    "name": "2-methylhexanedial",
+    "smiles": "CC(C=O)CCCC=O"
+  },
+  {
+    "name": "pentane-1,1,3-triamine",
+    "smiles": "CCC(N)CC(N)N"
+  },
+  {
+    "name": "pentane-1,2,2-triamine",
+    "smiles": "CCCC(N)(N)CN"
+  },
+  {
+    "name": "1-chloro-1-fluoropropane",
+    "smiles": "CCC(F)Cl"
+  },
+  {
+    "name": "1,2,4-trifluorobenzene",
+    "smiles": "Fc1ccc(F)c(F)c1"
+  },
+  {
+    "name": "1-fluoro-2,2-diiodopropane",
+    "smiles": "CC(I)(I)CF"
+  },
+  {
+    "name": "2-chloro-1,3-diiodobenzene",
+    "smiles": "Clc1c(I)cccc1I"
+  },
+  {
+    "name": "3-chloropentane",
+    "smiles": "CCC(Cl)CC"
+  },
+  {
+    "name": "2-iodohexane",
+    "smiles": "CCCCC(C)I"
+  },
+  {
+    "name": "butane-2,2,3-triamine",
+    "smiles": "CC(N)C(C)(N)N"
+  },
+  {
+    "name": "2,6-dimethylheptanedial",
+    "smiles": "CC(C=O)CCCC(C)C=O"
+  },
+  {
+    "name": "2-propylpentanedial",
+    "smiles": "CCCC(C=O)CCC=O"
+  },
+  {
+    "name": "heptane-1,6-diol",
+    "smiles": "CC(O)CCCCCO"
+  },
+  {
+    "name": "pentyl heptanoate",
+    "smiles": "CCCCCCC(=O)OCCCCC"
+  },
+  {
+    "name": "pentane-1,3-diamine",
+    "smiles": "CCC(N)CCN"
+  },
+  {
+    "name": "n-hexylhexanamide",
+    "smiles": "CCCCCCNC(=O)CCCCC"
+  },
+  {
+    "name": "2-oxooctanal",
+    "smiles": "CCCCCCC(=O)C=O"
+  },
+  {
+    "name": "hexane-2,4-diol",
+    "smiles": "CCC(O)CC(C)O"
+  },
+  {
+    "name": "pentane-1,1,5-triol",
+    "smiles": "OCCCCC(O)O"
+  },
+  {
+    "name": "hexane-1,1,5-triol",
+    "smiles": "CC(O)CCCC(O)O"
+  },
+  {
+    "name": "butanoyl hexanoate",
+    "smiles": "CCCCCC(=O)OC(=O)CCC"
+  },
+  {
+    "name": "hexane-1,2,4-triol",
+    "smiles": "CCC(O)CC(O)CO"
+  },
+  {
+    "name": "heptane-3,5-diamine",
+    "smiles": "CCC(N)CC(N)CC"
+  },
+  {
+    "name": "pentane-1,1,1-triol",
+    "smiles": "CCCCC(O)(O)O"
+  },
+  {
+    "name": "hexane-1,2,3-triamine",
+    "smiles": "CCCC(N)C(N)CN"
+  },
+  {
+    "name": "butane-1,2-diamine",
+    "smiles": "CCC(N)CN"
+  },
+  {
+    "name": "n-hexylheptanamide",
+    "smiles": "CCCCCCNC(=O)CCCCCC"
+  },
+  {
+    "name": "propane-1,1,1-triol",
+    "smiles": "CCC(O)(O)O"
+  },
+  {
+    "name": "2-methyl-4-propylpentanedial",
+    "smiles": "CCCC(C=O)CC(C)C=O"
+  },
+  {
+    "name": "2-butyl-3-methylbutanedial",
+    "smiles": "CCCCC(C=O)C(C)C=O"
+  },
+  {
+    "name": "1,2,3-tribromobenzene",
+    "smiles": "Brc1cccc(Br)c1Br"
+  },
+  {
+    "name": "2-iodopentane",
+    "smiles": "CCCC(C)I"
+  },
+  {
+    "name": "heptane-1,5-diamine",
+    "smiles": "CCC(N)CCCCN"
+  },
+  {
+    "name": "1,2-difluoro-2-iodopropane",
+    "smiles": "CC(F)(I)CF"
+  },
+  {
+    "name": "1,2-dichloro-4-iodobenzene",
+    "smiles": "Clc1ccc(I)cc1Cl"
+  },
+  {
+    "name": "1,2,3-trichlorobenzene",
+    "smiles": "Clc1cccc(Cl)c1Cl"
+  },
+  {
+    "name": "hexane-2,2,4-triol",
+    "smiles": "CCC(O)CC(C)(O)O"
+  },
+  {
+    "name": "pentane-1,1,2-triamine",
+    "smiles": "CCCC(N)C(N)N"
+  },
+  {
+    "name": "1-iodobutane",
+    "smiles": "CCCCI"
+  },
+  {
+    "name": "1,5-dibromoheptane",
+    "smiles": "CCC(Br)CCCCBr"
+  },
+  {
+    "name": "2-bromo-2-fluoropropane",
+    "smiles": "CC(C)(F)Br"
+  },
+  {
+    "name": "2-chloro-4-fluoro-1-iodobenzene",
+    "smiles": "Fc1ccc(I)c(Cl)c1"
+  },
+  {
+    "name": "2-chloro-1,3-difluorobenzene",
+    "smiles": "Fc1cccc(F)c1Cl"
+  },
+  {
+    "name": "1,2-dichlorobenzene",
+    "smiles": "Clc1ccccc1Cl"
+  },
+  {
+    "name": "3-iodoheptane",
+    "smiles": "CCCCC(I)CC"
+  },
+  {
+    "name": "3-oxohexanal",
+    "smiles": "CCCC(=O)CC=O"
+  },
+  {
+    "name": "2,4-dibromoheptane",
+    "smiles": "CCCC(Br)CC(C)Br"
+  },
+  {
+    "name": "pentane-1,3,4-triamine",
+    "smiles": "CC(N)C(N)CCN"
+  },
+  {
+    "name": "1-chloro-3,5-difluorobenzene",
+    "smiles": "Fc1cc(F)cc(Cl)c1"
+  },
+  {
+    "name": "2-bromo-3-chlorohexane",
+    "smiles": "CCCC(Cl)C(C)Br"
+  },
+  {
+    "name": "1,1-difluoropropane",
+    "smiles": "CCC(F)F"
+  },
+  {
+    "name": "1-bromo-1,1,2-trichloropropane",
+    "smiles": "CC(Cl)C(Cl)(Cl)Br"
+  },
+  {
+    "name": "heptane-1,1,4-triol",
+    "smiles": "CCCC(O)CCC(O)O"
+  },
+  {
+    "name": "2-iodobutane",
+    "smiles": "CCC(C)I"
+  },
+  {
+    "name": "3-bromoheptane",
+    "smiles": "CCCCC(Br)CC"
+  },
+  {
+    "name": "propanoyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(=O)CC"
+  },
+  {
+    "name": "heptane-2,5-dione",
+    "smiles": "CCC(=O)CCC(C)=O"
+  },
+  {
+    "name": "pentane-1,4-diol",
+    "smiles": "CC(O)CCCO"
+  },
+  {
+    "name": "1-bromobutane",
+    "smiles": "CCCCBr"
+  },
+  {
+    "name": "hexane-3,4-diol",
+    "smiles": "CCC(O)C(O)CC"
+  },
+  {
+    "name": "1,2,3-tribromo-2-fluoropropane",
+    "smiles": "FC(Br)(CBr)CBr"
+  },
+  {
+    "name": "3-bromopentane",
+    "smiles": "CCC(Br)CC"
+  },
+  {
+    "name": "2-ethylpentanedial",
+    "smiles": "CCC(C=O)CCC=O"
+  },
+  {
+    "name": "butane-1,1-diamine",
+    "smiles": "CCCC(N)N"
+  },
+  {
+    "name": "1,3-dibromobenzene",
+    "smiles": "Brc1cccc(Br)c1"
+  },
+  {
+    "name": "heptyl hexanoate",
+    "smiles": "CCCCCCCOC(=O)CCCCC"
+  },
+  {
+    "name": "2-methyloctanedial",
+    "smiles": "CC(C=O)CCCCCC=O"
+  },
+  {
+    "name": "1-iodohexane",
+    "smiles": "CCCCCCI"
+  },
+  {
+    "name": "heptane-2,3,6-triol",
+    "smiles": "CC(O)CCC(O)C(C)O"
+  },
+  {
+    "name": "4-bromo-1-chloro-2-fluorobenzene",
+    "smiles": "Fc1cc(Br)ccc1Cl"
+  },
+  {
+    "name": "heptane-2,5-diol",
+    "smiles": "CCC(O)CCC(C)O"
+  },
+  {
+    "name": "hexane-1,3,6-triol",
+    "smiles": "OCCCC(O)CCO"
+  },
+  {
+    "name": "pentanoyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(=O)CCCC"
+  },
+  {
+    "name": "hexane-2,3-diol",
+    "smiles": "CCCC(O)C(C)O"
+  },
+  {
+    "name": "pentane-1,2,5-triol",
+    "smiles": "OCCCC(O)CO"
+  },
+  {
+    "name": "pentane-2,3-diol",
+    "smiles": "CCC(O)C(C)O"
+  },
+  {
+    "name": "hexane-1,3,5-triol",
+    "smiles": "CC(O)CC(O)CCO"
+  },
+  {
+    "name": "pentan-3-one",
+    "smiles": "CCC(=O)CC"
+  },
+  {
+    "name": "heptane-2,2-diamine",
+    "smiles": "CCCCCC(C)(N)N"
+  },
+  {
+    "name": "1-fluoro-2,3-diiodobenzene",
+    "smiles": "Fc1cccc(I)c1I"
+  },
+  {
+    "name": "3-ethyl-2-oxoheptanal",
+    "smiles": "CCCCC(CC)C(=O)C=O"
+  },
+  {
+    "name": "hexane-2,2,5-triol",
+    "smiles": "CC(O)CCC(C)(O)O"
+  },
+  {
+    "name": "hexane-1,4-diol",
+    "smiles": "CCC(O)CCCO"
+  },
+  {
+    "name": "5-oxohexanal",
+    "smiles": "CC(=O)CCCC=O"
+  },
+  {
+    "name": "heptane-2,2-diol",
+    "smiles": "CCCCCC(C)(O)O"
+  },
+  {
+    "name": "1,2-dichloro-4-fluorobenzene",
+    "smiles": "Fc1ccc(Cl)c(Cl)c1"
+  },
+  {
+    "name": "hexane-1,2,6-triamine",
+    "smiles": "NCCCCC(N)CN"
+  },
+  {
+    "name": "hexane-1,2,5-triamine",
+    "smiles": "CC(N)CCC(N)CN"
+  },
+  {
+    "name": "1-bromo-2-chloro-3-iodobenzene",
+    "smiles": "Clc1c(Br)cccc1I"
+  },
+  {
+    "name": "2-propylpropanedial",
+    "smiles": "CCCC(C=O)C=O"
+  },
+  {
+    "name": "pentane-1,2,3-triamine",
+    "smiles": "CCC(N)C(N)CN"
+  },
+  {
+    "name": "2-chloro-3-iodobutane",
+    "smiles": "CC(Cl)C(C)I"
+  },
+  {
+    "name": "1-bromo-3-chloro-5-iodobenzene",
+    "smiles": "Clc1cc(Br)cc(I)c1"
+  },
+  {
+    "name": "1,3-dibromo-5-chlorobenzene",
+    "smiles": "Clc1cc(Br)cc(Br)c1"
+  },
+  {
+    "name": "n-heptylhexanamide",
+    "smiles": "CCCCCCCNC(=O)CCCCC"
+  },
+  {
+    "name": "heptane-2,2,3-triamine",
+    "smiles": "CCCCC(N)C(C)(N)N"
+  },
+  {
+    "name": "2-ethyl-4-methylpentanedial",
+    "smiles": "CCC(C=O)CC(C)C=O"
+  },
+  {
+    "name": "pentane-1,3,3-triol",
+    "smiles": "CCC(O)(O)CCO"
+  },
+  {
+    "name": "heptane-1,5-diol",
+    "smiles": "CCC(O)CCCCO"
+  },
+  {
+    "name": "heptane-1,3,7-triamine",
+    "smiles": "NCCCCC(N)CCN"
+  },
+  {
+    "name": "heptyl butanoate",
+    "smiles": "CCCCCCCOC(=O)CCC"
+  },
+  {
+    "name": "pentane-1,2,4-triamine",
+    "smiles": "CC(N)CC(N)CN"
+  },
+  {
+    "name": "hexane-1,2-diamine",
+    "smiles": "CCCCC(N)CN"
+  },
+  {
+    "name": "2,4-dibromo-1-chlorobenzene",
+    "smiles": "Clc1ccc(Br)cc1Br"
+  },
+  {
+    "name": "1,1-dichloro-1-iodopropane",
+    "smiles": "CCC(Cl)(Cl)I"
+  },
+  {
+    "name": "pentane-2,4-diamine",
+    "smiles": "CC(N)CC(C)N"
+  },
+  {
+    "name": "1-bromo-2-iodobenzene",
+    "smiles": "Brc1ccccc1I"
+  },
+  {
+    "name": "1-chlorohexane",
+    "smiles": "CCCCCCCl"
+  },
+  {
+    "name": "butane-1,1,4-triamine",
+    "smiles": "NCCCC(N)N"
+  },
+  {
+    "name": "1-bromo-2,2-difluoropropane",
+    "smiles": "CC(F)(F)CBr"
+  },
+  {
+    "name": "pentane-1,1,5-triamine",
+    "smiles": "NCCCCC(N)N"
+  },
+  {
+    "name": "3-methyl-2-oxopentanal",
+    "smiles": "CCC(C)C(=O)C=O"
+  },
+  {
+    "name": "pent-2-ene",
+    "smiles": "CC=CCC"
+  },
+  {
+    "name": "hexan-3-amine",
+    "smiles": "CCCC(N)CC"
+  },
+  {
+    "name": "1-fluorohexane",
+    "smiles": "CCCCCCF"
+  },
+  {
+    "name": "1-chloro-4-fluorobenzene",
+    "smiles": "Fc1ccc(Cl)cc1"
+  },
+  {
+    "name": "pentane-1,5-diamine",
+    "smiles": "NCCCCCN"
+  },
+  {
+    "name": "heptane-1,4,6-triamine",
+    "smiles": "CC(N)CC(N)CCCN"
+  },
+  {
+    "name": "1-bromo-1-iodopentane",
+    "smiles": "CCCCC(Br)I"
+  },
+  {
+    "name": "4-chloro-2-fluoro-1-iodobenzene",
+    "smiles": "Fc1cc(Cl)ccc1I"
+  },
+  {
+    "name": "heptane-1,4,7-triol",
+    "smiles": "OCCCC(O)CCCO"
+  },
+  {
+    "name": "3-oxoheptanal",
+    "smiles": "CCCCC(=O)CC=O"
+  },
+  {
+    "name": "1,4-dibromo-2-iodobenzene",
+    "smiles": "Brc1ccc(Br)c(I)c1"
+  },
+  {
+    "name": "2-fluorohexane",
+    "smiles": "CCCCC(C)F"
+  },
+  {
+    "name": "butanedial",
+    "smiles": "O=CCCC=O"
+  },
+  {
+    "name": "5-oxoheptanal",
+    "smiles": "CCC(=O)CCCC=O"
+  },
+  {
+    "name": "1,1-dibromoheptane",
+    "smiles": "CCCCCCC(Br)Br"
+  },
+  {
+    "name": "1-iodopentane",
+    "smiles": "CCCCCI"
+  },
+  {
+    "name": "pentan-3-amine",
+    "smiles": "CCC(N)CC"
+  },
+  {
+    "name": "2,2-dibromo-1-chloropropane",
+    "smiles": "CC(Br)(Br)CCl"
+  },
+  {
+    "name": "hexane-1,3,3-triol",
+    "smiles": "CCCC(O)(O)CCO"
+  },
+  {
+    "name": "1-bromo-3-fluoropropane",
+    "smiles": "FCCCBr"
+  },
+  {
+    "name": "3-chloroheptane",
+    "smiles": "CCCCC(Cl)CC"
+  },
+  {
+    "name": "hexyl heptanoate",
+    "smiles": "CCCCCCOC(=O)CCCCCC"
+  },
+  {
+    "name": "1-fluoro-3,5-diiodobenzene",
+    "smiles": "Fc1cc(I)cc(I)c1"
+  },
+  {
+    "name": "heptane-1,2,3-triol",
+    "smiles": "CCCCC(O)C(O)CO"
+  },
+  {
+    "name": "2-oxoheptanal",
+    "smiles": "CCCCCC(=O)C=O"
+  },
+  {
+    "name": "3-ethyl-2-oxopentanal",
+    "smiles": "CCC(CC)C(=O)C=O"
+  },
+  {
+    "name": "2-bromo-4-iodopentane",
+    "smiles": "CC(Br)CC(C)I"
+  },
+  {
+    "name": "butane-1,2,3-triol",
+    "smiles": "CC(O)C(O)CO"
+  },
+  {
+    "name": "2-bromo-1-iodopropane",
+    "smiles": "CC(Br)CI"
+  },
+  {
+    "name": "1-bromo-1-chloropropane",
+    "smiles": "CCC(Cl)Br"
+  },
+  {
+    "name": "1-fluoroheptane",
+    "smiles": "CCCCCCCF"
+  },
+  {
+    "name": "1-chloro-2-fluorobutane",
+    "smiles": "CCC(F)CCl"
+  },
+  {
+    "name": "1-fluoro-1-iodopropane",
+    "smiles": "CCC(F)I"
+  },
+  {
+    "name": "2-bromo-1,4-difluorobenzene",
+    "smiles": "Fc1ccc(F)c(Br)c1"
+  },
+  {
+    "name": "2-bromo-2-iodopropane",
+    "smiles": "CC(C)(Br)I"
+  },
+  {
+    "name": "2,2-diiodopropane",
+    "smiles": "CC(C)(I)I"
+  },
+  {
+    "name": "1-chloro-2-fluoro-4-iodobenzene",
+    "smiles": "Fc1cc(I)ccc1Cl"
+  },
+  {
+    "name": "1-bromo-4-fluoro-2-iodobenzene",
+    "smiles": "Fc1ccc(Br)c(I)c1"
+  },
+  {
+    "name": "1,3,5-trichlorobenzene",
+    "smiles": "Clc1cc(Cl)cc(Cl)c1"
+  },
+  {
+    "name": "butane-1,2,4-triol",
+    "smiles": "OCCC(O)CO"
+  },
+  {
+    "name": "1-bromo-2,4-dichlorobenzene",
+    "smiles": "Clc1ccc(Br)c(Cl)c1"
+  },
+  {
+    "name": "2-bromo-1,3-diiodobenzene",
+    "smiles": "Brc1c(I)cccc1I"
+  },
+  {
+    "name": "propane-1,1,1-triamine",
+    "smiles": "CCC(N)(N)N"
+  },
+  {
+    "name": "heptane-1,4-diamine",
+    "smiles": "CCCC(N)CCCN"
+  },
+  {
+    "name": "pentane-2,3-diamine",
+    "smiles": "CCC(N)C(C)N"
+  },
+  {
+    "name": "heptane-1,7-diol",
+    "smiles": "OCCCCCCCO"
+  },
+  {
+    "name": "pentan-2-ol",
+    "smiles": "CCCC(C)O"
+  },
+  {
+    "name": "hexane-1,2,2-triol",
+    "smiles": "CCCCC(O)(O)CO"
+  },
+  {
+    "name": "3-chloro-1-fluoro-1-iodopropane",
+    "smiles": "FC(I)CCCl"
+  },
+  {
+    "name": "2-bromo-1,3-dichlorobenzene",
+    "smiles": "Clc1cccc(Cl)c1Br"
+  },
+  {
+    "name": "1,2,3-trifluorobenzene",
+    "smiles": "Fc1cccc(F)c1F"
+  },
+  {
+    "name": "1,2-difluoro-4-iodobenzene",
+    "smiles": "Fc1ccc(I)cc1F"
+  },
+  {
+    "name": "heptane-1,3,4-triamine",
+    "smiles": "CCCC(N)C(N)CCN"
+  },
+  {
+    "name": "3-ethyl-2-oxohexanal",
+    "smiles": "CCCC(CC)C(=O)C=O"
+  },
+  {
+    "name": "butane-1,1-diol",
+    "smiles": "CCCC(O)O"
+  },
+  {
+    "name": "hexane-1,1,2-triamine",
+    "smiles": "CCCCC(N)C(N)N"
+  },
+  {
+    "name": "pentane-2,2-diol",
+    "smiles": "CCCC(C)(O)O"
+  },
+  {
+    "name": "2,4-dibromo-1-fluorobenzene",
+    "smiles": "Fc1ccc(Br)cc1Br"
+  },
+  {
+    "name": "1-chloro-2,4-difluorobenzene",
+    "smiles": "Fc1ccc(Cl)c(F)c1"
+  },
+  {
+    "name": "heptane-2,3-diamine",
+    "smiles": "CCCCC(N)C(C)N"
+  },
+  {
+    "name": "hexane-3,3,4-triol",
+    "smiles": "CCC(O)C(O)(O)CC"
+  },
+  {
+    "name": "1-fluorobutane",
+    "smiles": "CCCCF"
+  },
+  {
+    "name": "2,2-difluoropropane",
+    "smiles": "CC(C)(F)F"
+  },
+  {
+    "name": "1-bromo-2-fluoro-3-iodobenzene",
+    "smiles": "Fc1c(Br)cccc1I"
+  },
+  {
+    "name": "1-bromo-2-iodopropane",
+    "smiles": "CC(I)CBr"
+  },
+  {
+    "name": "2-fluoroheptane",
+    "smiles": "CCCCCC(C)F"
+  },
+  {
+    "name": "pentane-1,3,3-triamine",
+    "smiles": "CCC(N)(N)CCN"
+  },
+  {
+    "name": "3-iodohexane",
+    "smiles": "CCCC(I)CC"
+  },
+  {
+    "name": "heptane-1,3,5-triamine",
+    "smiles": "CCC(N)CC(N)CCN"
+  },
+  {
+    "name": "1-fluoro-3-iodopropane",
+    "smiles": "FCCCI"
+  },
+  {
+    "name": "2-bromo-4-chloro-1-fluorobenzene",
+    "smiles": "Fc1ccc(Cl)cc1Br"
+  },
+  {
+    "name": "1,2-dichloro-3-iodopropane",
+    "smiles": "ClCC(Cl)CI"
+  },
+  {
+    "name": "3-chloro-1-iodoheptane",
+    "smiles": "CCCCC(Cl)CCI"
+  },
+  {
+    "name": "hexane-1,3,3-triamine",
+    "smiles": "CCCC(N)(N)CCN"
+  },
+  {
+    "name": "hepta-2,4-diene",
+    "smiles": "CC=CC=CCC"
+  },
+  {
+    "name": "1,1-dichloro-3-fluoropropane",
+    "smiles": "FCCC(Cl)Cl"
+  },
+  {
+    "name": "hexane-3,3-diamine",
+    "smiles": "CCCC(N)(N)CC"
+  },
+  {
+    "name": "1,1,3-trichloro-1-fluoropropane",
+    "smiles": "FC(Cl)(Cl)CCCl"
+  },
+  {
+    "name": "pentane-1,1,1-triamine",
+    "smiles": "CCCCC(N)(N)N"
+  },
+  {
+    "name": "1-bromo-3-iodobutane",
+    "smiles": "CC(I)CCBr"
+  },
+  {
+    "name": "1,2,3-trifluoro-2-iodopropane",
+    "smiles": "FCC(F)(I)CF"
+  },
+  {
+    "name": "1-chloro-2,3-difluoropropane",
+    "smiles": "FCC(F)CCl"
+  },
+  {
+    "name": "2-fluoro-2-iodopropane",
+    "smiles": "CC(C)(F)I"
+  },
+  {
+    "name": "1,4-dibromo-2-chlorobutane",
+    "smiles": "ClC(CBr)CCBr"
+  },
+  {
+    "name": "2-chloro-1-fluoro-3-iodobenzene",
+    "smiles": "Fc1cccc(I)c1Cl"
+  },
+  {
+    "name": "hexyl hexanoate",
+    "smiles": "CCCCCCOC(=O)CCCCC"
+  },
+  {
+    "name": "3-bromo-1-chloropentane",
+    "smiles": "CCC(Br)CCCl"
+  },
+  {
+    "name": "hexane-2,4-diamine",
+    "smiles": "CCC(N)CC(C)N"
+  },
+  {
+    "name": "1,5-difluorohexane",
+    "smiles": "CC(F)CCCCF"
+  },
+  {
+    "name": "1-chloro-4-fluorobutane",
+    "smiles": "FCCCCCl"
+  },
+  {
+    "name": "1,2-difluoro-3-iodopropane",
+    "smiles": "FCC(F)CI"
+  },
+  {
+    "name": "1,2-dichloro-1-fluoropropane",
+    "smiles": "CC(Cl)C(F)Cl"
+  },
+  {
+    "name": "4-bromoheptane",
+    "smiles": "CCCC(Br)CCC"
+  },
+  {
+    "name": "1-chloro-6-iodohexane",
+    "smiles": "ClCCCCCCI"
+  },
+  {
+    "name": "acetyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(C)=O"
+  },
+  {
+    "name": "3-bromo-1-chloro-1-fluoropropane",
+    "smiles": "FC(Cl)CCBr"
+  },
+  {
+    "name": "1,3-dibromobutane",
+    "smiles": "CC(Br)CCBr"
+  },
+  {
+    "name": "1,3-dibromo-2-chlorobenzene",
+    "smiles": "Clc1c(Br)cccc1Br"
+  },
+  {
+    "name": "pentane-1,2,5-triamine",
+    "smiles": "NCCCC(N)CN"
+  },
+  {
+    "name": "1-bromo-3-chloro-5-fluorobenzene",
+    "smiles": "Fc1cc(Cl)cc(Br)c1"
+  },
+  {
+    "name": "1-bromo-1-fluorohexane",
+    "smiles": "CCCCCC(F)Br"
+  },
+  {
+    "name": "1-bromo-1-fluoropropane",
+    "smiles": "CCC(F)Br"
+  },
+  {
+    "name": "1,3-dichloro-2-iodopropane",
+    "smiles": "ClCC(I)CCl"
+  },
+  {
+    "name": "3-bromo-1,1-difluoropropane",
+    "smiles": "FC(F)CCBr"
+  },
+  {
+    "name": "4-bromo-1-chloropentane",
+    "smiles": "CC(Br)CCCCl"
+  },
+  {
+    "name": "heptane-1,4,5-triamine",
+    "smiles": "CCC(N)C(N)CCCN"
+  },
+  {
+    "name": "1-chloro-1,2-difluorobutane",
+    "smiles": "CCC(F)C(F)Cl"
+  },
+  {
+    "name": "2-oxononanal",
+    "smiles": "CCCCCCCC(=O)C=O"
+  },
+  {
+    "name": "1,2-dichloro-3-fluorobenzene",
+    "smiles": "Fc1cccc(Cl)c1Cl"
+  },
+  {
+    "name": "hexane-1,5-diol",
+    "smiles": "CC(O)CCCCO"
+  },
+  {
+    "name": "1,3-dichloro-5-iodobenzene",
+    "smiles": "Clc1cc(Cl)cc(I)c1"
+  },
+  {
+    "name": "heptane-1,2,4-triol",
+    "smiles": "CCCC(O)CC(O)CO"
+  },
+  {
+    "name": "1,3-dibromo-2-iodobenzene",
+    "smiles": "Brc1cccc(Br)c1I"
+  },
+  {
+    "name": "3-methyl-2-oxooctanal",
+    "smiles": "CCCCCC(C)C(=O)C=O"
+  },
+  {
+    "name": "1,2-dibromo-4-fluorobenzene",
+    "smiles": "Fc1ccc(Br)c(Br)c1"
+  },
+  {
+    "name": "2-bromo-1-chloro-3-iodobenzene",
+    "smiles": "Clc1cccc(I)c1Br"
+  },
+  {
+    "name": "pentane-1,2,3-triol",
+    "smiles": "CCC(O)C(O)CO"
+  },
+  {
+    "name": "2-butylpropanedial",
+    "smiles": "CCCCC(C=O)C=O"
+  },
+  {
+    "name": "1-chloro-1,1-difluoropropane",
+    "smiles": "CCC(F)(F)Cl"
+  },
+  {
+    "name": "heptane-1,2,2-triamine",
+    "smiles": "CCCCCC(N)(N)CN"
+  },
+  {
+    "name": "pentane-3,3-diol",
+    "smiles": "CCC(O)(O)CC"
+  },
+  {
+    "name": "1,1-dibromo-2,2-dichloropropane",
+    "smiles": "CC(Cl)(Cl)C(Br)Br"
+  },
+  {
+    "name": "1,1-difluoro-1-iodobutane",
+    "smiles": "CCCC(F)(F)I"
+  },
+  {
+    "name": "heptane-2,5,5-triol",
+    "smiles": "CCC(O)(O)CCC(C)O"
+  },
+  {
+    "name": "1-chloro-2-iodopropane",
+    "smiles": "CC(I)CCl"
+  },
+  {
+    "name": "3-fluorohexane",
+    "smiles": "CCCC(F)CC"
+  },
+  {
+    "name": "2-fluoro-2-iodohexane",
+    "smiles": "CCCCC(C)(F)I"
+  },
+  {
+    "name": "2-ethyl-2-methylpropanedial",
+    "smiles": "CCC(C)(C=O)C=O"
+  },
+  {
+    "name": "2,3,4-trichloropentane",
+    "smiles": "CC(Cl)C(Cl)C(C)Cl"
+  },
+  {
+    "name": "hexane-1,3,5-triamine",
+    "smiles": "CC(N)CC(N)CCN"
+  },
+  {
+    "name": "1-bromo-3-iodopentane",
+    "smiles": "CCC(I)CCBr"
+  },
+  {
+    "name": "heptane-1,3,5-triol",
+    "smiles": "CCC(O)CC(O)CCO"
+  },
+  {
+    "name": "hexane-1,3,6-triamine",
+    "smiles": "NCCCC(N)CCN"
+  },
+  {
+    "name": "2-bromo-1-chloro-2-fluoropropane",
+    "smiles": "CC(F)(Br)CCl"
+  },
+  {
+    "name": "hexane-2,2-diol",
+    "smiles": "CCCCC(C)(O)O"
+  },
+  {
+    "name": "1,3-dichloropentane",
+    "smiles": "CCC(Cl)CCCl"
+  },
+  {
+    "name": "1,1-difluorobutane",
+    "smiles": "CCCC(F)F"
+  },
+  {
+    "name": "1,2-difluoroheptane",
+    "smiles": "CCCCCC(F)CF"
+  },
+  {
+    "name": "1-bromo-2-fluoropropane",
+    "smiles": "CC(F)CBr"
+  },
+  {
+    "name": "hexane-1,6-diamine",
+    "smiles": "NCCCCCCN"
+  },
+  {
+    "name": "1-chloro-3-fluoro-2-iodobenzene",
+    "smiles": "Fc1cccc(Cl)c1I"
+  },
+  {
+    "name": "1-fluoro-5-iodohexane",
+    "smiles": "CC(I)CCCCF"
+  },
+  {
+    "name": "hexane-3,4-dione",
+    "smiles": "CCC(=O)C(=O)CC"
+  },
+  {
+    "name": "hexyl pentanoate",
+    "smiles": "CCCCCCOC(=O)CCCC"
+  },
+  {
+    "name": "1,1-dibromo-2-fluoropropane",
+    "smiles": "CC(F)C(Br)Br"
+  },
+  {
+    "name": "heptane-3,4-diol",
+    "smiles": "CCCC(O)C(O)CC"
+  },
+  {
+    "name": "1,2-dibromo-1,2-dichloropropane",
+    "smiles": "CC(Cl)(Br)C(Cl)Br"
+  },
+  {
+    "name": "1,2-diiodopropane",
+    "smiles": "CC(I)CI"
+  },
+  {
+    "name": "2-bromohexane",
+    "smiles": "CCCCC(C)Br"
+  },
+  {
+    "name": "2-hexylpropanedial",
+    "smiles": "CCCCCCC(C=O)C=O"
+  },
+  {
+    "name": "1-chloro-2-iodopentane",
+    "smiles": "CCCC(I)CCl"
+  },
+  {
+    "name": "butane-1,1,3-triamine",
+    "smiles": "CC(N)CC(N)N"
+  },
+  {
+    "name": "2-bromo-2-chloropentane",
+    "smiles": "CCCC(C)(Cl)Br"
+  },
+  {
+    "name": "1-bromo-4-fluorobenzene",
+    "smiles": "Fc1ccc(Br)cc1"
+  },
+  {
+    "name": "1,2-dibromo-3-chlorobenzene",
+    "smiles": "Clc1cccc(Br)c1Br"
+  },
+  {
+    "name": "1,4-dichloropentane",
+    "smiles": "CC(Cl)CCCCl"
+  },
+  {
+    "name": "3-chloro-2-fluorohexane",
+    "smiles": "CCCC(Cl)C(C)F"
+  },
+  {
+    "name": "2-bromobutane",
+    "smiles": "CCC(C)Br"
+  },
+  {
+    "name": "2,5-difluorohexane",
+    "smiles": "CC(F)CCC(C)F"
+  },
+  {
+    "name": "2-bromo-2-chloropropane",
+    "smiles": "CC(C)(Cl)Br"
+  },
+  {
+    "name": "4-chloro-1,2-diiodobenzene",
+    "smiles": "Clc1ccc(I)c(I)c1"
+  },
+  {
+    "name": "butane-1,3,3-triol",
+    "smiles": "CC(O)(O)CCO"
+  },
+  {
+    "name": "1,2-dibromo-4-chlorobenzene",
+    "smiles": "Clc1ccc(Br)c(Br)c1"
+  },
+  {
+    "name": "hexane-3,3-diol",
+    "smiles": "CCCC(O)(O)CC"
+  },
+  {
+    "name": "2-chloro-1-fluoropropane",
+    "smiles": "CC(Cl)CF"
+  },
+  {
+    "name": "2-chloro-1,1-difluoropropane",
+    "smiles": "CC(Cl)C(F)F"
+  },
+  {
+    "name": "1-fluoro-2-iodopropane",
+    "smiles": "CC(I)CF"
+  },
+  {
+    "name": "4-fluoroheptane",
+    "smiles": "CCCC(F)CCC"
+  },
+  {
+    "name": "2-chlorohexane",
+    "smiles": "CCCCC(C)Cl"
+  },
+  {
+    "name": "1,2-dibromo-3-chloropropane",
+    "smiles": "ClCC(Br)CBr"
+  },
+  {
+    "name": "1,3-diiodobenzene",
+    "smiles": "Ic1cccc(I)c1"
+  },
+  {
+    "name": "hexane-1,5,5-triol",
+    "smiles": "CC(O)(O)CCCCO"
+  },
+  {
+    "name": "pentane-1,3,5-triamine",
+    "smiles": "NCCC(N)CCN"
+  },
+  {
+    "name": "2,2-diiodobutane",
+    "smiles": "CCC(C)(I)I"
+  },
+  {
+    "name": "heptane-3,5-dione",
+    "smiles": "CCC(=O)CC(=O)CC"
+  },
+  {
+    "name": "1-bromo-6-chlorohexane",
+    "smiles": "ClCCCCCCBr"
+  },
+  {
+    "name": "butane-1,4-diol",
+    "smiles": "OCCCCO"
+  },
+  {
+    "name": "4-bromo-1,2-diiodobenzene",
+    "smiles": "Brc1ccc(I)c(I)c1"
+  },
+  {
+    "name": "hexanoyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(=O)CCCCC"
+  },
+  {
+    "name": "3-bromohexane",
+    "smiles": "CCCC(Br)CC"
+  },
+  {
+    "name": "1,5-dichloroheptane",
+    "smiles": "CCC(Cl)CCCCCl"
+  },
+  {
+    "name": "1,2,4-tribromobenzene",
+    "smiles": "Brc1ccc(Br)c(Br)c1"
+  },
+  {
+    "name": "1-chloro-2-fluoropropane",
+    "smiles": "CC(F)CCl"
+  },
+  {
+    "name": "1-chloro-2-fluoro-3-iodobenzene",
+    "smiles": "Fc1c(Cl)cccc1I"
+  },
+  {
+    "name": "heptane-1,2,3-triamine",
+    "smiles": "CCCCC(N)C(N)CN"
+  },
+  {
+    "name": "heptane-1,2,5-triamine",
+    "smiles": "CCC(N)CCC(N)CN"
+  },
+  {
+    "name": "heptane-3,4-dione",
+    "smiles": "CCCC(=O)C(=O)CC"
+  },
+  {
+    "name": "4-chloro-1-fluoro-2-iodobenzene",
+    "smiles": "Fc1ccc(Cl)cc1I"
+  },
+  {
+    "name": "1-bromo-1-chloropentane",
+    "smiles": "CCCCC(Cl)Br"
+  },
+  {
+    "name": "1-fluoro-2,3-diiodopropane",
+    "smiles": "FCC(I)CI"
+  },
+  {
+    "name": "butane-1,1,2-triol",
+    "smiles": "CCC(O)C(O)O"
+  },
+  {
+    "name": "heptane-3,3-diol",
+    "smiles": "CCCCC(O)(O)CC"
+  },
+  {
+    "name": "1-chloro-3-fluoropropane",
+    "smiles": "FCCCCl"
+  },
+  {
+    "name": "1,2-difluorohexane",
+    "smiles": "CCCCC(F)CF"
+  },
+  {
+    "name": "1,1-dichloro-3-iodopropane",
+    "smiles": "ClC(Cl)CCI"
+  },
+  {
+    "name": "2-chloroheptane",
+    "smiles": "CCCCCC(C)Cl"
+  },
+  {
+    "name": "4-bromo-2-chloro-1-iodobenzene",
+    "smiles": "Clc1cc(Br)ccc1I"
+  },
+  {
+    "name": "2-chlorobutane",
+    "smiles": "CCC(C)Cl"
+  },
+  {
+    "name": "3,3-dichlorohexane",
+    "smiles": "CCCC(Cl)(Cl)CC"
+  },
+  {
+    "name": "4-chloro-1-iodopentane",
+    "smiles": "CC(Cl)CCCI"
+  },
+  {
+    "name": "1,2,2-triiodopropane",
+    "smiles": "CC(I)(I)CI"
+  },
+  {
+    "name": "1,4-dibromohexane",
+    "smiles": "CCC(Br)CCCBr"
+  },
+  {
+    "name": "1,3,3-tribromopentane",
+    "smiles": "CCC(Br)(Br)CCBr"
+  },
+  {
+    "name": "butanoyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(=O)CCC"
+  },
+  {
+    "name": "1-bromo-2,4-diiodobenzene",
+    "smiles": "Brc1ccc(I)cc1I"
+  },
+  {
+    "name": "4-iodoheptane",
+    "smiles": "CCCC(I)CCC"
+  },
+  {
+    "name": "heptanoyl heptanoate",
+    "smiles": "CCCCCCC(=O)OC(=O)CCCCCC"
+  },
+  {
+    "name": "hexane-1,1,5-triamine",
+    "smiles": "CC(N)CCCC(N)N"
+  },
+  {
+    "name": "pentane-2,2,4-triamine",
+    "smiles": "CC(N)CC(C)(N)N"
+  },
+  {
+    "name": "heptane-2,3,4-triol",
+    "smiles": "CCCC(O)C(O)C(C)O"
+  },
+  {
+    "name": "1-bromo-1,3-difluoropropane",
+    "smiles": "FCCC(F)Br"
+  },
+  {
+    "name": "3-chloro-3-iodopentane",
+    "smiles": "CCC(Cl)(I)CC"
+  },
+  {
+    "name": "heptane-1,2,5-triol",
+    "smiles": "CCC(O)CCC(O)CO"
+  },
+  {
+    "name": "2-bromo-3-iodobutane",
+    "smiles": "CC(Br)C(C)I"
+  },
+  {
+    "name": "1,2,3-trifluorobutane",
+    "smiles": "CC(F)C(F)CF"
+  },
+  {
+    "name": "1-bromo-3-fluorohexane",
+    "smiles": "CCCC(F)CCBr"
+  },
+  {
+    "name": "heptane-3,4,4-triol",
+    "smiles": "CCCC(O)(O)C(O)CC"
+  },
+  {
+    "name": "3-bromo-1-iodobutane",
+    "smiles": "CC(Br)CCI"
+  },
+  {
+    "name": "1-chloroheptane",
+    "smiles": "CCCCCCCCl"
+  },
+  {
+    "name": "2,3-difluoropentane",
+    "smiles": "CCC(F)C(C)F"
+  },
+  {
+    "name": "4-chloro-3-fluoroheptane",
+    "smiles": "CCCC(Cl)C(F)CC"
+  },
+  {
+    "name": "2,6-dibromoheptane",
+    "smiles": "CC(Br)CCCC(C)Br"
+  },
+  {
+    "name": "hexane-1,4,4-triamine",
+    "smiles": "CCC(N)(N)CCCN"
+  },
+  {
+    "name": "hexane-2,2,3-triol",
+    "smiles": "CCCC(O)C(C)(O)O"
+  },
+  {
+    "name": "1,4-dibromobenzene",
+    "smiles": "Brc1ccc(Br)cc1"
+  },
+  {
+    "name": "heptane-3,4,4-triamine",
+    "smiles": "CCCC(N)(N)C(N)CC"
+  },
+  {
+    "name": "2-ethyl-2-propylpropanedial",
+    "smiles": "CCCC(C=O)(C=O)CC"
+  },
+  {
+    "name": "4-bromo-1-chlorohexane",
+    "smiles": "CCC(Br)CCCCl"
+  },
+  {
+    "name": "pentane-1,2,2-triol",
+    "smiles": "CCCC(O)(O)CO"
+  },
+  {
+    "name": "1-chloro-6-fluoroheptane",
+    "smiles": "CC(F)CCCCCCl"
+  },
+  {
+    "name": "1-bromo-3-chloro-2-iodopropane",
+    "smiles": "ClCC(I)CBr"
+  },
+  {
+    "name": "1,1,2-trifluoro-2-iodopropane",
+    "smiles": "CC(F)(I)C(F)F"
+  },
+  {
+    "name": "1-bromo-2,3-diiodobenzene",
+    "smiles": "Brc1cccc(I)c1I"
+  },
+  {
+    "name": "1-iodoheptane",
+    "smiles": "CCCCCCCI"
+  },
+  {
+    "name": "3-iodopentane",
+    "smiles": "CCC(I)CC"
+  },
+  {
+    "name": "2,3-dibromopentane",
+    "smiles": "CCC(Br)C(C)Br"
+  },
+  {
+    "name": "1,4-dichlorobutane",
+    "smiles": "ClCCCCCl"
+  },
+  {
+    "name": "4-chloro-1,2-difluorobenzene",
+    "smiles": "Fc1ccc(Cl)cc1F"
+  },
+  {
+    "name": "1-chloro-1,3-difluoropropane",
+    "smiles": "FCCC(F)Cl"
+  },
+  {
+    "name": "heptane-4,4-diol",
+    "smiles": "CCCC(O)(O)CCC"
+  },
+  {
+    "name": "1,2-dibromobenzene",
+    "smiles": "Brc1ccccc1Br"
+  },
+  {
+    "name": "2-bromo-4-fluoropentane",
+    "smiles": "CC(F)CC(C)Br"
+  },
+  {
+    "name": "hexane-3,4-diamine",
+    "smiles": "CCC(N)C(N)CC"
+  },
+  {
+    "name": "1,1-dibromopropane",
+    "smiles": "CCC(Br)Br"
+  },
+  {
+    "name": "3-fluoro-1,1-diiodopropane",
+    "smiles": "FCCC(I)I"
+  },
+  {
+    "name": "1,1,3-tribromo-3-chloropropane",
+    "smiles": "ClC(Br)CC(Br)Br"
+  },
+  {
+    "name": "1,1-difluoroheptane",
+    "smiles": "CCCCCCC(F)F"
+  },
+  {
+    "name": "1-bromo-2,3-dichlorobenzene",
+    "smiles": "Clc1cccc(Br)c1Cl"
+  },
+  {
+    "name": "1-bromo-2,3-difluorobenzene",
+    "smiles": "Fc1cccc(Br)c1F"
+  },
+  {
+    "name": "1,2-dibromo-1-fluoropropane",
+    "smiles": "CC(Br)C(F)Br"
+  },
+  {
+    "name": "1,3-diiodopropane",
+    "smiles": "ICCCI"
+  },
+  {
+    "name": "1,3-dichloro-1-iodopropane",
+    "smiles": "ClCCC(Cl)I"
+  },
+  {
+    "name": "2-ethylheptanedial",
+    "smiles": "CCC(C=O)CCCCC=O"
+  },
+  {
+    "name": "1,2-difluoro-2,3-diiodopropane",
+    "smiles": "FCC(F)(I)CI"
+  },
+  {
+    "name": "1,1-dibromo-2,2-difluoropropane",
+    "smiles": "CC(F)(F)C(Br)Br"
+  },
+  {
+    "name": "3-bromo-1-chlorobutane",
+    "smiles": "CC(Br)CCCl"
+  },
+  {
+    "name": "1-chlorobutane",
+    "smiles": "CCCCCl"
+  },
+  {
+    "name": "1,2,4-triiodobenzene",
+    "smiles": "Ic1ccc(I)c(I)c1"
+  },
+  {
+    "name": "heptane-1,1-diamine",
+    "smiles": "CCCCCCC(N)N"
+  },
+  {
+    "name": "1-chloropentane",
+    "smiles": "CCCCCCl"
+  },
+  {
+    "name": "heptane-2,3,5-triol",
+    "smiles": "CCC(O)CC(O)C(C)O"
+  },
+  {
+    "name": "1,1-dibromo-2-iodopropane",
+    "smiles": "CC(I)C(Br)Br"
+  },
+  {
+    "name": "4-bromo-1,2-dichlorobenzene",
+    "smiles": "Clc1ccc(Br)cc1Cl"
+  },
+  {
+    "name": "heptane-2,4,5-triol",
+    "smiles": "CCC(O)C(O)CC(C)O"
+  },
+  {
+    "name": "1,1-dibromo-3-fluoropropane",
+    "smiles": "FCCC(Br)Br"
+  },
+  {
+    "name": "4-bromo-2-fluoro-1-iodobenzene",
+    "smiles": "Fc1cc(Br)ccc1I"
+  },
+  {
+    "name": "1,3-dichloro-2-fluorobenzene",
+    "smiles": "Fc1c(Cl)cccc1Cl"
+  },
+  {
+    "name": "1-bromo-4-chlorohexane",
+    "smiles": "CCC(Cl)CCCBr"
+  },
+  {
+    "name": "hexane-2,5-dione",
+    "smiles": "CC(=O)CCC(C)=O"
+  },
+  {
+    "name": "heptane-1,3-diamine",
+    "smiles": "CCCCC(N)CCN"
+  },
+  {
+    "name": "1,2-dibromo-1-chloropropane",
+    "smiles": "CC(Br)C(Cl)Br"
+  },
+  {
+    "name": "1-bromo-5-chloropentane",
+    "smiles": "ClCCCCCBr"
+  },
+  {
+    "name": "heptane-1,5,6-triamine",
+    "smiles": "CC(N)C(N)CCCCN"
+  },
+  {
+    "name": "1-bromo-3-chloro-1-fluoropropane",
+    "smiles": "FC(Br)CCCl"
+  },
+  {
+    "name": "1,2-dichloro-2-fluoropropane",
+    "smiles": "CC(F)(Cl)CCl"
+  },
+  {
+    "name": "3-fluoro-1-iodobutane",
+    "smiles": "CC(F)CCI"
+  },
+  {
+    "name": "2-bromo-1,2-difluoropropane",
+    "smiles": "CC(F)(Br)CF"
+  },
+  {
+    "name": "2-chloro-2-iodopropane",
+    "smiles": "CC(C)(Cl)I"
+  },
+  {
+    "name": "2-bromo-1,4-diiodobenzene",
+    "smiles": "Brc1cc(I)ccc1I"
+  },
+  {
+    "name": "1-bromo-4-chloro-2-fluorobenzene",
+    "smiles": "Fc1cc(Cl)ccc1Br"
+  },
+  {
+    "name": "1-bromo-2-chloro-2-fluoropropane",
+    "smiles": "CC(F)(Cl)CBr"
+  },
+  {
+    "name": "1,4-difluoro-2-iodobenzene",
+    "smiles": "Fc1ccc(F)c(I)c1"
+  },
+  {
+    "name": "hexane-2,2-diamine",
+    "smiles": "CCCCC(C)(N)N"
+  },
+  {
+    "name": "3-fluoropentane",
+    "smiles": "CCC(F)CC"
+  },
+  {
+    "name": "1-chloro-7-iodoheptane",
+    "smiles": "ClCCCCCCCI"
+  },
+  {
+    "name": "butane-2,3-diamine",
+    "smiles": "CC(N)C(C)N"
+  },
+  {
+    "name": "heptane-2,4-dione",
+    "smiles": "CCCC(=O)CC(C)=O"
+  },
+  {
+    "name": "nonanedial",
+    "smiles": "O=CCCCCCCCC=O"
+  },
+  {
+    "name": "2-fluorobutane",
+    "smiles": "CCC(C)F"
+  },
+  {
+    "name": "2,5-dibromoheptane",
+    "smiles": "CCC(Br)CCC(C)Br"
+  },
+  {
+    "name": "hexane-1,1,3-triol",
+    "smiles": "CCCC(O)CC(O)O"
+  },
+  {
+    "name": "1-bromo-3,5-diiodobenzene",
+    "smiles": "Brc1cc(I)cc(I)c1"
+  },
+  {
+    "name": "1,4,7-tribromoheptane",
+    "smiles": "BrCCCC(Br)CCCBr"
+  },
+  {
+    "name": "heptane-2,6-diol",
+    "smiles": "CC(O)CCCC(C)O"
+  },
+  {
+    "name": "1,2-dichloro-1,3-difluoropropane",
+    "smiles": "FCC(Cl)C(F)Cl"
+  },
+  {
+    "name": "heptane-1,5,5-triol",
+    "smiles": "CCC(O)(O)CCCCO"
+  },
+  {
+    "name": "1,2-difluoro-1,2-diiodopropane",
+    "smiles": "CC(F)(I)C(F)I"
+  },
+  {
+    "name": "2-bromo-5-chlorohexane",
+    "smiles": "CC(Cl)CCC(C)Br"
+  },
+  {
+    "name": "4-bromo-1,1-dichlorobutane",
+    "smiles": "ClC(Cl)CCCBr"
+  },
+  {
+    "name": "hexane-2,4,4-triol",
+    "smiles": "CCC(O)(O)CC(C)O"
+  },
+  {
+    "name": "2,6-diiodoheptane",
+    "smiles": "CC(I)CCCC(C)I"
+  },
+  {
+    "name": "1-bromo-1-iodoheptane",
+    "smiles": "CCCCCCC(Br)I"
+  },
+  {
+    "name": "1,5-diiodoheptane",
+    "smiles": "CCC(I)CCCCI"
+  },
+  {
+    "name": "1,1,2-tribromopropane",
+    "smiles": "CC(Br)C(Br)Br"
+  },
+  {
+    "name": "4-fluoro-1,2-diiodobenzene",
+    "smiles": "Fc1ccc(I)c(I)c1"
+  },
+  {
+    "name": "hexane-1,3,4-triamine",
+    "smiles": "CCC(N)C(N)CCN"
+  },
+  {
+    "name": "hexane-1,1-diol",
+    "smiles": "CCCCCC(O)O"
+  },
+  {
+    "name": "1,1-difluoro-3,3-diiodopropane",
+    "smiles": "FC(F)CC(I)I"
+  },
+  {
+    "name": "hexane-1,1,6-triol",
+    "smiles": "OCCCCCC(O)O"
+  },
+  {
+    "name": "2-bromo-1-fluorohexane",
+    "smiles": "CCCCC(Br)CF"
+  },
+  {
+    "name": "1,1,1-trichloropropane",
+    "smiles": "CCC(Cl)(Cl)Cl"
+  },
+  {
+    "name": "1,1-difluoro-2,2-diiodopropane",
+    "smiles": "CC(I)(I)C(F)F"
+  },
+  {
+    "name": "1-bromo-1,4-diiodobutane",
+    "smiles": "BrC(I)CCCI"
+  },
+  {
+    "name": "heptane-1,1,7-triamine",
+    "smiles": "NCCCCCCC(N)N"
+  },
+  {
+    "name": "4-chloro-1-fluoropentane",
+    "smiles": "CC(Cl)CCCF"
+  },
+  {
+    "name": "heptane-1,2,6-triol",
+    "smiles": "CC(O)CCCC(O)CO"
+  },
+  {
+    "name": "2-methyl-2-pentylpropanedial",
+    "smiles": "CCCCCC(C)(C=O)C=O"
+  },
+  {
+    "name": "heptane-1,1,6-triamine",
+    "smiles": "CC(N)CCCCC(N)N"
+  },
+  {
+    "name": "1,1,3-trichloro-3-fluoropropane",
+    "smiles": "FC(Cl)CC(Cl)Cl"
+  },
+  {
+    "name": "heptane-2,3,4-triamine",
+    "smiles": "CCCC(N)C(N)C(C)N"
+  },
+  {
+    "name": "2-chloro-1-fluoro-1,3-diiodopropane",
+    "smiles": "FC(I)C(Cl)CI"
+  },
+  {
+    "name": "1,2-dibromohexane",
+    "smiles": "CCCCC(Br)CBr"
+  },
+  {
+    "name": "2-butyl-2-ethylpropanedial",
+    "smiles": "CCCCC(C=O)(C=O)CC"
+  },
+  {
+    "name": "1,2,2-trichloro-1-fluoropropane",
+    "smiles": "CC(Cl)(Cl)C(F)Cl"
+  },
+  {
+    "name": "3-bromo-1-iodohexane",
+    "smiles": "CCCC(Br)CCI"
+  },
+  {
+    "name": "1,2-dibromo-2-fluoropropane",
+    "smiles": "CC(F)(Br)CBr"
+  },
+  {
+    "name": "pentane-2,3,4-triol",
+    "smiles": "CC(O)C(O)C(C)O"
+  },
+  {
+    "name": "2-bromo-3-chlorobutane",
+    "smiles": "CC(Cl)C(C)Br"
+  },
+  {
+    "name": "1,3-diiodopentane",
+    "smiles": "CCC(I)CCI"
+  },
+  {
+    "name": "heptane-1,7-diamine",
+    "smiles": "NCCCCCCCN"
+  },
+  {
+    "name": "1,3-difluoro-1-iodopropane",
+    "smiles": "FCCC(F)I"
+  },
+  {
+    "name": "1-bromo-1,3-dichloropropane",
+    "smiles": "ClCCC(Cl)Br"
+  },
+  {
+    "name": "3,3-dibromohexane",
+    "smiles": "CCCC(Br)(Br)CC"
+  },
+  {
+    "name": "2-fluoro-3-iodobutane",
+    "smiles": "CC(F)C(C)I"
+  },
+  {
+    "name": "1,1,3-tribromopropane",
+    "smiles": "BrCCC(Br)Br"
+  },
+  {
+    "name": "heptane-1,4,6-triol",
+    "smiles": "CC(O)CC(O)CCCO"
+  },
+  {
+    "name": "1-fluoro-2-iodopentane",
+    "smiles": "CCCC(I)CF"
+  },
+  {
+    "name": "heptane-1,2,2-triol",
+    "smiles": "CCCCCC(O)(O)CO"
+  },
+  {
+    "name": "1-bromo-2-chloro-1-fluoropropane",
+    "smiles": "CC(Cl)C(F)Br"
+  },
+  {
+    "name": "3-chloro-1,1-diiodopropane",
+    "smiles": "ClCCC(I)I"
+  },
+  {
+    "name": "heptane-2,6-dione",
+    "smiles": "CC(=O)CCCC(C)=O"
+  },
+  {
+    "name": "1,3-difluoro-5-iodobenzene",
+    "smiles": "Fc1cc(F)cc(I)c1"
+  },
+  {
+    "name": "1-bromo-1-iodopropane",
+    "smiles": "CCC(Br)I"
+  },
+  {
+    "name": "2,2-dipropylpropanedial",
+    "smiles": "CCCC(C=O)(C=O)CCC"
+  },
+  {
+    "name": "1-bromo-3-chloro-1-iodopropane",
+    "smiles": "ClCCC(Br)I"
+  },
+  {
+    "name": "2-bromo-1-fluoro-3-iodopropane",
+    "smiles": "FCC(Br)CI"
+  },
+  {
+    "name": "2-chloro-1,2-difluoropropane",
+    "smiles": "CC(F)(Cl)CF"
+  },
+  {
+    "name": "hexane-2,5-diamine",
+    "smiles": "CC(N)CCC(C)N"
+  },
+  {
+    "name": "2,3-dichlorohexane",
+    "smiles": "CCCC(Cl)C(C)Cl"
+  },
+  {
+    "name": "1-chloro-2,3-diiodobenzene",
+    "smiles": "Clc1cccc(I)c1I"
+  },
+  {
+    "name": "1-bromo-2-fluorobutane",
+    "smiles": "CCC(F)CBr"
+  },
+  {
+    "name": "heptane-4,4-diamine",
+    "smiles": "CCCC(N)(N)CCC"
+  },
+  {
+    "name": "1,3-dichloro-3-fluorobutane",
+    "smiles": "CC(F)(Cl)CCCl"
+  },
+  {
+    "name": "1-bromo-5-iodohexane",
+    "smiles": "CC(I)CCCCBr"
+  },
+  {
+    "name": "heptane-1,4,4-triamine",
+    "smiles": "CCCC(N)(N)CCCN"
+  },
+  {
+    "name": "1,3,3-trichlorobutane",
+    "smiles": "CC(Cl)(Cl)CCCl"
+  },
+  {
+    "name": "1-fluoro-2,4-diiodobenzene",
+    "smiles": "Fc1ccc(I)cc1I"
+  },
+  {
+    "name": "hexane-1,4,5-triamine",
+    "smiles": "CC(N)C(N)CCCN"
+  },
+  {
+    "name": "1-bromo-2-chloro-3-fluoropropane",
+    "smiles": "FCC(Cl)CBr"
+  },
+  {
+    "name": "1-bromopentane",
+    "smiles": "CCCCCBr"
+  },
+  {
+    "name": "2-chloro-1,4-difluorobenzene",
+    "smiles": "Fc1ccc(F)c(Cl)c1"
+  },
+  {
+    "name": "1-chloro-3-fluoro-5-iodobenzene",
+    "smiles": "Fc1cc(Cl)cc(I)c1"
+  },
+  {
+    "name": "1,2,3,4-tetrachlorobutane",
+    "smiles": "ClCC(Cl)C(Cl)CCl"
+  },
+  {
+    "name": "heptane-2,2,3-triol",
+    "smiles": "CCCCC(O)C(C)(O)O"
+  },
+  {
+    "name": "1-chloro-2,2-difluoropropane",
+    "smiles": "CC(F)(F)CCl"
+  },
+  {
+    "name": "2-bromo-3-iodohexane",
+    "smiles": "CCCC(I)C(C)Br"
+  },
+  {
+    "name": "1,3-diiodoheptane",
+    "smiles": "CCCCC(I)CCI"
+  },
+  {
+    "name": "heptane-1,1,7-triol",
+    "smiles": "OCCCCCCC(O)O"
+  },
+  {
+    "name": "1-bromo-3-fluoro-5-iodobenzene",
+    "smiles": "Fc1cc(Br)cc(I)c1"
+  },
+  {
+    "name": "1-bromo-3-chloropropane",
+    "smiles": "ClCCCBr"
+  },
+  {
+    "name": "1,2-dibromo-1-chloropentane",
+    "smiles": "CCCC(Br)C(Cl)Br"
+  },
+  {
+    "name": "1,2-dichloro-1-fluorobutane",
+    "smiles": "CCC(Cl)C(F)Cl"
+  },
+  {
+    "name": "2,2-dichloro-1-fluoropropane",
+    "smiles": "CC(Cl)(Cl)CF"
+  },
+  {
+    "name": "1,2,2-trichloropropane",
+    "smiles": "CC(Cl)(Cl)CCl"
+  },
+  {
+    "name": "heptane-2,4,5-triamine",
+    "smiles": "CCC(N)C(N)CC(C)N"
+  },
+  {
+    "name": "1,3,5-triiodobenzene",
+    "smiles": "Ic1cc(I)cc(I)c1"
+  },
+  {
+    "name": "1-fluoro-4-iodobutane",
+    "smiles": "FCCCCI"
+  },
+  {
+    "name": "1-bromo-1-chlorohexane",
+    "smiles": "CCCCCC(Cl)Br"
+  },
+  {
+    "name": "3-chloro-1-fluoropentane",
+    "smiles": "CCC(Cl)CCF"
+  },
+  {
+    "name": "1-chloro-3,5-diiodobenzene",
+    "smiles": "Clc1cc(I)cc(I)c1"
+  },
+  {
+    "name": "heptane-2,4-diamine",
+    "smiles": "CCCC(N)CC(C)N"
+  },
+  {
+    "name": "heptane-1,2-diamine",
+    "smiles": "CCCCCC(N)CN"
+  },
+  {
+    "name": "2-bromo-4-chloro-1-iodobutane",
+    "smiles": "ClCCC(Br)CI"
+  },
+  {
+    "name": "2-bromo-3-fluorohexane",
+    "smiles": "CCCC(F)C(C)Br"
+  },
+  {
+    "name": "2-chloro-1,1-difluorobutane",
+    "smiles": "CCC(Cl)C(F)F"
+  },
+  {
+    "name": "1,3-dibromo-2-chloropropane",
+    "smiles": "ClC(CBr)CBr"
+  },
+  {
+    "name": "3-bromo-3-chlorohexane",
+    "smiles": "CCCC(Cl)(Br)CC"
+  },
+  {
+    "name": "1,2-dichloro-3-iodobenzene",
+    "smiles": "Clc1cccc(I)c1Cl"
+  },
+  {
+    "name": "2-chloro-3-fluoropentane",
+    "smiles": "CCC(F)C(C)Cl"
+  },
+  {
+    "name": "1-bromo-1,5-dichloropentane",
+    "smiles": "ClCCCCC(Cl)Br"
+  },
+  {
+    "name": "1,6-dibromoheptane",
+    "smiles": "CC(Br)CCCCCBr"
+  },
+  {
+    "name": "2-bromo-1-chlorohexane",
+    "smiles": "CCCCC(Br)CCl"
+  },
+  {
+    "name": "heptane-3,5-diol",
+    "smiles": "CCC(O)CC(O)CC"
+  },
+  {
+    "name": "hexane-1,1,1-triol",
+    "smiles": "CCCCCC(O)(O)O"
+  },
+  {
+    "name": "2-bromo-1,2,3-trifluoropropane",
+    "smiles": "FCC(F)(Br)CF"
+  },
+  {
+    "name": "1-fluoro-1-iodobutane",
+    "smiles": "CCCC(F)I"
+  },
+  {
+    "name": "hexane-1,1,2-triol",
+    "smiles": "CCCCC(O)C(O)O"
+  },
+  {
+    "name": "1-bromo-2,3-difluoropropane",
+    "smiles": "FCC(F)CBr"
+  },
+  {
+    "name": "2,3-dibromohexane",
+    "smiles": "CCCC(Br)C(C)Br"
+  },
+  {
+    "name": "1,2,2-tribromo-1-fluoropropane",
+    "smiles": "CC(Br)(Br)C(F)Br"
+  },
+  {
+    "name": "2-bromo-1,2-dichloropropane",
+    "smiles": "CC(Cl)(Br)CCl"
+  },
+  {
+    "name": "1,2-difluorobutane",
+    "smiles": "CCC(F)CF"
+  },
+  {
+    "name": "1-fluoro-5-iodopentane",
+    "smiles": "FCCCCCI"
+  },
+  {
+    "name": "1,3-dibromo-1-fluoropropane",
+    "smiles": "FC(Br)CCBr"
+  },
+  {
+    "name": "pentane-3,3-diamine",
+    "smiles": "CCC(N)(N)CC"
+  },
+  {
+    "name": "3-bromo-2-chloropentane",
+    "smiles": "CCC(Br)C(C)Cl"
+  },
+  {
+    "name": "3-fluoro-3-iodohexane",
+    "smiles": "CCCC(F)(I)CC"
+  },
+  {
+    "name": "1-chloro-4-iodobutane",
+    "smiles": "ClCCCCI"
+  },
+  {
+    "name": "1,2-dibromo-3-fluorobenzene",
+    "smiles": "Fc1cccc(Br)c1Br"
+  },
+  {
+    "name": "2-bromo-1,1,3-trichloropropane",
+    "smiles": "ClCC(Br)C(Cl)Cl"
+  },
+  {
+    "name": "1-fluoro-3-iodobutane",
+    "smiles": "CC(I)CCF"
+  },
+  {
+    "name": "2-fluoro-1,3-diiodopropane",
+    "smiles": "FC(CI)CI"
+  },
+  {
+    "name": "2,5-diiodohexane",
+    "smiles": "CC(I)CCC(C)I"
+  },
+  {
+    "name": "1,5-dichloro-2-fluorohexane",
+    "smiles": "CC(Cl)CCC(F)CCl"
+  },
+  {
+    "name": "3,4-dichloroheptane",
+    "smiles": "CCCC(Cl)C(Cl)CC"
+  },
+  {
+    "name": "1,3-dibromopropane",
+    "smiles": "BrCCCBr"
+  },
+  {
+    "name": "heptane-1,5,6-triol",
+    "smiles": "CC(O)C(O)CCCCO"
+  },
+  {
+    "name": "1-fluoro-1,3-diiodopropane",
+    "smiles": "FC(I)CCI"
+  },
+  {
+    "name": "pentane-1,1-diamine",
+    "smiles": "CCCCC(N)N"
+  },
+  {
+    "name": "1-fluoro-2-iodobutane",
+    "smiles": "CCC(I)CF"
+  },
+  {
+    "name": "2-bromo-1-chloropropane",
+    "smiles": "CC(Br)CCl"
+  },
+  {
+    "name": "2-propylbutanedial",
+    "smiles": "CCCC(C=O)CC=O"
+  },
+  {
+    "name": "1-bromo-1,2-dichloropropane",
+    "smiles": "CC(Cl)C(Cl)Br"
+  },
+  {
+    "name": "pentane-1,4,4-triol",
+    "smiles": "CC(O)(O)CCCO"
+  },
+  {
+    "name": "1-bromo-2,3-dichloropropane",
+    "smiles": "ClCC(Cl)CBr"
+  },
+  {
+    "name": "1-chloro-3-fluoro-2-iodopropane",
+    "smiles": "FCC(I)CCl"
+  },
+  {
+    "name": "1-bromo-5-fluoropentane",
+    "smiles": "FCCCCCBr"
+  },
+  {
+    "name": "3-bromo-1,2-dichloro-1-fluoropropane",
+    "smiles": "FC(Cl)C(Cl)CBr"
+  },
+  {
+    "name": "2-chloro-1,4-difluorobutane",
+    "smiles": "FCCC(Cl)CF"
+  },
+  {
+    "name": "1-bromoheptane",
+    "smiles": "CCCCCCCBr"
+  },
+  {
+    "name": "1,1-dichlorobutane",
+    "smiles": "CCCC(Cl)Cl"
+  },
+  {
+    "name": "1,1-difluoro-3-iodopropane",
+    "smiles": "FC(F)CCI"
+  },
+  {
+    "name": "2-bromo-1-iodobutane",
+    "smiles": "CCC(Br)CI"
+  },
+  {
+    "name": "1,2-diiodobutane",
+    "smiles": "CCC(I)CI"
+  },
+  {
+    "name": "2-bromo-1,1-dichloropropane",
+    "smiles": "CC(Br)C(Cl)Cl"
+  },
+  {
+    "name": "1,6-dichlorohexane",
+    "smiles": "ClCCCCCCCl"
+  },
+  {
+    "name": "1,2,3,3-tetrabromobutane",
+    "smiles": "CC(Br)(Br)C(Br)CBr"
+  },
+  {
+    "name": "2-bromoheptane",
+    "smiles": "CCCCCC(C)Br"
+  },
+  {
+    "name": "1-bromo-2-chlorohexane",
+    "smiles": "CCCCC(Cl)CBr"
+  },
+  {
+    "name": "2,2-diethylpropanedial",
+    "smiles": "CCC(C=O)(C=O)CC"
+  },
+  {
+    "name": "2,2-dichloropentane",
+    "smiles": "CCCC(C)(Cl)Cl"
+  },
+  {
+    "name": "1,3,6-trichlorohexane",
+    "smiles": "ClCCCC(Cl)CCCl"
+  },
+  {
+    "name": "2,2-dibromo-1-fluoropropane",
+    "smiles": "CC(Br)(Br)CF"
+  },
+  {
+    "name": "2-chloro-2-fluoropentane",
+    "smiles": "CCCC(C)(F)Cl"
+  },
+  {
+    "name": "1,2-difluoro-3-iodobenzene",
+    "smiles": "Fc1cccc(I)c1F"
+  },
+  {
+    "name": "1,3-difluoropentane",
+    "smiles": "CCC(F)CCF"
+  },
+  {
+    "name": "1,2-diiodoheptane",
+    "smiles": "CCCCCC(I)CI"
+  },
+  {
+    "name": "hexane-2,2,3-triamine",
+    "smiles": "CCCC(N)C(C)(N)N"
+  },
+  {
+    "name": "2-chloro-1-fluorobutane",
+    "smiles": "CCC(Cl)CF"
+  },
+  {
+    "name": "1,4-dibromo-2-chloropentane",
+    "smiles": "CC(Br)CC(Cl)CBr"
+  },
+  {
+    "name": "heptane-1,1,4-triamine",
+    "smiles": "CCCC(N)CCC(N)N"
+  },
+  {
+    "name": "pentane-2,3,4-triamine",
+    "smiles": "CC(N)C(N)C(C)N"
+  },
+  {
+    "name": "hexane-3,3,4-triamine",
+    "smiles": "CCC(N)C(N)(N)CC"
+  },
+  {
+    "name": "1-bromo-2-chloro-4-iodobenzene",
+    "smiles": "Clc1cc(I)ccc1Br"
+  },
+  {
+    "name": "2,3-dibromobutane",
+    "smiles": "CC(Br)C(C)Br"
+  },
+  {
+    "name": "hexane-1,1,3-triamine",
+    "smiles": "CCCC(N)CC(N)N"
+  },
+  {
+    "name": "2-bromo-4-chloropentane",
+    "smiles": "CC(Cl)CC(C)Br"
+  },
+  {
+    "name": "3-bromo-1-fluorobutane",
+    "smiles": "CC(Br)CCF"
+  },
+  {
+    "name": "1,1-dibromo-1-chloropropane",
+    "smiles": "CCC(Cl)(Br)Br"
+  },
+  {
+    "name": "2,2-dibromoheptane",
+    "smiles": "CCCCCC(C)(Br)Br"
+  },
+  {
+    "name": "1,5-dibromohexane",
+    "smiles": "CC(Br)CCCCBr"
+  },
+  {
+    "name": "2-fluoro-1-iodobutane",
+    "smiles": "CCC(F)CI"
+  },
+  {
+    "name": "1,1,1-tribromo-2-fluoropropane",
+    "smiles": "CC(F)C(Br)(Br)Br"
+  },
+  {
+    "name": "1,2-dibromo-1,2-difluoropropane",
+    "smiles": "CC(F)(Br)C(F)Br"
+  },
+  {
+    "name": "1-bromo-3-fluoropentane",
+    "smiles": "CCC(F)CCBr"
+  },
+  {
+    "name": "heptane-2,4,6-triol",
+    "smiles": "CC(O)CC(O)CC(C)O"
+  },
+  {
+    "name": "1-bromo-1-fluoropentane",
+    "smiles": "CCCCC(F)Br"
+  },
+  {
+    "name": "1-bromo-4-chlorobutane",
+    "smiles": "ClCCCCBr"
+  },
+  {
+    "name": "2-bromo-1-chloro-3-iodopropane",
+    "smiles": "ClCC(Br)CI"
+  },
+  {
+    "name": "1,3-dichlorobutane",
+    "smiles": "CC(Cl)CCCl"
+  },
+  {
+    "name": "1-bromo-3-chloroheptane",
+    "smiles": "CCCCC(Cl)CCBr"
+  },
+  {
+    "name": "1,4-dichloroheptane",
+    "smiles": "CCCC(Cl)CCCCl"
+  },
+  {
+    "name": "hexane-1,2,3-triol",
+    "smiles": "CCCC(O)C(O)CO"
+  },
+  {
+    "name": "2-bromo-1-fluoro-4-iodobenzene",
+    "smiles": "Fc1ccc(I)cc1Br"
+  },
+  {
+    "name": "1-chloro-1,1-diiodopropane",
+    "smiles": "CCC(Cl)(I)I"
+  },
+  {
+    "name": "1-bromo-3-fluorobutane",
+    "smiles": "CC(F)CCBr"
+  },
+  {
+    "name": "hexane-1,1,4-triol",
+    "smiles": "CCC(O)CCC(O)O"
+  },
+  {
+    "name": "1,2,2-tribromo-3-fluoropropane",
+    "smiles": "FCC(Br)(Br)CBr"
+  },
+  {
+    "name": "3-chloro-4-fluorohexane",
+    "smiles": "CCC(F)C(Cl)CC"
+  }
+]
