@@ -250,7 +250,7 @@ def generate_cross_hints(answer_tokenised, correct_tokenised):
                 elif i == 10:
                     hints.append((f"How many {group} groups are there?", 4))
                 elif i == 11:
-                    hints.append((f"Is that the correct suffix for {'an' if group[0].lower() in vowels else "a"} {group} group?", 5))
+                    hints.append((f"Is that the correct suffix for {'an' if group[0].lower() in vowels else 'a'} {group} group?", 5))
                 i += 1
 
         # checks the prefix hints
