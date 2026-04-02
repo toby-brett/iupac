@@ -1,5 +1,5 @@
 # IUPAC Trainer
-**[Try it here](https://dailychemistry.co.uk)**
+**https://dailychemistry.co.uk** to view live site
 
 A web app that quizzes you on IUPAC nomenclature. It generates random organic molecules, draws them, and you have to name them.
 
@@ -40,6 +40,9 @@ cd project
 python app.py
 ```
 Then open `http://localhost:5000`
+
+note - if rdkit does not install with pip use:
+`conda install -c conda-forge rdkit `
 
 ## Known issues
 - Name lookup depends on PubChem availability
