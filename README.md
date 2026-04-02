@@ -1,4 +1,5 @@
 # IUPAC Trainer
+**[Try it here](https://dailychemistry.co.uk)**
 
 A web app that quizzes you on IUPAC nomenclature. It generates random organic molecules, draws them, and you have to name them.
 
